@@ -40,8 +40,12 @@ package org.orbisgis.noisemap.core;
  */
 public class EvalRoadSource {
 
+    public static final int STEADY_SPEED = 1;
+    public static final int ACCELERATION = 2;
+    public static final int DECELERATION = 2;
+
     private static Double getNoiseLvl(Double base, Double adj, Double speed,
-                               Double speedBase) {
+                                      Double speedBase) {
         return base + adj * Math.log(speed / speedBase);
     }
 
@@ -161,12 +165,16 @@ public class EvalRoadSource {
      * @param speed_load Average vehicle speed
      * @param vl_per_hour Average light vehicle per hour
      * @param pl_per_hour Average heavy vehicle per hour
-     * @param surface_category Defining surface categories
-     * @param surface_age Defining surface age
      * @return Noise level in dB(A)
      */
-    public static double evaluate(double speed_load, int vl_per_hour, int pl_per_hour, int surface_category, int surface_age) {
-        return evaluate(vl_per_hour, pl_per_hour, speed_load, speed_load, 0, surface_category, surface_age);
+    public static double evaluate(double speed_load, int vl_per_hour, int pl_per_hour) {
+        int surface_category = 2 ;
+        int surface_age = 10 ;
+        boolean condition_vl = true ;
+        boolean condition_pl = true ;
+        int pace_vl = STEADY_SPEED ;
+        int pace_pl = STEADY_SPEED ;
+        return evaluate(vl_per_hour, pl_per_hour, speed_load, speed_load, 0, surface_category, surface_age,condition_vl, condition_pl,pace_vl,pace_pl);
     }
 
     /**
@@ -197,7 +205,7 @@ public class EvalRoadSource {
      * @return Noise level in dB(A)
      */
     public static double evaluate(double speed_load, int vl_per_hour, int pl_per_hour, double speed_junction, double speed_max,
-                                  int copound_roadtype, double begin_z,double end_z, double road_length_2d, boolean is_queue, int surface_category, int surface_age) {
+                                  int copound_roadtype, double begin_z,double end_z, double road_length_2d, boolean is_queue, int surface_category, int surface_age,boolean condition_vl, boolean condition_pl, int pace_vl,int pace_pl) {
         double speed;
         double speed_pl;
         // Separation of main index and sub index
@@ -220,12 +228,9 @@ public class EvalRoadSource {
         }
         speed_pl = getVPl(speed, speed_max, roadtype, roadsubtype);
         double slope_perc = Math.min(6., Math.max(-6., computeSlope(begin_z, end_z, road_length_2d)));
-        return evaluate(vl_per_hour, pl_per_hour, speed, speed_pl, slope_perc, surface_category, surface_age);
+        return evaluate(vl_per_hour, pl_per_hour, speed, speed_pl, slope_perc, surface_category, surface_age,condition_vl,condition_pl,pace_vl,pace_pl);
     }
 
-    public static final int STEADY_SPEED = 1;
-    public static final int ACCELERATION = 2;
-    public static final int DECELERATION = 2;
 
     /**
      * Road noise evaluation.
@@ -238,7 +243,22 @@ public class EvalRoadSource {
      * @param surface_age Defining surface age
      * @return Noise level in dB(A)
      */
-    public static double evaluate(int vl_per_hour, int pl_per_hour, double speed, double speed_pl, double slope_perc, int surface_category, int surface_age) {
+    /**
+     * Calculate the emission powers of motors lights vehicles.
+     * @param condition_vl initialization of conditions sections. True for starting condition and false for stopping condition. ----> (default : true)
+     * @param pace_vl initialization of vehicle pace : 1 for steady speed ; 2 for acceleration ; 3 for decelerating.       ----> (default : 1)
+     * @return vl motor noise level
+     */
+    /**
+     * Calculate the emission powers of heavies goods vehicles.
+     * @param condition_pl initialization of conditions sections. True for starting condition and false for stopping condition. ----> (default : true)
+     * @param pace_pl      initialization of vehicle pace : 1 for steady speed ; 2 for acceleration ; 3 for deceleration.       ----> (default : 1)
+     * @return vl motor noise level
+     */
+
+
+
+    public static double evaluate(int vl_per_hour, int pl_per_hour, double speed, double speed_pl, double slope_perc, int surface_category, int surface_age,boolean condition_vl, boolean condition_pl, int pace_vl,int pace_pl) {
         // ///////////////////////
         // Noise road/tire
         // cf. NMPB 2008 1 - Calculating sound emissions from road traffic
@@ -278,7 +298,7 @@ public class EvalRoadSource {
         else {
             vl_road_lvl = getNoiseLvl(55.4, 20.1, speed, 90.);
             pl_road_lvl = getNoiseLvl(63.4, 20., speed_pl, 80.);
-            // check surface age                                                                                        // TODO default surface age 2 at 10 years. so need to initialize default value
+            // check surface age     a                                                                                   // TODO default surface age 2 at 10 years. so need to initialize default value
             if (surface_age < 2) {
                 vl_road_lvl = vl_road_lvl - 2.;
                 pl_road_lvl = pl_road_lvl - 1.2;
@@ -294,34 +314,21 @@ public class EvalRoadSource {
         // ///////////////////////
         // Noise motor
 
-        // TODO need to initiate default speed for vl & pl
-
-       /**
-        * Calculate the emission powers of motors lights vehicles.
-        * @param condition_vl initialization of conditions sections. True for starting condition and false for stopping condition. ----> (default : true)
-        * @param pace_vl initialization of vehicle pace : 1 for steady speed ; 2 for acceleration ; 3 for decelerating.       ----> (default : 1)
-        * @return vl motor noise level
-        */
-
-        boolean condition_vl = true;
-        int pace_vl = 1;
-        double vl_motor_lvl = 0.;
-
-
+        double vl_motor_lvl;
         if (speed < 25.) {                  // check speed the lvl.                                                     // TODO for check speed the lvl, need to initiate default speed
             if (condition_vl == false){     // stopping condition.
                 vl_motor_lvl = 44.5;
             } else {                        // default or starting condition.
                 vl_motor_lvl = 51.1;
             }
-        } else if (speed >= 25.) {          // check speed the lvl.                                                     // TODO can initialize default at 25 km/h ?
-            if (pace_vl == 2){              // accelerated pace.
+        } else {          // check speed the lvl.                                                     // TODO can initialize default at 25 km/h ?
+            if (pace_vl == ACCELERATION){              // accelerated pace.
                 if (speed <= 100.) {         // check again the speed lvl.
                     vl_motor_lvl = getNoiseLvl(46.1, -10., Math.max(20, speed), 90.);                                   // TODO Math.max(20, speed) -> max(25, speed) ?
                 } else {                    // default speed lvl for accelerated pace
                     vl_motor_lvl = getNoiseLvl(44.3, 28.6, speed, 90.);
                 }
-            } else if (pace_vl == 3){       // decelerated pace.
+            } else if (pace_vl == DECELERATION){       // decelerated pace.
                 if (speed <= 80.) {          // check again the speed lvl.
                     vl_motor_lvl = getNoiseLvl(42.1, -4.5, Math.max(20, speed), 90.);
                 } else if (speed > 80. && speed <= 110.) {
@@ -329,7 +336,7 @@ public class EvalRoadSource {
                 } else {                    // default speed lvl for decelerated pace.
                     vl_motor_lvl = getNoiseLvl(40.7, 21.3, speed, 90.);
                 }
-            } else {                        // default or steady speed.
+            } else {                        // default or STEADY_SPEED.
                 if (speed <= 30.) {          // check again the speed lvl.
                     vl_motor_lvl = getNoiseLvl(36.7, -10., Math.max(20, speed), 90.);
                 } else if (speed > 30. && speed <= 110. ) {
@@ -339,21 +346,7 @@ public class EvalRoadSource {
                 }
             }
         }
-
-
-
-        /**
-         * Calculate the emission powers of heavies goods vehicles.
-         * @param condition_pl initialization of conditions sections. True for starting condition and false for stopping condition. ----> (default : true)
-         * @param pace_pl      initialization of vehicle pace : 1 for steady speed ; 2 for acceleration ; 3 for deceleration.       ----> (default : 1)
-         * @return vl motor noise level
-         */
-
-
-        boolean condition_pl = true;
-        int pace_pl = STEADY_SPEED;
         double pl_motor_lvl;
-
         if (speed_pl <= 25.) {                                                                                           // TODO initialize default speed
             if (condition_pl != true){                      // stopping condition
                 if (slope_perc < 0){                        // downward slope
@@ -367,10 +360,10 @@ public class EvalRoadSource {
                 if (slope_perc < 0) {                       // downward slope
                     pl_motor_lvl = 62.4;
                 } else if (slope_perc > 2) {
-                     pl_motor_lvl = 62.4 + Math.max(0, 2 *( slope_perc - 4.5));
+                    pl_motor_lvl = 62.4 + Math.max(0, 2 *( slope_perc - 4.5));
                 } else {
-                        pl_motor_lvl = 62.4;
-                 }
+                    pl_motor_lvl = 62.4;
+                }
             }
         } else {                                                                                                        // TODO initialize default speed
             if (speed_pl > 25. && speed_pl <= 70.) {
@@ -389,8 +382,8 @@ public class EvalRoadSource {
                         pl_motor_lvl = pl_motor_lvl + 2 * (slope_perc - 2);
                     }
                 } else {
-                    if (pace_pl == ACCELERATION){
-                        pl_motor_lvl = pl_motor_lvl + 5.;
+                        if (pace_pl == ACCELERATION){
+                            pl_motor_lvl = pl_motor_lvl + 5.;
                     }
                 }
             } else {
@@ -424,6 +417,6 @@ public class EvalRoadSource {
         double pl_lvl = sumDba(pl_road_lvl, pl_motor_lvl) + 10
                 * Math.log10(pl_per_hour);
 
-        return sumDba(vl_lvl, pl_lvl);
+         return sumDba(vl_lvl, pl_lvl);
     }
 }
