@@ -47,8 +47,62 @@ import java.io.InputStream;
 
 
 public class EvaluateTrainSourceNMPB {
+// Todo evaluation du niveau sonore d'un train
+    private static JsonNode nmpbTraindata = parse(EvaluateTrainSourceNMPB.class.getResourceAsStream("coefficients_train_NMPB.json"));
+
+    private static JsonNode parse(InputStream inputStream) {
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            return mapper.readTree(inputStream);
+        } catch (IOException ex) {
+            return NullNode.getInstance();
+        }
+    }
+    public static JsonNode getnmpbTraindata(int spectreVer){
+        if (spectreVer==1){
+            return nmpbTraindata;
+        }
+        else {
+            return nmpbTraindata;
+        }
+    }
+    public static Double getTrainVmax(String typeTrain, int spectreVer) { //
+        return getnmpbTraindata(spectreVer).get("Train").get(typeTrain).get("Vmax").doubleValue();
+    }
+    public static Double getTrainVref(String typeTrain, int spectreVer) { //
+        return getnmpbTraindata(spectreVer).get("Train").get(typeTrain).get("Vref").doubleValue();
+    }
+
+    public static Double getbase0cm(String typeTrain, int spectreVer) { //
+        return getnmpbTraindata(spectreVer).get("Train").get(typeTrain).get("Spectrum0cm").doubleValue();
+    }
+
+    /** get noise level from 0cm source from speed **/
+    private static Double getNoiseLvl0cm(double base0cm, double speed,
+                                      double speedBase) {
+        return base0cm + 30 * Math.log10(speed / speedBase);
+    }
+    /** get noise level from 50cm source from speed **/
+    private static Double getNoiseLvl50cm(double base50cm, double speed,
+                                         double speedBase) {
+        return base50cm + 30 * Math.log10(speed / speedBase);
+    }
+    /** get noise level from 50cm source from speed **/
+    private static Double sumDb(Double dB0cm, Double dB50cm) {
+        return 10*Math.log10(Math.pow(10,(dB0cm/10)) + Math.pow(10,(dB50cm/10)));
+    }
 
 
+    /**
+     * Train noise evaluation.
+     * @param parameters Noise emission parameters
+     * @return Noise level in dB
+     */
+    public static double evaluate(TrainParametersNMPB parameters) {
+        //final int freqParam = parameters.getFreqParam();
+        //lvTrainLvl = getNoiseLvl(getCoeff("Spectrum0cm", freqParam , "1"  ,spectreVer), parameters.getSpeedLv(), 70.);
+
+    }
 }
 
 
