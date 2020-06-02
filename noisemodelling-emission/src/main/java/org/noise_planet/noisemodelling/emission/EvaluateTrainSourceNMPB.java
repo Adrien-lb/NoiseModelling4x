@@ -67,11 +67,18 @@ public class EvaluateTrainSourceNMPB {
             return nmpbTraindata;
         }
     }
+    public static Double getSpeedIncrement(String typeTrain, int spectreVer) { //
+        return getnmpbTraindata(spectreVer).get("Train").get(typeTrain).get("Source").get("Speed_increment").doubleValue();
+    }
+
     public static Double getTrainVmax(String typeTrain, int spectreVer) { //
         return getnmpbTraindata(spectreVer).get("Train").get(typeTrain).get("Vmax").doubleValue();
     }
     public static Double getTrainVref(String typeTrain, int spectreVer) { //
         return getnmpbTraindata(spectreVer).get("Train").get(typeTrain).get("Vref").doubleValue();
+    }
+    public static int getNumberSource(String typeTrain, int spectreVer) { //
+        return getnmpbTraindata(spectreVer).get("Train").get(typeTrain).get("Source").get("Source_number_0cm").intValue();
     }
 
     public static Double getbase(String typeTrain, int spectreVer, int freq, double height) { //
@@ -137,6 +144,8 @@ public class EvaluateTrainSourceNMPB {
         String heightSource;
         if (height==1){
             heightSource="Spectrum50cm";
+        }else if (height==2){
+            heightSource="Spectrum400cm";
         }
         else {
             heightSource="Spectrum0cm";
@@ -146,8 +155,72 @@ public class EvaluateTrainSourceNMPB {
 
     /** get noise level source from speed **/
     private static Double getNoiseLvl(double base, double speed,
-                                      double speedBase) {
-        return base + 30 * Math.log10(speed / speedBase);
+                                      double speedRef, double speedIncrement) {
+        return base + speedIncrement * Math.log10(speed / speedRef);
+    }
+
+
+    private static Double getNoiseLvldBa(double NoiseLvl,  int freq){
+        double LvlCorrectionA;
+        switch (freq) {
+            case 100:
+                LvlCorrectionA=-19.1;
+                break;
+            case 125:
+                LvlCorrectionA=-16.1;
+                break;
+            case 160:
+                LvlCorrectionA=-13.4;
+                break;
+            case 200:
+                LvlCorrectionA=-10.9;
+                break;
+            case 250:
+                LvlCorrectionA=-8.6;
+                break;
+            case 315:
+                LvlCorrectionA=-6.6;
+                break;
+            case 400:
+                LvlCorrectionA=-4.8;
+                break;
+            case 500:
+                LvlCorrectionA=-3.2;
+                break;
+            case 630:
+                LvlCorrectionA=-1.9;
+                break;
+            case 800:
+                LvlCorrectionA=-0.8;
+                break;
+            case 1000:
+                LvlCorrectionA=0;
+                break;
+            case 1250:
+                LvlCorrectionA=0.6;
+                break;
+            case 1600:
+                LvlCorrectionA=1;
+                break;
+            case 2000:
+                LvlCorrectionA=1.2;
+                break;
+            case 2500:
+                LvlCorrectionA=1.3;
+                break;
+            case 3150:
+                LvlCorrectionA=1.2;
+                break;
+            case 4000:
+                LvlCorrectionA=1;
+                break;
+            case 5000:
+                LvlCorrectionA=0.5;
+                break;
+            default:
+                LvlCorrectionA=0;
+        }
+        return NoiseLvl+LvlCorrectionA;
     }
 
 
@@ -160,6 +233,12 @@ public class EvaluateTrainSourceNMPB {
         }
     }
 
+
+    /** get noise level source from number of vehicule **/
+    private static Double getNoiseLvlFinal(double base, double numbersource, int numVeh) {
+        return base + 10 * Math.log10(numbersource*numVeh);
+    }
+
     /**
      * Road noise evaluation.
      * @param parameters Noise emission parameters
@@ -167,21 +246,19 @@ public class EvaluateTrainSourceNMPB {
      */
     public static double evaluate(TrainParametersNMPB parameters) {
         final int freqParam = parameters.getFreqParam();
-
         final int spectreVer = parameters.getSpectreVer();
-        // ///////////////////////
-        // N
-        double trainLvl; // Lw/m (1 veh/h)
+        double trainLWvm; // LW(v)/m (1 veh/h)
+        double trainLWv; // LW(v)
+        double speedIncrement = getSpeedIncrement(parameters.getTypeTrain(),spectreVer);
+        double speedRef = getTrainVref(parameters.getTypeTrain(),spectreVer);
+        int numSource = getNumberSource(parameters.getTypeTrain(),spectreVer);
 
-        // Noise level
-        trainLvl = 0;
-
-        // ////////////////////////
-        // Lw/m (1 veh/h) to ?
         double base = getbase(parameters.getTypeTrain(),spectreVer, freqParam , parameters.getHeight());
-        double testLvl=getNoiseLvl(base,parameters.getSpeed(),parameters.getSpeed());
-        double lvFlowLvl = Vperhour2NoiseLevel(trainLvl , parameters.getVehPerHour(), parameters.getSpeed());
-        return testLvl;
+        trainLWv =getNoiseLvl(base,parameters.getSpeed(),speedRef,speedIncrement);
+        trainLWvm= Vperhour2NoiseLevel(trainLWv , parameters.getVehPerHour(), parameters.getSpeed());
+        trainLWvm = getNoiseLvlFinal(trainLWvm ,numSource, parameters.getNumVeh());
+
+        return trainLWvm;
     }
 }
 

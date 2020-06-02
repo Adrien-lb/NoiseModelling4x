@@ -197,6 +197,120 @@ public class LDENPropagationProcessData extends PropagationProcessData {
         return lvl;
     }
 
+    /**
+     * @param rs result set of source
+     * @param period D or E or N
+     * @param slope Gradient percentage of road from -12 % to 12 %
+     * @return Emission spectrum in dB
+     */
+    public double[] getRailEmissionFromResultSet(ResultSet rs, String period, double slope) throws SQLException {// TODO ADRIEN
+        if (sourceFields == null) {
+            sourceFields = new HashMap<>();
+            int fieldId = 1;
+            for (String fieldName : JDBCUtilities.getFieldNames(rs.getMetaData())) {
+                sourceFields.put(fieldName.toUpperCase(), fieldId++);
+            }
+        }
+        double[] lvl = new double[PropagationProcessPathData.freq_lvl.size()];
+        // Set default values
+        double tv = 0; // old format "total vehicles"
+        double hv = 0; // old format "heavy vehicles"
+        double lv_speed = 0;
+        double mv_speed = 0;
+        double hgv_speed = 0;
+        double wav_speed = 0;
+        double wbv_speed = 0;
+        double lvPerHour = 0;
+        double mvPerHour = 0;
+        double hgvPerHour = 0;
+        double wavPerHour = 0;
+        double wbvPerHour = 0;
+        double temperature = 20.0;
+        String roadSurface = "NL08";
+        double tsStud = 0;
+        double pmStud = 0;
+        double junctionDistance = 100; // no acceleration of deceleration changes with dist >= 100
+        int junctionType = 2;
+
+        // Read fields
+        if(sourceFields.containsKey("LV_SPD_"+period)) {
+            lv_speed = rs.getDouble(sourceFields.get("LV_SPD_"+period));
+        }
+        if(sourceFields.containsKey("MV_SPD_"+period)) {
+            mv_speed = rs.getDouble(sourceFields.get("MV_SPD_"+period));
+        }
+        if(sourceFields.containsKey("HGV_SPD_"+period)) {
+            hgv_speed = rs.getDouble(sourceFields.get("HGV_SPD_"+period));
+        }
+        if(sourceFields.containsKey("WAV_SPD_"+period)) {
+            wav_speed = rs.getDouble(sourceFields.get("WAV_SPD_"+period));
+        }
+        if(sourceFields.containsKey("WBV_SPD_"+period)) {
+            wbv_speed = rs.getDouble(sourceFields.get("WBV_SPD_"+period));
+        }
+        if(sourceFields.containsKey("LV_"+period)) {
+            lvPerHour = rs.getDouble(sourceFields.get("LV_"+period));
+        }
+        if(sourceFields.containsKey("MV_"+period)) {
+            mvPerHour = rs.getDouble(sourceFields.get("MV_"+period));
+        }
+        if(sourceFields.containsKey("HGV_"+period)) {
+            hgvPerHour = rs.getDouble(sourceFields.get("HGV_"+period));
+        }
+        if(sourceFields.containsKey("WAV_"+period)) {
+            wavPerHour = rs.getDouble(sourceFields.get("WAV_"+period));
+        }
+        if(sourceFields.containsKey("WBV_"+period)) {
+            wbvPerHour = rs.getDouble(sourceFields.get("WBV_"+period));
+        }
+        if(sourceFields.containsKey("PVMT")) {
+            roadSurface= rs.getString(sourceFields.get("PVMT"));
+        }
+        if(sourceFields.containsKey("TEMP_"+period)) {
+            temperature = rs.getDouble(sourceFields.get("TEMP_"+period));
+        }
+        if(sourceFields.containsKey("TS_STUD")) {
+            tsStud = rs.getDouble(sourceFields.get("TS_STUD"));
+        }
+        if(sourceFields.containsKey("PM_STUD")) {
+            pmStud = rs.getDouble(sourceFields.get("PM_STUD"));
+        }
+        if(sourceFields.containsKey("JUNC_DIST")) {
+            junctionDistance = rs.getDouble(sourceFields.get("JUNC_DIST"));
+        }
+        if(sourceFields.containsKey("JUNC_TYPE")) {
+            junctionType = rs.getInt(sourceFields.get("JUNC_TYPE"));
+        }
+
+        // old fields
+        if(sourceFields.containsKey("TV_"+period)) {
+            tv = rs.getDouble(sourceFields.get("TV_"+period));
+        }
+        if(sourceFields.containsKey("HV_"+period)) {
+            hv = rs.getDouble(sourceFields.get("HV_"+period));
+        }
+        if(sourceFields.containsKey("HV_SPD_"+period)) {
+            hgv_speed = rs.getDouble(sourceFields.get("HV_SPD_"+period));
+        }
+
+        if(tv > 0) {
+            lvPerHour = tv - (hv + mvPerHour + hgvPerHour + wavPerHour + wbvPerHour);
+        }
+        if(hv > 0) {
+            hgvPerHour = hv;
+        }
+        // Compute emission
+        int idFreq = 0;
+        for (int freq : PropagationProcessPathData.freq_lvl) {
+            RSParametersCnossos rsParametersCnossos = new TrainParametersNMPB(); // TODO ADRIEN
+            rsParametersCnossos.setSlopePercentage(slope);
+            rsParametersCnossos.setCoeffVer(ldenConfig.coefficientVersion);
+            lvl[idFreq++] = EvaluateRoadSourceCnossos.evaluate(rsParametersCnossos);
+        }
+        return lvl;
+    }
+
+
     public double[][] computeLw(SpatialResultSet rs) throws SQLException {
 
         // Compute day average level
@@ -252,6 +366,33 @@ public class LDENPropagationProcessData extends PropagationProcessData {
 
             // Night
             ln = getEmissionFromResultSet(rs, "N", slope);
+
+        }else if(ldenConfig.input_mode == LDENConfig.INPUT_MODE.INPUT_MODE_RAIL_FLOW) {
+            // Extract road slope
+            double slope = 0;
+            try {
+                Geometry g = rs.getGeometry();
+                if(freeFieldFinder!=null && g != null && !g.isEmpty()) {
+                    Coordinate[] c = g.getCoordinates();
+                    if(c.length >= 2) {
+                        double z0 = freeFieldFinder.getHeightAtPosition(c[0]);
+                        double z1 = freeFieldFinder.getHeightAtPosition(c[1]);
+                        if(!Double.isNaN(z0) && !Double.isNaN(z1)) {
+                            slope = RSParameters.computeSlope(z0, z1, g.getLength());
+                        }
+                    }
+                }
+            } catch (SQLException ex) {
+                // ignore
+            }
+            // Day
+            ld = getRailEmissionFromResultSet(rs, "D", slope);
+
+            // Evening
+            le = getRailEmissionFromResultSet(rs, "E", slope);
+
+            // Night
+            ln = getRailEmissionFromResultSet(rs, "N", slope);
 
         }
 

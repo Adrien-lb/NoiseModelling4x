@@ -2,6 +2,7 @@ package org.noise_planet.noisemodelling.emission.jdbc;
 
 import org.h2gis.api.EmptyProgressVisitor;
 import org.h2gis.functions.factory.H2GISDBFactory;
+import org.h2gis.functions.io.dbf.DBFRead;
 import org.h2gis.functions.io.shp.SHPRead;
 import org.h2gis.utilities.JDBCUtilities;
 import org.h2gis.utilities.SFSUtilities;
@@ -82,6 +83,33 @@ public class LDENPointNoiseMapFactoryTest {
                 assertTrue(rs.next());
                 double[] leq = process.getEmissionFromResultSet(rs, "D", 10);
                 assertEquals(77.67 , leq[leq.length - 1] , 0.1);
+            }
+        }
+    }
+
+    @Test
+    public void testRailNoiseEmission() throws SQLException, IOException {// TODO ADRIEN
+        DBFRead.read(connection, LDENPointNoiseMapFactoryTest.class.getResource("rail_traffic.dbf").getFile());
+        SHPRead.readShape(connection, LDENPointNoiseMapFactoryTest.class.getResource("rail_geom.shp").getFile());
+
+        LDENConfig ldenConfig = new LDENConfig(LDENConfig.INPUT_MODE.INPUT_MODE_RAIL_FLOW);
+        ldenConfig.setCoefficientVersion(1);
+        LDENPropagationProcessData process = new LDENPropagationProcessData(null, ldenConfig);
+        try(Statement st = connection.createStatement()) {
+            double train_speed = 160;
+            int train_per_hour = 1;
+            String Train = "Corail";
+            double Pr = 1250;
+            StringBuilder qry = new StringBuilder("SELECT ");
+            qry.append(Pr).append(" PR, ");
+            qry.append(Train).append(" NAME, '");
+            qry.append(train_per_hour).append("' Q, '");
+            qry.append(train_speed).append("' SPEED, '");
+
+            try(ResultSet rs = st.executeQuery(qry.toString())) {
+                assertTrue(rs.next());
+                double[] leq = process.getEmissionFromResultSet(rs, "D", 0);
+                assertEquals(84.5078 , leq[leq.length - 1] , 0.1);
             }
         }
     }

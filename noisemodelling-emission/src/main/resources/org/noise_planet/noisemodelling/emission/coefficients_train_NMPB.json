@@ -1,6 +1,6 @@
 {
   "Train": {
-    "TGV_00_100_TGV_SE_TGV_38_La_Poste": {
+    "TGV00_38_100": {
       "length": 200.19,
       "braking": "Bogies porteurs : disques - Bogies moteurs : semelle composite",
       "Vmax": 300,
@@ -75,7 +75,7 @@
         5000
       ]
     },
-    "TGV200_600_700_TGV_Duplex_TGV800_4700_TGV_EuroDuplex": {
+    "TGV_D": {
       "length": 200.19,
       "braking": "Bogies porteurs : disques - Bogies moteurs : semelle composite",
       "Vmax": 320,
@@ -150,7 +150,7 @@
         5000
       ]
     },
-    "TGV300_400_TGV_A": {
+    "TGV_A": {
       "length": 237.59,
       "braking": "Bogies porteurs : disques - Bogies moteurs : semelle composite",
       "Vmax": 300,
@@ -225,7 +225,7 @@
         5000
       ]
     },
-    "TGV3200_TGV_TMST_Eurostar": {
+    "TGV_TM": {
       "length": 393.72,
       "braking": "Bogies porteurs : disques - Bogies moteurs : semelle composite",
       "Vmax": 300,
@@ -300,7 +300,7 @@
         5000
       ]
     },
-    "TGV4300_TGV_Thalys_PBKA": {
+    "TGV4300": {
       "length": 200.19,
       "braking": "Bogies porteurs : disques - Bogies moteurs : semelle composite",
       "Vmax": 300,
@@ -375,7 +375,7 @@
         5000
       ]
     },
-    "TGV500_4500_TGV_R_TGV_Thalys_PBA_TGV4400_TGV_POS": {
+    "TGV_R": {
       "length": 200.19,
       "braking": "Bogies porteurs : disques - Bogies moteurs : semelle composite",
       "Vmax": 320,
@@ -450,7 +450,7 @@
         5000
       ]
     },
-    "A1A_A1A68000_68500": {
+    "A1A68000": {
       "length": 18.01,
       "braking": "Semelle fonte",
       "Vmax": 130,
@@ -600,7 +600,7 @@
         5000
       ]
     },
-    "BB16000_16100": {
+    "BB16000": {
       "length": 16.68,
       "braking": "Semelle fonte",
       "Vmax": 160,
@@ -675,7 +675,7 @@
         5000
       ]
     },
-    "BB16500_16600_16700": {
+    "BB16500": {
       "length": 14.4,
       "braking": "Semelle fonte",
       "Vmax": 140,
@@ -750,7 +750,7 @@
         5000
       ]
     },
-    "BB17000_17100": {
+    "BB17000": {
       "length": 14.94,
       "braking": "Semelle composite",
       "Vmax": 140,
@@ -825,7 +825,7 @@
         5000
       ]
     },
-    "BB22200_22300_22400": {
+    "BB22200": {
       "length": 17.48,
       "braking": "Semelle frittee",
       "Vmax": 160,
@@ -900,7 +900,7 @@
         5000
       ]
     },
-    "BB25100_25200": {
+    "BB25100": {
       "length": 16.7,
       "braking": "Semelle fonte",
       "Vmax": 160,
@@ -975,7 +975,7 @@
         5000
       ]
     },
-    "BB25500_25600": {
+    "BB25500": {
       "length": 14.7,
       "braking": "Semelle fonte",
       "Vmax": 140,
@@ -1050,7 +1050,7 @@
         5000
       ]
     },
-    "BB26000_26100_26200": {
+    "BB26000": {
       "length": 17.71,
       "braking": "Semelle frittee",
       "Vmax": 200,
@@ -1125,7 +1125,7 @@
         5000
       ]
     },
-    "BB27000_27100": {
+    "BB27000": {
       "length": 19.72,
       "braking": "Semelle composite",
       "Vmax": 140,
@@ -1200,7 +1200,7 @@
         5000
       ]
     },
-    "BB36000_36200_36300": {
+    "BB36000": {
       "length": 19.11,
       "braking": "Disque + semelle fonte",
       "Vmax": 200,
@@ -1350,7 +1350,7 @@
         5000
       ]
     },
-    "BB61000_Vossloh": {
+    "BB61000": {
       "length": 14.7,
       "braking": "??",
       "Vmax": 100,
@@ -1425,7 +1425,7 @@
         5000
       ]
     },
-    "BB62400_62500": {
+    "BB62400": {
       "length": 12.52,
       "braking": "Semelle fonte",
       "Vmax": 80,
@@ -1500,7 +1500,7 @@
         5000
       ]
     },
-    "BB63000_63100_63200_63400_63500_64000_64700": {
+    "BB63000": {
       "length": 14.68,
       "braking": "Semelle fonte",
       "Vmax": 90,
@@ -1575,7 +1575,7 @@
         5000
       ]
     },
-    "BB66000_66100_66200_66300_66500_66700": {
+    "BB66000": {
       "length": 14.89,
       "braking": "Semelle fonte",
       "Vmax": 120,
@@ -1725,7 +1725,7 @@
         5000
       ]
     },
-    "BB67000_67100_67200_67300_67500_67600": {
+    "BB67000": {
       "length": 17.09,
       "braking": "Semelle fonte",
       "Vmax": 140,
@@ -1875,7 +1875,7 @@
         5000
       ]
     },
-    "BB7200_7300_7400": {
+    "BB7200": {
       "length": 17.48,
       "braking": "Semelle frittee",
       "Vmax": 160,
@@ -2025,7 +2025,7 @@
         5000
       ]
     },
-    "BB8100_8200": {
+    "BB8100": {
       "length": 12.93,
       "braking": "Semelle fonte",
       "Vmax": 105,
@@ -2100,7 +2100,7 @@
         5000
       ]
     },
-    "BB8500_8600_8700": {
+    "BB8500": {
       "length": 14.9,
       "braking": "Semelle fonte",
       "Vmax": 140,
@@ -2250,7 +2250,7 @@
         5000
       ]
     },
-    "BB9200_9300_9700": {
+    "BB9200": {
       "length": 16.2,
       "braking": "Semelle fonte",
       "Vmax": 160,
@@ -2550,7 +2550,7 @@
         5000
       ]
     },
-    "CC72000_72100": {
+    "CC72000": {
       "length": 20.19,
       "braking": "Semelle composite",
       "Vmax": 160,
@@ -2700,7 +2700,7 @@
         5000
       ]
     },
-    "B81500_quadricaisse_AGC_bimode": {
+    "B81500_4": {
       "length": 72.8,
       "braking": "Disque",
       "Vmax": 160,
@@ -2775,7 +2775,7 @@
         5000
       ]
     },
-    "B81500_tricaisse_AGC_bimode": {
+    "B81500_3": {
       "length": 57.4,
       "braking": "Disque",
       "Vmax": 160,
@@ -2850,7 +2850,7 @@
         5000
       ]
     },
-    "X2100_92100_92200": {
+    "X2100": {
       "length": 22.4,
       "braking": "Semelle fonte",
       "Vmax": 140,
@@ -3075,7 +3075,7 @@
         5000
       ]
     },
-    "X2800_2900": {
+    "X2800": {
       "length": 27.73,
       "braking": "Semelle fonte",
       "Vmax": 120,
@@ -3150,7 +3150,7 @@
         5000
       ]
     },
-    "X4300_4400_4500_4600_4700_4800_modernisees": {
+    "X4300_mod": {
       "length": 43.48,
       "braking": "Semelle fonte",
       "Vmax": 140,
@@ -3225,7 +3225,7 @@
         5000
       ]
     },
-    "X4300_4400_4500_4600_4700_4800": {
+    "X4300": {
       "length": 42.48,
       "braking": "Semelle fonte",
       "Vmax": 120,
@@ -3375,7 +3375,7 @@
         5000
       ]
     },
-    "X72500_bicaisses_X_TER": {
+    "X72500_Bi": {
       "length": 52.9,
       "braking": "Disque + semelle composite",
       "Vmax": 160,
@@ -3450,7 +3450,7 @@
         5000
       ]
     },
-    "X72500_72700_tricaisse_XTER": {
+    "X72500_3": {
       "length": 78.5,
       "braking": "Disue + Semelle composite",
       "Vmax": 160,
@@ -3525,7 +3525,7 @@
         5000
       ]
     },
-    "X73500_73600_73700_73800_73900_A_TER": {
+    "X73500": {
       "length": 28.9,
       "braking": "Disque",
       "Vmax": 140,
@@ -3600,7 +3600,7 @@
         5000
       ]
     },
-    "X76500_tricaisse_AGC": {
+    "X76500": {
       "length": 57.4,
       "braking": "Disque",
       "Vmax": 160,
@@ -3750,7 +3750,7 @@
         5000
       ]
     },
-    "Z20500_pentacaisse_freinee_composite_Z2N": {
+    "Z20500_5_FC": {
       "length": 129.4,
       "braking": "Bogie Moteur : semelle fritteeBogie Porteur : disque+ semelle composite",
       "Vmax": 140,
@@ -3825,7 +3825,7 @@
         5000
       ]
     },
-    "Z20500_20800_20900_21000_92000_quadricaisses_Z2N": {
+    "Z20500_4_FC": {
       "length": 103,
       "braking": "Bogie Moteur : semelle fritteeBogie Porteur : disque+ semelle composite",
       "Vmax": 140,
@@ -3900,7 +3900,7 @@
         5000
       ]
     },
-    "Z21500_ZTER": {
+    "Z21500": {
       "length": 79.2,
       "braking": "Disque",
       "Vmax": 200,
@@ -3975,7 +3975,7 @@
         5000
       ]
     },
-    "Z22500_22600_pentacaisse_MI2N": {
+    "Z22500_5_FC": {
       "length": 112,
       "braking": "Disque + Semelle composite",
       "Vmax": 140,
@@ -4050,7 +4050,7 @@
         5000
       ]
     },
-    "Z22500_22600_quadricaisses_MI2N": {
+    "Z22500_4_FC": {
       "length": 89.9,
       "braking": "Disque + Semelle composite",
       "Vmax": 140,
@@ -4125,7 +4125,7 @@
         5000
       ]
     },
-    "Z23500_TER_2N_PG": {
+    "Z23500": {
       "length": 52.5,
       "braking": "Disque + Semelle composite",
       "Vmax": 140,
@@ -4200,7 +4200,7 @@
         5000
       ]
     },
-    "Z24500_26500_pentacaisse_TER_2N_NG": {
+    "Z24500_5": {
       "length": 133.9,
       "braking": "Disque + Semelle composite",
       "Vmax": 160,
@@ -4275,7 +4275,7 @@
         5000
       ]
     },
-    "Z24500_26500_quadricaisse_TER_2N_NG": {
+    "Z24500_4": {
       "length": 107.5,
       "braking": "Disque + Semelle composite",
       "Vmax": 160,
@@ -4350,7 +4350,7 @@
         5000
       ]
     },
-    "Z27500_quadricaisses_ZGC": {
+    "Z27500_4": {
       "length": 72.8,
       "braking": "Disque",
       "Vmax": 160,
@@ -4425,7 +4425,7 @@
         5000
       ]
     },
-    "Z27500_tricaisses_ZGC": {
+    "Z27500_3": {
       "length": 57.4,
       "braking": "Disque",
       "Vmax": 160,
@@ -4500,7 +4500,7 @@
         5000
       ]
     },
-    "Z5300_5400": {
+    "Z5300": {
       "length": 103.55,
       "braking": "Semelle composite",
       "Vmax": 120,
@@ -4575,7 +4575,7 @@
         5000
       ]
     },
-    "Z5600_5700_hexacaisses": {
+    "Z5600_6": {
       "length": 147.32,
       "braking": "Bogie Moteur : semelle fritteeBogie Porteur : disque + Semelle fonte",
       "Vmax": 140,
@@ -4650,7 +4650,7 @@
         5000
       ]
     },
-    "Z5600_5700_pentacaisses": {
+    "Z5600_5": {
       "length": 123.04,
       "braking": "Bogie Moteur : semelle fritteeBogie Porteur : disque + Semelle fonte",
       "Vmax": 140,
@@ -4725,7 +4725,7 @@
         5000
       ]
     },
-    "Z5600_5700_quadricaisses": {
+    "Z5600_4": {
       "length": 98.76,
       "braking": "Bogie Moteur : semelle fritteeBogie Porteur : disque + Semelle fonte",
       "Vmax": 140,
@@ -4950,7 +4950,7 @@
         5000
       ]
     },
-    "Z6400_6500": {
+    "Z6400": {
       "length": 92.43,
       "braking": "Semelle composite",
       "Vmax": 120,
@@ -5025,7 +5025,7 @@
         5000
       ]
     },
-    "Z7100_bicaisses": {
+    "Z7100_2": {
       "length": 45.36,
       "braking": "Semelle fonte",
       "Vmax": 130,
@@ -5100,7 +5100,7 @@
         5000
       ]
     },
-    "Z7100_quadricaisses": {
+    "Z7100_4": {
       "length": 90.72,
       "braking": "Semelle fonte",
       "Vmax": 130,
@@ -5175,7 +5175,7 @@
         5000
       ]
     },
-    "Z7300_7500_97300_9500_9600_11500_Z2": {
+    "Z7300": {
       "length": 50.2,
       "braking": "Bogie Moteur : semelle fritteeBogie Porteur : disque",
       "Vmax": 160,
@@ -5250,7 +5250,7 @@
         5000
       ]
     },
-    "Z8100_8200_MI79": {
+    "Z8100": {
       "length": 104.05,
       "braking": "Semelle composite",
       "Vmax": 140,
@@ -5325,7 +5325,7 @@
         5000
       ]
     },
-    "Z8800_8900_Z2N": {
+    "Z8800_FC": {
       "length": 98.76,
       "braking": "Bogie Moteur : semelle fritteeBogie Porteur : disque+ semelle composite",
       "Vmax": 140,
@@ -5400,7 +5400,7 @@
         5000
       ]
     },
-    "U25500_Tram_Train_Avento": {
+    "U25500": {
       "length": 36.678,
       "braking": "Disque",
       "Vmax": 100,
@@ -5475,7 +5475,7 @@
         5000
       ]
     },
-    "Voitures_V2N": {
+    "V2N": {
       "length": 26.4,
       "braking": "Disque",
       "Vmax": 160,
@@ -5550,7 +5550,7 @@
         5000
       ]
     },
-    "Voitures_VB2N": {
+    "VB2N": {
       "length": 24.28,
       "braking": "Disque + Semelle fonte",
       "Vmax": 120,
@@ -5625,7 +5625,7 @@
         5000
       ]
     },
-    "Voitures_VO2N_VR2N": {
+    "VO2N_VR2N": {
       "length": 24.78,
       "braking": "Disque + semelle fonte",
       "Vmax": 140,
@@ -5700,7 +5700,7 @@
         5000
       ]
     },
-    "Voitures_freinees_composite_LUNEA_VSOE": {
+    "CORAIL_FC": {
       "length": 26.4,
       "braking": "Semelle composite",
       "Vmax": 200,
@@ -5775,7 +5775,7 @@
         5000
       ]
     },
-    "Voitures_freinees_fonte_CORAIL_VU_VTU_USI_VSE": {
+    "Corail_FF": {
       "length": 26.4,
       "braking": "Semelle fonte",
       "Vmax": 200,
@@ -5850,7 +5850,7 @@
         5000
       ]
     },
-    "Rame_RIB_RIO_RRR": {
+    "RIB_RIO_RRR": {
       "length": 99,
       "braking": "Disque + semelle frittee ou composite",
       "Vmax": 140,
@@ -5925,7 +5925,7 @@
         5000
       ]
     },
-    "Wagon_FRET_PLAT_freine_composite_sans_chargement": {
+    "Wagon_plat_FC": {
       "length": 17,
       "braking": "Semelle composite",
       "Vmax": 120,
@@ -6000,7 +6000,7 @@
         5000
       ]
     },
-    "Wagon_FRET_PLAT_freine_fonte_sans_chargement": {
+    "Wagon_plat_FF": {
       "length": 17,
       "braking": "Semelle fonte",
       "Vmax": 120,
@@ -6075,7 +6075,7 @@
         5000
       ]
     },
-    "Wagon_FRET_freine_composite": {
+    "Wagon_FC": {
       "length": 17,
       "braking": "Semelle composite",
       "Vmax": 120,
@@ -6150,7 +6150,7 @@
         5000
       ]
     },
-    "Wagon_FRET_freine_fonte": {
+    "Wagon_FF": {
       "length": 17,
       "braking": "Semelle fonte",
       "Vmax": 120,

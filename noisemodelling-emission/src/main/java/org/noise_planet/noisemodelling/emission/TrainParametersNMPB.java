@@ -5,7 +5,7 @@ public class TrainParametersNMPB {
     private double vehPerHour;
 
     private double speed;
-    private double speedRef;
+    private int numVeh;
     private int height;
     private final int FreqParam;
 
@@ -28,11 +28,11 @@ public class TrainParametersNMPB {
     public void setSpeed(double speed) {
         this.speed = speed;
     }
-    public void setSpeedRef(double speedRef) {
-        this.speedRef = speedRef;
-    }
     public void setVehPerHour(double vehPerHour) {
         this.vehPerHour = vehPerHour;
+    }
+    public void setNumVeh(int numVeh) {
+        this.numVeh = numVeh;
     }
     public void setHeight(int height) {
         this.height = height;
@@ -45,11 +45,11 @@ public class TrainParametersNMPB {
     public double getVehPerHour() {
         return vehPerHour;
     }
+    public int getNumVeh() {
+        return numVeh;
+    }
     public double getSpeed() {
         return speed;
-    }
-    public double getSpeedRef() {
-        return speedRef;
     }
     public double getHeight() {
         return height;
@@ -58,13 +58,13 @@ public class TrainParametersNMPB {
         return FreqParam;
     }
 
-    public TrainParametersNMPB(String typeTrain, double speed, double speedRef, double vehPerHour, int height,int freqParam) {
+    public TrainParametersNMPB(String typeTrain, double speed,  double vehPerHour, int numVeh,int height,int freqParam) {
 
        setTypeTrain(typeTrain);
-       this.vehPerHour = Math.max(0, vehPerHour);
        this.FreqParam = Math.max(0, freqParam);
        setSpeed(speed);
-       setSpeedRef(speedRef);
        setHeight(height);
+       setVehPerHour(vehPerHour);
+       setNumVeh(numVeh);
     }
 }
