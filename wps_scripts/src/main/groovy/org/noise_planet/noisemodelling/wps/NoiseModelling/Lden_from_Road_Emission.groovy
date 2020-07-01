@@ -90,10 +90,10 @@ inputs = [
                                      '</br> </br> <b> This table can be generated from the WPS Block "Import_Asc_File". </b>',
                              min: 0, max: 1, type: String.class],
         tableGroundAbs      : [name: 'Ground absorption table name', title: 'Ground absorption table name',
-                             description: '<b>Name of the surface/ground acoustic absorption table.</b></br>  ' +
-                                     '</br>The table shall contain : </br> ' +
-                                     '- <b> THE_GEOM </b> : the 2D geometry of the sources (POLYGON or MULTIPOLYGON).</br> ' +
-                                     '- <b> G </b> : the acoustic absorption of a ground (FLOAT between 0 : very hard and 1 : very soft).</br> ',
+                               description: '<b>Name of the surface/ground acoustic absorption table.</b></br>  ' +
+                                       '</br>The table shall contain : </br> ' +
+                                       '- <b> THE_GEOM </b> : the 2D geometry of the sources (POLYGON or MULTIPOLYGON).</br> ' +
+                                       '- <b> G </b> : the acoustic absorption of a ground (FLOAT between 0 : very hard and 1 : very soft).</br> ',
                                min: 0, max: 1, type: String.class],
         paramWallAlpha    : [name: 'wallAlpha', title: 'Wall absorption coefficient',
                              description: 'Wall absorption coefficient (FLOAT between 0 : fully absorbent and strictly less than 1 : fully reflective)' +
@@ -102,11 +102,11 @@ inputs = [
         confReflOrder     : [name: 'Order of reflexion', title: 'Order of reflexion',
                              description: 'Maximum number of reflections to be taken into account (INTEGER).' +
                                      '</br> </br> <b> Default value : 1 </b>' ,
-                                     min: 0, max: 1, type: String.class],
+                             min: 0, max: 1, type: String.class],
         confMaxSrcDist    : [name: 'Maximum source-receiver distance', title: 'Maximum source-receiver distance',
                              description: 'Maximum distance between source and receiver (FLOAT, in meters).' +
-                                '</br> </br> <b> Default value : 150 </b>',
-                                min: 0, max: 1, type: String.class],
+                                     '</br> </br> <b> Default value : 150 </b>',
+                             min: 0, max: 1, type: String.class],
         confMaxReflDist   : [name: 'Maximum source-reflexion distance', title: 'Maximum source-reflexion distance',
                              description: 'Maximum reflection distance from the source (FLOAT, in meters).' +
                                      '</br> </br> <b> Default value : 50 </b>',

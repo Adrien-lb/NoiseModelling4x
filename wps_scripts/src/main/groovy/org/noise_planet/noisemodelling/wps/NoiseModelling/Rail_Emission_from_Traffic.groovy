@@ -16,7 +16,7 @@
  * Copyright (C) 2013-2019 Ifsttar and CNRS
  * Copyright (C) 2020 Université Gustave Eiffel and CNRS
  *
- * @Author Pierre Aumond, Université Gustave Eiffel
+ * @Author Adrien LE BELLEC, Université Gustave Eiffel
  */
 
 package org.noise_planet.noisemodelling.wps.NoiseModelling
@@ -51,20 +51,16 @@ title = 'Compute rail emission noise map from rail_traffic table AND rail_geom t
 description = 'Compute Rail Emission Noise Map from Day Evening Night traffic flow rate and speed estimates (specific format, see input details). ' +
         '</br> </br> <b> The output table is called : LW_RAIL </b> '
 
-inputs = [tableRailTraffic: [name: 'Rail traffic table name', title: 'Roads table name', description: "<b>Name of the Roads table.</b>  </br>  " +
+inputs = [tableRailTraffic: [name: 'Rail traffic table name', title: 'Rail table name', description: "<b>Name of the Rail traffic table.</b>  </br>  " +
         "<br>  This function recognize the following columns (* mandatory) : </br><ul>" +
-        "<li><b> PK </b>* : an identifier. It shall be a primary key (INTEGER, PRIMARY KEY)</li>" +
-        "<li><b> LV_D </b><b>TV_E </b><b> TV_N </b> : Hourly average light vehicle count (6-18h)(18-22h)(22-6h) (DOUBLE)</li>" +
-        "<li><b> MV_D </b><b>MV_E </b><b>MV_N </b> : Hourly average medium heavy vehicles, delivery vans > 3.5 tons,  buses, touring cars, etc. with two axles and twin tyre mounting on rear axle count (6-18h)(18-22h)(22-6h) (DOUBLE)</li>" +
-        "<li><b> HGV_D </b><b> HGV_E </b><b> HGV_N </b> :  Hourly average heavy duty vehicles, touring cars, buses, with three or more axles (6-18h)(18-22h)(22-6h) (DOUBLE)</li>" +
-        "<li><b> WAV_D </b><b> WAV_E </b><b> WAV_N </b> :  Hourly average mopeds, tricycles or quads &le; 50 cc count (6-18h)(18-22h)(22-6h) (DOUBLE)</li>" +
-        "<li><b> WBV_D </b><b> WBV_E </b><b> WBV_N </b> :  Hourly average motorcycles, tricycles or quads > 50 cc count (6-18h)(18-22h)(22-6h) (DOUBLE)</li>" +
-        "<li><b> LV_SPD_D </b><b> LV_SPD_E </b><b>LV_SPD_N </b> :  Hourly average light vehicle speed (6-18h)(18-22h)(22-6h) (DOUBLE)</li>" +
-        "<li><b> MV_SPD_D </b><b> MV_SPD_E </b><b>MV_SPD_N </b> :  Hourly average medium heavy vehicles speed (6-18h)(18-22h)(22-6h) (DOUBLE)</li>" +
-        "<li><b> HGV_SPD_D </b><b> HGV_SPD_E </b><b> HGV_SPD_N </b> :  Hourly average heavy duty vehicles speed (6-18h)(18-22h)(22-6h) (DOUBLE)</li>" +
-        "<li><b> WAV_SPD_D </b><b> WAV_SPD_E </b><b> WAV_SPD_N </b> :  Hourly average mopeds, tricycles or quads &le; 50 cc speed (6-18h)(18-22h)(22-6h) (DOUBLE)</li>" +
-        "<li><b> WBV_SPD_D </b><b> WBV_SPD_E </b><b> WBV_SPD_N </b> :  Hourly average motorcycles, tricycles or quads > 50 cc speed (6-18h)(18-22h)(22-6h) (DOUBLE)</li>" , type: String.class],
-          tableRailGeom: [name: 'Roads table name', title: 'Roads table name', description: "<b>Name of the Roads table.</b>  </br>  " +
+        "<li><b> IDTRAFIC </b>* : an identifier. It shall be a primary key (STRING, PRIMARY KEY)</li>" +
+        "<li><b> IDTRONCON </b>* : an identifier. It shall be a primary key (STRING, PR)</li>" +
+        "<li><b> ENGMOTEUR </b>* : Motor vehicle (STRING)/li>" +
+        "<li><b> TYPVOITWAG </b>* : Wagon type (STRING)</li>" +
+        "<li><b> TYPVOITWAG </b>* : Number of Wagon (DOUBLE)</li>" +
+        "<li><b> VMAX </b>* : Maximum Train speed (DOUBLE) </li>" +
+        "<li><b> TDIURNE </b><b> TSOIR </b><b> TNUIT </b> : Hourly average train count (6-18h)(18-22h)(22-6h) (DOUBLE)</li>", type: String.class],
+          tableRailGeom: [name: 'Rail Geom table name', title: 'Rail table name', description: "<b>Name of the Rail Geom table.</b>  </br>  " +
                   "<br>  This function recognize the following columns (* mandatory) : </br><ul>" +
                   "<li><b> PK </b>* : an identifier. It shall be a primary key (INTEGER, PRIMARY KEY)</li>" , type: String.class]]
 
@@ -125,16 +121,16 @@ def exec(Connection connection, input) {
     // Get every inputs
     // -------------------
 
-    String sources_table_name = input['tableRailGeom'] as String
+    String sources_geom_table_name = input['tableRailGeom'] as String
     // do it case-insensitive
-    sources_table_name = sources_table_name.toUpperCase()
+    sources_geom_table_name = sources_geom_table_name.toUpperCase()
 
-    String sources_table_name = input['tableRailTraffic'] as String
+    String sources_table_traffic_name = input['tableRailTraffic'] as String
     // do it case-insensitive
-    sources_table_name = sources_table_name.toUpperCase()
+    sources_table_traffic_name = sources_table_traffic_name.toUpperCase()
 
     //Get the geometry field of the source table
-    TableLocation sourceTableIdentifier = TableLocation.parse(sources_table_name)
+    TableLocation sourceTableIdentifier = TableLocation.parse(sources_geom_table_name)
     List<String> geomFields = SFSUtilities.getGeometryFields(connection, sourceTableIdentifier)
     if (geomFields.isEmpty()) {
         resultString = String.format("The table %s does not exists or does not contain a geometry field", sourceTableIdentifier)
@@ -142,28 +138,41 @@ def exec(Connection connection, input) {
     }
 
     //Get the primary key field of the source table
-    int pkIndex = JDBCUtilities.getIntegerPrimaryKey(connection, sources_table_name)
+    /*int pkIndex = JDBCUtilities.getIntegerPrimaryKey(connection, sources_table_name)
     if (pkIndex < 1) {
         resultString = String.format("Source table %s does not contain a primary key", sourceTableIdentifier)
         throw new IllegalArgumentException(String.format("Source table %s does not contain a primary key", sourceTableIdentifier))
-    }
+    }*/
 
 
     // -------------------
-    // Init table LW_ROADS
+    // Init table LW_RAIL
     // -------------------
 
     // Create a sql connection to interact with the database in SQL
     Sql sql = new Sql(connection)
 
     // drop table LW_ROADS if exists and the create and prepare the table
-    sql.execute("drop table if exists LW_RAIL;")
-    sql.execute("create table LW_ROADS (pk integer, the_geom Geometry, " +
+    sql.execute("drop table if exists LW_RAIL_0;")
+    sql.execute("create table LW_RAIL_0 (pr varchar, the_geom geometry," +
             "LWD63 double precision, LWD125 double precision, LWD250 double precision, LWD500 double precision, LWD1000 double precision, LWD2000 double precision, LWD4000 double precision, LWD8000 double precision," +
             "LWE63 double precision, LWE125 double precision, LWE250 double precision, LWE500 double precision, LWE1000 double precision, LWE2000 double precision, LWE4000 double precision, LWE8000 double precision," +
             "LWN63 double precision, LWN125 double precision, LWN250 double precision, LWN500 double precision, LWN1000 double precision, LWN2000 double precision, LWN4000 double precision, LWN8000 double precision);")
 
-    def qry = 'INSERT INTO LW_ROADS(pk,the_geom, ' +
+    def qry00 = 'INSERT INTO LW_RAIL_0(pr, the_geom,' +
+            'LWD63, LWD125, LWD250, LWD500, LWD1000,LWD2000, LWD4000, LWD8000,' +
+            'LWE63, LWE125, LWE250, LWE500, LWE1000,LWE2000, LWE4000, LWE8000,' +
+            'LWN63, LWN125, LWN250, LWN500, LWN1000,LWN2000, LWN4000, LWN8000) ' +
+            'VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);'
+
+
+    sql.execute("drop table if exists LW_RAIL_50;")
+    sql.execute("create table LW_RAIL_50 (pr varchar, the_geom geometry," +
+            "LWD63 double precision, LWD125 double precision, LWD250 double precision, LWD500 double precision, LWD1000 double precision, LWD2000 double precision, LWD4000 double precision, LWD8000 double precision," +
+            "LWE63 double precision, LWE125 double precision, LWE250 double precision, LWE500 double precision, LWE1000 double precision, LWE2000 double precision, LWE4000 double precision, LWE8000 double precision," +
+            "LWN63 double precision, LWN125 double precision, LWN250 double precision, LWN500 double precision, LWN1000 double precision, LWN2000 double precision, LWN4000 double precision, LWN8000 double precision);")
+
+    def qry50 = 'INSERT INTO LW_RAIL_50(pr, the_geom,' +
             'LWD63, LWD125, LWD250, LWD500, LWD1000,LWD2000, LWD4000, LWD8000,' +
             'LWE63, LWE125, LWE250, LWE500, LWE1000,LWE2000, LWE4000, LWE8000,' +
             'LWN63, LWN125, LWN250, LWN500, LWN1000,LWN2000, LWN4000, LWN8000) ' +
@@ -175,60 +184,101 @@ def exec(Connection connection, input) {
     // --------------------------------------
 
     // Get Class to compute LW
-    LDENConfig ldenConfig = new LDENConfig(LDENConfig.INPUT_MODE.INPUT_MODE_TRAFFIC_FLOW)
-    //TODO read DEM table for road slope impact on noise emission
+    LDENConfig ldenConfig = new LDENConfig(LDENConfig.INPUT_MODE.INPUT_MODE_RAIL_FLOW)
     LDENPropagationProcessData ldenData =  new LDENPropagationProcessData(null, ldenConfig)
 
 
-    // Get size of the table (number of road segments
-    PreparedStatement st = connection.prepareStatement("SELECT COUNT(*) AS total FROM " + sources_table_name)
-    ResultSet rs1 = st.executeQuery().unwrap(ResultSet.class)
-    int nbRoads = 0
+    // Get size of the table (number of rail segments
+    PreparedStatement st = connection.prepareStatement("SELECT COUNT(*) AS total FROM " + sources_geom_table_name)
+    SpatialResultSet rs1 = st.executeQuery().unwrap(SpatialResultSet.class)
+    int nbSegment = 0
     while (rs1.next()) {
-        nbRoads = rs1.getInt("total")
-        System.println('The table Roads has ' + nbRoads + ' road segments.')
+        nbSegment = rs1.getInt("total")
+        System.println('The table Rail Geom has ' + nbSegment + ' rail segments.')
     }
-    //System.println('The table Roads has ' + nbRoads + ' road segments.')
+    //System.println('The table Traffic has ' + nbRoads + ' rail segments.')
     int k = 0
     int currentVal = 0
-    sql.withBatch(100, qry) { ps ->
-        st = connection.prepareStatement("SELECT * FROM " + sources_table_name)
-        SpatialResultSet rs = st.executeQuery().unwrap(SpatialResultSet.class)
 
-        while (rs.next()) {
-            k++
-            currentVal = tools.invokeMethod("ProgressBar", [Math.round(10*k/nbRoads).toInteger(),currentVal])
-            //System.println(rs)
-            Geometry geo = rs.getGeometry()
+    st = connection.prepareStatement("SELECT * FROM " + sources_geom_table_name)
+    SpatialResultSet rs = st.executeQuery().unwrap(SpatialResultSet.class)
+    while (rs.next()) {
+        double[][] results0cm = new double[4][PropagationProcessPathData.third_freq_lvl.size()];
+        double[][] results50cm = new double[4][PropagationProcessPathData.third_freq_lvl.size()];
+        k++
+        currentVal = tools.invokeMethod("ProgressBar", [Math.round(10*k/nbSegment).toInteger(),currentVal])
+        //System.println(rs)
+        Geometry geo = rs.getGeometry()
+        String PR = rs.getString("IDTRONCON")
+        st = connection.prepareStatement("SELECT a.*, b.* FROM " + sources_table_traffic_name + " a, " + sources_geom_table_name + " b WHERE a.IDTRONCON = '" + PR.toString() + "' AND b.IDTRONCON = '" + PR.toString() + "'")
+        SpatialResultSet rs2 = st.executeQuery().unwrap(SpatialResultSet.class)
 
-            // Compute emission sound level for each road segment
-            def results = ldenData.computeLw(rs)
+        while (rs2.next()) {
+            // Compute emission sound level for each rail segment
+            def results0 = ldenData.computeLwTrain(rs2, 0)
+            def results50 = ldenData.computeLwTrain(rs2, 1)
 
-            // fill the LW_ROADS table
-            ps.addBatch(rs.getLong(pkIndex) as Integer, geo as Geometry,
-                    results[0][0] as Double, results[0][1] as Double, results[0][2] as Double,
-                    results[0][3] as Double, results[0][4] as Double, results[0][5] as Double,
-                    results[0][6] as Double, results[0][7] as Double,
-                    results[1][0] as Double, results[1][1] as Double, results[1][2] as Double,
-                    results[1][3] as Double, results[1][4] as Double, results[1][5] as Double,
-                    results[1][6] as Double, results[1][7] as Double,
-                    results[2][0] as Double, results[2][1] as Double, results[2][2] as Double,
-                    results[2][3] as Double, results[2][4] as Double, results[2][5] as Double,
-                    results[2][6] as Double, results[2][7] as Double)
+            for (int idfreq = 0; idfreq < PropagationProcessPathData.third_freq_lvl.size(); idfreq++) {
+                results0cm[0][idfreq]=ComputeRays.wToDba(ComputeRays.dbaToW(results0cm[0][idfreq])+ComputeRays.dbaToW(results0[0][idfreq]));
+                results50cm[0][idfreq]=ComputeRays.wToDba(ComputeRays.dbaToW(results50cm[0][idfreq])+ComputeRays.dbaToW(results50[0][idfreq]));
+                results0cm[1][idfreq]=ComputeRays.wToDba(ComputeRays.dbaToW(results0cm[1][idfreq])+ComputeRays.dbaToW(results0[1][idfreq]));
+                results50cm[1][idfreq]=ComputeRays.wToDba(ComputeRays.dbaToW(results50cm[1][idfreq])+ComputeRays.dbaToW(results50[1][idfreq]));
+                results0cm[2][idfreq]=ComputeRays.wToDba(ComputeRays.dbaToW(results0cm[2][idfreq])+ComputeRays.dbaToW(results0[2][idfreq]));
+                results50cm[2][idfreq]=ComputeRays.wToDba(ComputeRays.dbaToW(results50cm[2][idfreq])+ComputeRays.dbaToW(results50[2][idfreq]));
+                results0cm[3][idfreq]=ComputeRays.wToDba(ComputeRays.dbaToW(results0cm[3][idfreq])+ComputeRays.dbaToW(results0[3][idfreq]));
+                results50cm[3][idfreq]=ComputeRays.wToDba(ComputeRays.dbaToW(results50cm[3][idfreq])+ComputeRays.dbaToW(results50[3][idfreq]));
+            }
+
         }
+
+        // fill the LW_RAIL table
+        sql.withBatch(100, qry00) { ps ->
+            ps.addBatch(PR as String, geo as Geometry,
+                    results0cm[0][10] as Double, results0cm[0][11] as Double, results0cm[0][12] as Double,
+                    results0cm[0][13] as Double, results0cm[0][14] as Double, results0cm[0][15] as Double,
+                    results0cm[0][16] as Double, results0cm[0][17] as Double,
+                    results0cm[1][10] as Double, results0cm[1][11] as Double, results0cm[1][12] as Double,
+                    results0cm[1][13] as Double, results0cm[1][14] as Double, results0cm[1][15] as Double,
+                    results0cm[1][16] as Double, results0cm[1][17] as Double,
+                    results0cm[2][10] as Double, results0cm[2][11] as Double, results0cm[2][12] as Double,
+                    results0cm[2][13] as Double, results0cm[2][14] as Double, results0cm[2][15] as Double,
+                    results0cm[2][16] as Double, results0cm[2][17] as Double)
+        }
+        sql.withBatch(100, qry50) { ps ->
+        ps.addBatch(PR as String, geo as Geometry,
+                results50cm[0][10] as Double, results50cm[0][11] as Double, results50cm[0][12] as Double,
+                results50cm[0][13] as Double, results50cm[0][14] as Double, results50cm[0][15] as Double,
+                results50cm[0][16] as Double, results50cm[0][17] as Double,
+                results50cm[1][10] as Double, results50cm[1][11] as Double, results50cm[1][12] as Double,
+                results50cm[1][13] as Double, results50cm[1][14] as Double, results50cm[1][15] as Double,
+                results50cm[1][16] as Double, results50cm[1][17] as Double,
+                results50cm[2][10] as Double, results50cm[2][11] as Double, results50cm[2][12] as Double,
+                results50cm[2][13] as Double, results50cm[2][14] as Double, results50cm[2][15] as Double,
+                results50cm[2][16] as Double, results50cm[2][17] as Double)
+        }
+
     }
 
-    // Add Z dimension to the road segments
-    sql.execute("UPDATE LW_ROADS SET THE_GEOM = ST_UPDATEZ(The_geom,0.05);")
-    // Add primary key to the road table
-    sql.execute("ALTER TABLE LW_ROADS ALTER COLUMN PK INT NOT NULL;")
-    sql.execute("ALTER TABLE LW_ROADS ADD PRIMARY KEY (PK);  ")
+    // Fusion geometry and traffic table
+    //LW_ROADS avec un Pk(string) et il faut y associer la geometry de Rail_Geom qui a le PK(string) aussi
+    // CREATE TABLE LW_ROADS_0 AS SELECT a.THE_GEOM, b.HZ63, b.HZ125, b.HZ... FROM Rail_Geom a, LW b WHERE A.PK_RAIL = b.PK_RAIL;
 
-    resultString = "Calculation Done ! The table LW_ROADS has been created."
+    // Add Z dimension to the road segments
+    sql.execute("UPDATE LW_RAIL_0 SET THE_GEOM = ST_UPDATEZ(The_geom,0.01);")
+    sql.execute("UPDATE LW_RAIL_50 SET THE_GEOM = ST_UPDATEZ(The_geom,0.5);")
+
+    // fusion les deux tables LW_ROADS_0 & LW_ROADS_50 ?
+
+    // Add primary key to the LW table
+    sql.execute("ALTER TABLE  LW_RAIL_0  ADD PK INT AUTO_INCREMENT PRIMARY KEY;")
+    sql.execute("ALTER TABLE  LW_RAIL_50  ADD PK INT AUTO_INCREMENT PRIMARY KEY;")
+
+
+    resultString = "Calculation Done ! The table LW_RAIL_0 and LW_RAIL_50 has been created."
 
     // print to command window
     System.out.println('\nResult : ' + resultString)
-    System.out.println('End : LW_ROADS from Emission')
+    System.out.println('End : LW_RAIL from Emission')
     System.out.println('Duration : ' + TimeCategory.minus(new Date(), start))
 
     // print to WPS Builder

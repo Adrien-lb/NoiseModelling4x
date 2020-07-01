@@ -135,6 +135,19 @@ public class ComputeRays {
         return globlvl;
     }
 
+    public static double sumEnergeticArray(double energeticSum[]) {
+        double globlvl = 0;
+        for (int idfreq = 0; idfreq < energeticSum.length; idfreq++) {
+            if(energeticSum[idfreq]!=0){
+                globlvl += dbaToW(energeticSum[idfreq]);
+            }else if (energeticSum[idfreq]==0){
+                globlvl +=0;
+            }
+        }
+        return wToDba(globlvl);
+    }
+
+
     /**
      * Element wise sum array without any other operations.
      * @param array1 First array

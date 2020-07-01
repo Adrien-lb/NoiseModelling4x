@@ -21,10 +21,12 @@
 package org.noise_planet.noisemodelling.wps
 
 import groovy.sql.Sql
+import org.h2gis.functions.io.dbf.DBFRead
 import org.h2gis.functions.io.shp.SHPRead
 import org.noise_planet.noisemodelling.wps.Import_and_Export.Import_File
 import org.noise_planet.noisemodelling.wps.NoiseModelling.Lday_from_Traffic
 import org.noise_planet.noisemodelling.wps.NoiseModelling.Lden_from_Road_Emission
+import org.noise_planet.noisemodelling.wps.NoiseModelling.Rail_Emission_from_Traffic
 import org.noise_planet.noisemodelling.wps.NoiseModelling.Road_Emission_from_Traffic
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
@@ -180,4 +182,47 @@ class TestNoiseModelling extends JdbcTestCase {
         assertTrue(res.contains("LNIGHT_GEOM"))
         assertTrue(res.contains("LDEN_GEOM"))
     }
+
+    void testLwFromRailEmission() {
+
+        DBFRead.read(connection, TestNoiseModelling.getResource("N_FERROVIAIRE_TRAFIC_003new.dbf").getPath())
+        SHPRead.readShape(connection, TestNoiseModelling.getResource("N_FERROVIAIRE_TRONCON_L_003new.shp").getPath())
+
+        String res = new Rail_Emission_from_Traffic().exec(connection,
+                ["tableRailTraffic": "N_FERROVIAIRE_TRAFIC_003new",
+                 "tableRailGeom": "N_FERROVIAIRE_TRONCON_L_003new"])
+
+        assertTrue(res.contains("LW_RAIL"))
+        //assertTrue(res.contains("LW_RAIL_50"))
+    }
+   /* void testLdenFromRailEmission() {
+
+        SHPRead.readShape(connection, TestNoiseModelling.getResource("Rail_traffic.shp").getPath())
+        dBFRead.readShape(connection, TestNoiseModelling.getResource("Rail_geom.shp").getPath())
+
+        String res = new Rail_Emission_from_Traffic().exec(connection,
+                ["tableRoads": "trafic",
+                 "tableRoads": "rail"])
+
+        res = new Import_File().exec(connection,
+                ["pathFile" : TestNoiseModelling.getResource("buildings.shp").getPath(),
+                 "inputSRID": "2154",
+                 "tableName": "buildings"])
+
+        res = new Import_File().exec(connection,
+                ["pathFile" : TestNoiseModelling.getResource("receivers.shp").getPath(),
+                 "inputSRID": "2154",
+                 "tableName": "receivers"])
+
+
+        res = new Lden_from_Road_Emission().exec(connection,
+                ["tableBuilding"   : "BUILDINGS",
+                 "tableSources"   : "LW_RAIL",
+                 "tableReceivers": "RECEIVERS"])
+
+        assertTrue(res.contains("LDAY_GEOM"))
+        assertTrue(res.contains("LEVENING_GEOM"))
+        assertTrue(res.contains("LNIGHT_GEOM"))
+        assertTrue(res.contains("LDEN_GEOM"))
+    }*/
 }

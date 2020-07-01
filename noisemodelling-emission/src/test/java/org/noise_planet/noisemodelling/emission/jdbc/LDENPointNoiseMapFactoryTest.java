@@ -9,6 +9,8 @@ import org.h2gis.utilities.SFSUtilities;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.locationtech.jts.geom.Geometry;
+import org.noise_planet.noisemodelling.propagation.ComputeRays;
 import org.noise_planet.noisemodelling.propagation.PropagationProcessPathData;
 import org.noise_planet.noisemodelling.propagation.RootProgressVisitor;
 import org.noise_planet.noisemodelling.propagation.jdbc.PointNoiseMap;
@@ -87,32 +89,6 @@ public class LDENPointNoiseMapFactoryTest {
         }
     }
 
-    @Test
-    public void testRailNoiseEmission() throws SQLException, IOException {// TODO ADRIEN
-        DBFRead.read(connection, LDENPointNoiseMapFactoryTest.class.getResource("rail_traffic.dbf").getFile());
-        SHPRead.readShape(connection, LDENPointNoiseMapFactoryTest.class.getResource("rail_geom.shp").getFile());
-
-        LDENConfig ldenConfig = new LDENConfig(LDENConfig.INPUT_MODE.INPUT_MODE_RAIL_FLOW);
-        ldenConfig.setCoefficientVersion(1);
-        LDENPropagationProcessData process = new LDENPropagationProcessData(null, ldenConfig);
-        try(Statement st = connection.createStatement()) {
-            double train_speed = 160;
-            int train_per_hour = 1;
-            String Train = "Corail";
-            double Pr = 1250;
-            StringBuilder qry = new StringBuilder("SELECT ");
-            qry.append(Pr).append(" PR, ");
-            qry.append(Train).append(" NAME, '");
-            qry.append(train_per_hour).append("' Q, '");
-            qry.append(train_speed).append("' SPEED, '");
-
-            try(ResultSet rs = st.executeQuery(qry.toString())) {
-                assertTrue(rs.next());
-                double[] leq = process.getEmissionFromResultSet(rs, "D", 0);
-                assertEquals(84.5078 , leq[leq.length - 1] , 0.1);
-            }
-        }
-    }
 
     @Test
     public void testTableGenerationFromTraffic() throws SQLException, IOException {
@@ -272,5 +248,151 @@ public class LDENPointNoiseMapFactoryTest {
             assertEquals(86, rs.getDouble(9), 2.0);
             assertEquals(83,rs.getDouble(10), 2.0);
         }
+    }
+
+
+    @Test // Test SHORT format Rail DataBase
+    public void testRailNoiseEmission() throws SQLException, IOException {
+
+
+        DBFRead.read(connection, LDENPointNoiseMapFactoryTest.class.getResource("rail_trafficLDEN.dbf").getFile());
+        SHPRead.readShape(connection, LDENPointNoiseMapFactoryTest.class.getResource("rail_geom.shp").getFile());
+
+        LDENConfig ldenConfig = new LDENConfig(LDENConfig.INPUT_MODE.INPUT_MODE_RAIL_FLOW);
+        ldenConfig.setCoefficientVersion(1);
+        LDENPropagationProcessData process = new LDENPropagationProcessData(null, ldenConfig);
+        try(Statement st = connection.createStatement()) {
+
+            st.execute("DROP TABLE IF EXISTS RAIL_TRAFFIC_SPEED;");
+            st.execute("CREATE TABLE RAIL_TRAFFIC_SPEED AS SELECT a.PR, a.Q,  b.SPEED, a.NAME FROM RAIL_TRAFFICLDEN a, RAIL_GEOM b WHERE a.PR=b.PR;") ;
+
+            StringBuilder qry = new StringBuilder("SELECT  Q,  SPEED, NAME FROM RAIL_TRAFFIC_SPEED ");
+
+            try(ResultSet rs = st.executeQuery(qry.toString())) {
+                double[] leqDay=new double[18];
+                while (rs.next()) {
+                    ldenConfig.setTrainHeight(0);
+                    double[] leqDay0 = process.getRailEmissionFromResultSet(rs, "D",  "SHORT");
+                    ldenConfig.setTrainHeight(1);
+                    double[] leqDay50 = process.getRailEmissionFromResultSet(rs, "D",  "SHORT");
+                    double[] leqDay050= ComputeRays.wToDba(ComputeRays.sumArray(ComputeRays.dbaToW(leqDay0),ComputeRays.dbaToW(leqDay50)));
+
+                    leqDay= ComputeRays.wToDba(ComputeRays.sumArray(ComputeRays.dbaToW(leqDay),ComputeRays.dbaToW(leqDay050)));
+
+                }
+                assertEquals( 84.5078 , ComputeRays.sumEnergeticArray(leqDay) , 0.1);
+            }
+        }
+    }
+
+    @Test // Test LDEN SHORT format Rail DataBase
+    public void testRailNoiseEmissionLDEN() throws SQLException, IOException {
+        DBFRead.read(connection, LDENPointNoiseMapFactoryTest.class.getResource("rail_trafficLDEN.dbf").getFile());
+        SHPRead.readShape(connection, LDENPointNoiseMapFactoryTest.class.getResource("rail_geom.shp").getFile());
+
+        LDENConfig ldenConfig = new LDENConfig(LDENConfig.INPUT_MODE.INPUT_MODE_RAIL_FLOW);
+        ldenConfig.setCoefficientVersion(1);
+        LDENPropagationProcessData process = new LDENPropagationProcessData(null, ldenConfig);
+        try(Statement st = connection.createStatement()) {
+            st.execute("DROP TABLE IF EXISTS RAIL_TRAFFIC_SPEED;");
+            st.execute("CREATE TABLE RAIL_TRAFFIC_SPEED AS SELECT a.PR, b.SPEED, a.TDIURNE, a.TSOIR, a.TNUIT, a.NAME FROM RAIL_TRAFFICLDEN a,  RAIL_GEOM b WHERE a.PR=b.PR;") ;
+
+            StringBuilder qry = new StringBuilder("SELECT SPEED, TDIURNE, TSOIR, TNUIT, NAME FROM RAIL_TRAFFIC_SPEED ");
+
+            try(ResultSet rs = st.executeQuery(qry.toString())) {
+                double[] leqDay=new double[18];
+                while (rs.next()) {
+                    ldenConfig.setTrainHeight(0);
+                    double[] leqDay0 = process.getRailEmissionFromResultSet(rs, "D",  "SHORT");
+                    ldenConfig.setTrainHeight(1);
+                    double[] leqDay50 = process.getRailEmissionFromResultSet(rs, "D",  "SHORT");
+                    double[] leqDay050= ComputeRays.wToDba(ComputeRays.sumArray(ComputeRays.dbaToW(leqDay0),ComputeRays.dbaToW(leqDay50)));
+
+                    leqDay= ComputeRays.wToDba(ComputeRays.sumArray(ComputeRays.dbaToW(leqDay),ComputeRays.dbaToW(leqDay050)));
+
+                }
+                assertEquals( 80.8589 , ComputeRays.sumEnergeticArray(leqDay) , 0.1);
+            }
+            try(ResultSet rs = st.executeQuery(qry.toString())) {
+                double[] leqEvening=new double[18];
+                while (rs.next()) {
+                    ldenConfig.setTrainHeight(0);
+                    double[] leqEvening0 = process.getRailEmissionFromResultSet(rs, "E",  "SHORT");
+                    ldenConfig.setTrainHeight(1);
+                    double[] leqEvening50 = process.getRailEmissionFromResultSet(rs, "E",  "SHORT");
+                    double[] leqEvening050= ComputeRays.wToDba(ComputeRays.sumArray(ComputeRays.dbaToW(leqEvening0),ComputeRays.dbaToW(leqEvening50)));
+
+                    leqEvening= ComputeRays.wToDba(ComputeRays.sumArray(ComputeRays.dbaToW(leqEvening),ComputeRays.dbaToW(leqEvening050)));
+                }
+                assertEquals( 77.8486 , ComputeRays.sumEnergeticArray(leqEvening) , 0.1);
+            }
+            try(ResultSet rs = st.executeQuery(qry.toString())) {
+                double[] leqNight=new double[18];
+                while (rs.next()) {
+                    ldenConfig.setTrainHeight(0);
+                    double[] leqNight0 = process.getRailEmissionFromResultSet(rs, "N",  "SHORT");
+                    ldenConfig.setTrainHeight(1);
+                    double[] leqNight50 = process.getRailEmissionFromResultSet(rs, "N",  "SHORT");
+                    double[] leqNight050= ComputeRays.wToDba(ComputeRays.sumArray(ComputeRays.dbaToW(leqNight0),ComputeRays.dbaToW(leqNight50)));
+
+                    leqNight= ComputeRays.wToDba(ComputeRays.sumArray(ComputeRays.dbaToW(leqNight),ComputeRays.dbaToW(leqNight050)));
+                }
+                assertEquals( 19.5424 , ComputeRays.sumEnergeticArray(leqNight) , 0.1); // TODO change value expectd 0 ! wtodb -> 0
+            }
+        }
+    }
+
+    @Test // Test LDEN GEOSTANDARD format Rail DataBase
+    public void testRailNoiseEmissionGEOSTANDARD() throws SQLException, IOException {
+        DBFRead.read(connection, LDENPointNoiseMapFactoryTest.class.getResource("N_FERROVIAIRE_TRAFIC_003new.dbf").getFile());
+        SHPRead.readShape(connection, LDENPointNoiseMapFactoryTest.class.getResource("N_FERROVIAIRE_TRONCON_L_003new.shp").getFile());
+
+        LDENConfig ldenConfig = new LDENConfig(LDENConfig.INPUT_MODE.INPUT_MODE_RAIL_FLOW);
+        ldenConfig.setCoefficientVersion(1);
+        LDENPropagationProcessData process = new LDENPropagationProcessData(null, ldenConfig);
+        try(Statement st = connection.createStatement()) {
+
+            st.execute("DROP TABLE IF EXISTS RAIL_TRAFFIC_SPEED;");
+            st.execute("CREATE TABLE RAIL_TRAFFIC_SPEED AS SELECT a.IDTRONCON, a.ENGMOTEUR, a.TYPVOITWAG, a.NBVOITWAG, b.VMAXINFRA, a.TDIURNE, a.TSOIR, a.TNUIT FROM N_FERROVIAIRE_TRAFIC_003new a, N_FERROVIAIRE_TRONCON_L_003new b WHERE a.IDTRONCON=b.IDTRONCON;");
+
+            StringBuilder qry2 = new StringBuilder("SELECT ENGMOTEUR, TYPVOITWAG, NBVOITWAG, VMAXINFRA, TDIURNE, TSOIR, TNUIT FROM RAIL_TRAFFIC_SPEED ");
+
+            try (ResultSet rs = st.executeQuery(qry2.toString())) {
+                double[] leqDay = new double[18];
+                double[] leqEvening = new double[18];
+                double[] leqNight = new double[18];
+
+                while (rs.next()) {
+                    ldenConfig.setTrainHeight(0); // 0cm height
+                    double[] leqDay0 = process.getRailEmissionFromResultSet(rs, "D",  "GEOSTANDARD");
+                    double[] leqEvening0 = process.getRailEmissionFromResultSet(rs, "E",  "GEOSTANDARD");
+                    double[] leqNight0 = process.getRailEmissionFromResultSet(rs, "N", "GEOSTANDARD");
+
+                    ldenConfig.setTrainHeight(1);// 50cm height
+                    double[] leqDay50 = process.getRailEmissionFromResultSet(rs, "D",  "GEOSTANDARD");
+                    double[] leqEvening50 = process.getRailEmissionFromResultSet(rs, "E",  "GEOSTANDARD");
+                    double[] leqNight50 = process.getRailEmissionFromResultSet(rs, "N", "GEOSTANDARD");
+
+                    double[] leqDay050= ComputeRays.wToDba(ComputeRays.sumArray(ComputeRays.dbaToW(leqDay0),ComputeRays.dbaToW(leqDay50)));
+                    double[] leqEvening050= ComputeRays.wToDba(ComputeRays.sumArray(ComputeRays.dbaToW(leqEvening0),ComputeRays.dbaToW(leqEvening50)));
+                    double[] leqNight050= ComputeRays.wToDba(ComputeRays.sumArray(ComputeRays.dbaToW(leqNight0),ComputeRays.dbaToW(leqNight50)));
+
+                    leqDay= ComputeRays.wToDba(ComputeRays.sumArray(ComputeRays.dbaToW(leqDay),ComputeRays.dbaToW(leqDay050)));
+                    leqEvening= ComputeRays.wToDba(ComputeRays.sumArray(ComputeRays.dbaToW(leqEvening),ComputeRays.dbaToW(leqEvening050)));
+                    leqNight= ComputeRays.wToDba(ComputeRays.sumArray(ComputeRays.dbaToW(leqNight),ComputeRays.dbaToW(leqNight050)));
+
+
+                }
+                assertEquals(104.3123, ComputeRays.sumEnergeticArray(leqDay), 0.1);
+                assertEquals(102.2601, ComputeRays.sumEnergeticArray(leqEvening), 0.1);
+                assertEquals(103.2869, ComputeRays.sumEnergeticArray(leqNight), 0.1);
+            }
+
+
+
+
+        }
+
+
     }
 }

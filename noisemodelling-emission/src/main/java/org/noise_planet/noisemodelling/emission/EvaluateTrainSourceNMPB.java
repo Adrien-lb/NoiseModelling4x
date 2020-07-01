@@ -40,6 +40,8 @@ import org.noise_planet.noisemodelling.propagation.ComputeRays;
 import java.io.IOException;
 import java.io.InputStream;
 
+import static java.lang.Math.min;
+
 
 /**
  * Return the dB value corresponding to the parameters
@@ -67,8 +69,18 @@ public class EvaluateTrainSourceNMPB {
             return nmpbTraindata;
         }
     }
+
+    public static String getTypeTrain(String typeTrain, int spectreVer) { //
+        String typeTrainUse;
+        if (getnmpbTraindata(spectreVer).get("Train").has(typeTrain)) {
+            typeTrainUse = typeTrain;
+        }else{
+            typeTrainUse="TGV00-38-100"; // TODO a modifier -> Geostandard
+        }
+        return typeTrainUse;
+    }
     public static Double getSpeedIncrement(String typeTrain, int spectreVer) { //
-        return getnmpbTraindata(spectreVer).get("Train").get(typeTrain).get("Source").get("Speed_increment").doubleValue();
+        return getnmpbTraindata(spectreVer).get("Train").get(typeTrain).get("Source").get("Speed-increment").doubleValue();
     }
 
     public static Double getTrainVmax(String typeTrain, int spectreVer) { //
@@ -78,7 +90,7 @@ public class EvaluateTrainSourceNMPB {
         return getnmpbTraindata(spectreVer).get("Train").get(typeTrain).get("Vref").doubleValue();
     }
     public static int getNumberSource(String typeTrain, int spectreVer) { //
-        return getnmpbTraindata(spectreVer).get("Train").get(typeTrain).get("Source").get("Source_number_0cm").intValue();
+        return getnmpbTraindata(spectreVer).get("Train").get(typeTrain).get("Source").get("Source-number-0cm").intValue();
     }
 
     public static Double getbase(String typeTrain, int spectreVer, int freq, double height) { //
@@ -226,7 +238,7 @@ public class EvaluateTrainSourceNMPB {
 
     /** compute Noise Level from flow_rate and speed **/
     private static Double Vperhour2NoiseLevel(double NoiseLevel, double vperhour, double speed) {
-        if (speed > 0) {
+        if (speed > 0 && vperhour !=0) {
             return NoiseLevel + 10 * Math.log10(vperhour / (1000 * speed));
         }else{
             return 0.;
@@ -249,17 +261,32 @@ public class EvaluateTrainSourceNMPB {
         final int spectreVer = parameters.getSpectreVer();
         double trainLWvm; // LW(v)/m (1 veh/h)
         double trainLWv; // LW(v)
-        double speedIncrement = getSpeedIncrement(parameters.getTypeTrain(),spectreVer);
-        double speedRef = getTrainVref(parameters.getTypeTrain(),spectreVer);
-        int numSource = getNumberSource(parameters.getTypeTrain(),spectreVer);
+        String typeTrain = getTypeTrain(parameters.getTypeTrain(),spectreVer);
+        double speedIncrement = getSpeedIncrement(typeTrain,spectreVer);
+        double speedRef = getTrainVref(typeTrain,spectreVer);
+        double speedMax = getTrainVmax(typeTrain,spectreVer);
+        int numSource = getNumberSource(typeTrain,spectreVer);
 
-        double base = getbase(parameters.getTypeTrain(),spectreVer, freqParam , parameters.getHeight());
-        trainLWv =getNoiseLvl(base,parameters.getSpeed(),speedRef,speedIncrement);
-        trainLWvm= Vperhour2NoiseLevel(trainLWv , parameters.getVehPerHour(), parameters.getSpeed());
-        trainLWvm = getNoiseLvlFinal(trainLWvm ,numSource, parameters.getNumVeh());
+        double speed = Math.min(parameters.getSpeed(), speedMax);
 
+
+        double base = getbase(typeTrain,spectreVer, freqParam , parameters.getHeight());
+        trainLWv =getNoiseLvl(base,speed,speedRef,speedIncrement);
+        trainLWvm= Vperhour2NoiseLevel(trainLWv , parameters.getVehPerHour(), speed);
+        trainLWvm = getNoiseLvlFinal(trainLWvm, numSource, parameters.getNumVeh());
         return trainLWvm;
     }
+    public static double evaluateSpeed(String typeEng, String typeWag, Double speed){
+
+        double speedMaxEng = getTrainVmax(typeEng,2);
+        double speedMaxWag = getTrainVmax(typeWag,2);
+
+        double speedTrain = Math.min(speedMaxEng, speedMaxWag);
+        speed = Math.min(speed, speedTrain);
+
+        return speed;
+    }
+
 }
 
 

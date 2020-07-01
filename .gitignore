@@ -5,3 +5,6 @@ nbactions.xml
 *.versionsBackup
 .attach*
 
+noisemodelling-emission/src/test/resources/org/noise_planet/noisemodelling/emission/jdbc/*.dbf
+
+

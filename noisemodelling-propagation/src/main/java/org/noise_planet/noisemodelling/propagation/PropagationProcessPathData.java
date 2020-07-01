@@ -59,6 +59,7 @@ public class PropagationProcessPathData {
     static final double a8 = (2 * Math.PI / 35.0) * 10 * Math.log10(Math.pow(Math.exp(1),2));
     /** Frequency bands values, by third octave */
     public static final List<Integer> freq_lvl = Arrays.asList(63, 125, 250, 500, 1000, 2000, 4000, 8000);
+    public static final List<Integer> third_freq_lvl = Arrays.asList(100,125,160,200,250,315,400,500,630,800,1000,1250,1600,2000,2500,3150,4000,5000);
     public static final List<Double> freq_lvl_exact = Arrays.asList(63.0957, 125.8925, 251.1888, 501.1872, 1000.0, 1995.26231, 3981.07171, 7943.28235);
     public static final List<Double> freq_lvl_a_weighting = Arrays.asList(-26.2, -16.1, -8.6, -3.2, 0.0, 1.2, 1.0, -1.1);
     static final double[] DEFAULT_WIND_ROSE = new double[]{0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5};

@@ -21,8 +21,6 @@
  */
 package org.noise_planet.noisemodelling.emission.jdbc;
 
-import java.util.concurrent.atomic.AtomicLong;
-
 /**
  * Configuration of NoiseModelling computation based on database data using standard Lden outputs
  */
@@ -37,6 +35,8 @@ public class LDENConfig {
     // Cnossos revisions have multiple coefficients for road emission formulae
     // this parameter will be removed when the final version of Cnossos will be published
     int coefficientVersion = 2;
+
+    int trainHeight = 0;
 
     // Process status
     boolean exitWhenDone = false;
@@ -155,5 +155,13 @@ public class LDENConfig {
 
     public boolean isMergeSources() {
         return mergeSources;
+    }
+
+    public int getTrainHeight() {
+        return trainHeight;
+    }
+
+    public void setTrainHeight(int trainHeight) {
+        this.trainHeight = trainHeight;
     }
 }

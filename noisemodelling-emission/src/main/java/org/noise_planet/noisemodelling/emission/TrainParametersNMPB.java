@@ -51,7 +51,7 @@ public class TrainParametersNMPB {
     public double getSpeed() {
         return speed;
     }
-    public double getHeight() {
+    public int getHeight() {
         return height;
     }
     public int getFreqParam() {
@@ -62,6 +62,7 @@ public class TrainParametersNMPB {
 
        setTypeTrain(typeTrain);
        this.FreqParam = Math.max(0, freqParam);
+
        setSpeed(speed);
        setHeight(height);
        setVehPerHour(vehPerHour);

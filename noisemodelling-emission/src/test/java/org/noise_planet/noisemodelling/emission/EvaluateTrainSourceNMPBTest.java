@@ -16,7 +16,7 @@ public class EvaluateTrainSourceNMPBTest {
 
     @Test
     public void Test_TGV00_38_100() {
-        String vehCat="TGV00_38_100";
+        String vehCat="TGV00-38-100";
         double vehicleSpeed = 160;
         double vehiclePerHour = 1;
         int numVeh = 1;
@@ -48,7 +48,7 @@ public class EvaluateTrainSourceNMPBTest {
 
     @Test
     public void Test_Z24500_4() {
-        String vehCat="Z24500_4";
+        String vehCat="Z24500-4";
         double vehicleSpeed = 160;
         double vehiclePerHour = 1;
         int numVeh = 1;
@@ -80,7 +80,7 @@ public class EvaluateTrainSourceNMPBTest {
 
     @Test
     public void Test_X72500_Bi() {
-        String vehCat="X72500_Bi";
+        String vehCat="X72500-Bi";
         double vehicleSpeed = 160;
         double vehiclePerHour = 1;
         int numVeh = 1;
@@ -113,7 +113,7 @@ public class EvaluateTrainSourceNMPBTest {
     @Test
     public void Test_intercite() {
         String vehCat1="BB15000";
-        String vehCat2="Corail_FF";
+        String vehCat2="Corail-FF";
         double vehicleSpeed = 160;
         double vehiclePerHour = 1;
 
