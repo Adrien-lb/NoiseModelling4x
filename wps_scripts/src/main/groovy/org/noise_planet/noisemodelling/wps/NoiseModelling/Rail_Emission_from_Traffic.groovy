@@ -152,7 +152,7 @@ def exec(Connection connection, input) {
     // Create a sql connection to interact with the database in SQL
     Sql sql = new Sql(connection)
 
-    // drop table LW_ROADS if exists and the create and prepare the table
+    // drop table LW_RAIL if exists and the create and prepare the table
     sql.execute("drop table if exists LW_RAIL_0;")
     sql.execute("create table LW_RAIL_0 (pr varchar, the_geom geometry," +
             "LWD63 double precision, LWD125 double precision, LWD250 double precision, LWD500 double precision, LWD1000 double precision, LWD2000 double precision, LWD4000 double precision, LWD8000 double precision," +
@@ -196,7 +196,6 @@ def exec(Connection connection, input) {
         nbSegment = rs1.getInt("total")
         System.println('The table Rail Geom has ' + nbSegment + ' rail segments.')
     }
-    //System.println('The table Traffic has ' + nbRoads + ' rail segments.')
     int k = 0
     int currentVal = 0
 
@@ -215,8 +214,12 @@ def exec(Connection connection, input) {
 
         while (rs2.next()) {
             // Compute emission sound level for each rail segment
-            def results0 = ldenData.computeLwTrain(rs2, 0)
-            def results50 = ldenData.computeLwTrain(rs2, 1)
+
+            ldenConfig.setTrainHeight(0)
+            def results0 = ldenData.computeLw(rs2)
+
+            ldenConfig.setTrainHeight(1)
+            def results50 = ldenData.computeLw(rs2)
 
             for (int idfreq = 0; idfreq < PropagationProcessPathData.third_freq_lvl.size(); idfreq++) {
                 results0cm[0][idfreq]=ComputeRays.wToDba(ComputeRays.dbaToW(results0cm[0][idfreq])+ComputeRays.dbaToW(results0[0][idfreq]));
@@ -225,8 +228,8 @@ def exec(Connection connection, input) {
                 results50cm[1][idfreq]=ComputeRays.wToDba(ComputeRays.dbaToW(results50cm[1][idfreq])+ComputeRays.dbaToW(results50[1][idfreq]));
                 results0cm[2][idfreq]=ComputeRays.wToDba(ComputeRays.dbaToW(results0cm[2][idfreq])+ComputeRays.dbaToW(results0[2][idfreq]));
                 results50cm[2][idfreq]=ComputeRays.wToDba(ComputeRays.dbaToW(results50cm[2][idfreq])+ComputeRays.dbaToW(results50[2][idfreq]));
-                results0cm[3][idfreq]=ComputeRays.wToDba(ComputeRays.dbaToW(results0cm[3][idfreq])+ComputeRays.dbaToW(results0[3][idfreq]));
-                results50cm[3][idfreq]=ComputeRays.wToDba(ComputeRays.dbaToW(results50cm[3][idfreq])+ComputeRays.dbaToW(results50[3][idfreq]));
+                //results0cm[3][idfreq]=ComputeRays.wToDba(ComputeRays.dbaToW(results0cm[3][idfreq])+ComputeRays.dbaToW(results0[3][idfreq]));
+                //results50cm[3][idfreq]=ComputeRays.wToDba(ComputeRays.dbaToW(results50cm[3][idfreq])+ComputeRays.dbaToW(results50[3][idfreq]));
             }
 
         }
@@ -260,14 +263,10 @@ def exec(Connection connection, input) {
     }
 
     // Fusion geometry and traffic table
-    //LW_ROADS avec un Pk(string) et il faut y associer la geometry de Rail_Geom qui a le PK(string) aussi
-    // CREATE TABLE LW_ROADS_0 AS SELECT a.THE_GEOM, b.HZ63, b.HZ125, b.HZ... FROM Rail_Geom a, LW b WHERE A.PK_RAIL = b.PK_RAIL;
 
-    // Add Z dimension to the road segments
+    // Add Z dimension to the rail segments
     sql.execute("UPDATE LW_RAIL_0 SET THE_GEOM = ST_UPDATEZ(The_geom,0.01);")
     sql.execute("UPDATE LW_RAIL_50 SET THE_GEOM = ST_UPDATEZ(The_geom,0.5);")
-
-    // fusion les deux tables LW_ROADS_0 & LW_ROADS_50 ?
 
     // Add primary key to the LW table
     sql.execute("ALTER TABLE  LW_RAIL_0  ADD PK INT AUTO_INCREMENT PRIMARY KEY;")

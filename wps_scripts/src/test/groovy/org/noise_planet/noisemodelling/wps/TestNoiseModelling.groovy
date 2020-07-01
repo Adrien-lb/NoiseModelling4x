@@ -193,7 +193,6 @@ class TestNoiseModelling extends JdbcTestCase {
                  "tableRailGeom": "N_FERROVIAIRE_TRONCON_L_003new"])
 
         assertTrue(res.contains("LW_RAIL"))
-        //assertTrue(res.contains("LW_RAIL_50"))
     }
    /* void testLdenFromRailEmission() {
 
