@@ -269,4 +269,45 @@ class TestNoiseModelling extends JdbcTestCase {
 
         assertArrayEquals(["IDRECEIVER","THE_GEOM", "HZ1000", "LAEQ", "LEQ"].toArray(), fields.toArray())
     }
+    void testLwFromRailEmission() {
+
+        DBFRead.read(connection, TestNoiseModelling.getResource("N_FERROVIAIRE_TRAFIC_003new.dbf").getPath())
+        SHPRead.readShape(connection, TestNoiseModelling.getResource("N_FERROVIAIRE_TRONCON_L_003new.shp").getPath())
+
+        String res = new Rail_Emission_from_Traffic().exec(connection,
+                ["tableRailTraffic": "N_FERROVIAIRE_TRAFIC_003new",
+                 "tableRailGeom": "N_FERROVIAIRE_TRONCON_L_003new"])
+
+        assertTrue(res.contains("LW_RAIL"))
+    }
+    /* void testLdenFromRailEmission() {
+
+         SHPRead.readShape(connection, TestNoiseModelling.getResource("Rail_traffic.shp").getPath())
+         dBFRead.readShape(connection, TestNoiseModelling.getResource("Rail_geom.shp").getPath())
+
+         String res = new Rail_Emission_from_Traffic().exec(connection,
+                 ["tableRoads": "trafic",
+                  "tableRoads": "rail"])
+
+         res = new Import_File().exec(connection,
+                 ["pathFile" : TestNoiseModelling.getResource("buildings.shp").getPath(),
+                  "inputSRID": "2154",
+                  "tableName": "buildings"])
+
+         res = new Import_File().exec(connection,
+                 ["pathFile" : TestNoiseModelling.getResource("receivers.shp").getPath(),
+                  "inputSRID": "2154",
+                  "tableName": "receivers"])
+
+
+         res = new Lden_from_Road_Emission().exec(connection,
+                 ["tableBuilding"   : "BUILDINGS",
+                  "tableSources"   : "LW_RAIL",
+                  "tableReceivers": "RECEIVERS"])
+
+         assertTrue(res.contains("LDAY_GEOM"))
+         assertTrue(res.contains("LEVENING_GEOM"))
+         assertTrue(res.contains("LNIGHT_GEOM"))
+         assertTrue(res.contains("LDEN_GEOM"))
+     }*/
 }
