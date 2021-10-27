@@ -156,7 +156,7 @@ public class RailWayLWIterator implements Iterator<RailWayLWIterator.RailWayLWGe
         double[] lvl = new double[ldenConfig.propagationProcessPathData.freq_lvl.size()];
 
         String typeTrain = "FRET";
-        double vehicleSpeed = 160;
+        double vehicleSpeed = 120;
         double vehiclePerHour = 1;
         int rollingCondition = 0;
         double idlingTime = 0;
@@ -173,50 +173,87 @@ public class RailWayLWIterator implements Iterator<RailWayLWIterator.RailWayLWGe
         // Read fields
         if (sourceFields.containsKey("TRAINSPD")) {
             vehicleSpeed = rs.getDouble(sourceFields.get("TRAINSPD"));
+        }else{
+            System.out.print("The Rail Traffic table must contain the column TRAINSPD.");
         }
+
         if (sourceFields.containsKey("T" + period)) {
-            vehiclePerHour = rs.getInt(sourceFields.get("T" + period));
+            vehiclePerHour = rs.getDouble(sourceFields.get("T" + period));
+        }else{
+            System.out.print("The Rail Traffic table must contain the column T "+ period);
         }
+
         if (sourceFields.containsKey("ROLLINGCONDITION")) {
             rollingCondition = rs.getInt(sourceFields.get("ROLLINGCONDITION"));
+        }else{
+            System.out.print("The Rail Section table must contain the column ROLLINGCONDITION ");
         }
+
         if (sourceFields.containsKey("IDLINGTIME")) {
             idlingTime = rs.getDouble(sourceFields.get("IDLINGTIME"));
+        }else{
+            System.out.print("The Rail Section table must contain the column IDLINGTIME ");
         }
+
         if (sourceFields.containsKey("TRANSFER")) {
             trackTransfer = rs.getInt(sourceFields.get("TRANSFER"));
+        }else{
+            System.out.print("The Rail Section table must contain the column TRANSFER.");
         }
+
         if (sourceFields.containsKey("ROUGHNESS")) {
             railRoughness = rs.getInt(sourceFields.get("ROUGHNESS"));
+        }else{
+            System.out.print("The Rail Section table must contain the column ROUGHNESS.");
         }
 
         if (sourceFields.containsKey("IMPACT")) {
             impactNoise = rs.getInt(sourceFields.get("IMPACT"));
+        }else{
+            System.out.print("The Rail Section table must contain the column IMPACT.");
         }
+
         if (sourceFields.containsKey("BRIDGE")) {
             bridgeTransfert = rs.getInt(sourceFields.get("BRIDGE"));
+        }else{
+            System.out.print("The Rail Section table must contain the column BRIDGE.");
         }
+
         if (sourceFields.containsKey("CURVATURE")) {
             curvature = rs.getInt(sourceFields.get("CURVATURE"));
+        }else{
+            System.out.print("The Rail Section table must contain the column CURVATURE.");
         }
 
         if (sourceFields.containsKey("TRACKSPD")) {
             vMaxInfra = rs.getDouble(sourceFields.get("TRACKSPD"));
+        }else{
+            System.out.print("The Rail Section table must contain the column TRACKSPD.");
         }
+
         if (sourceFields.containsKey("TRACKSPC")) {
             trackSpacing = rs.getDouble(sourceFields.get("TRACKSPC"));
             setDistance(trackSpacing);
+        }else{
+            System.out.print("The Rail Section table must contain the column TRACKSPC. \n");
         }
 
         if (sourceFields.containsKey("COMSPD")) {
             commercialSpeed = rs.getDouble(sourceFields.get("COMSPD"));
+        }else{
+            System.out.print("The Rail Section table must contain the column COMSPD.");
         }
+
         if (sourceFields.containsKey("TRAINTYPE")) {
             typeTrain = rs.getString(sourceFields.get("TRAINTYPE"));
+        }else{
+            System.out.print("The Rail Traffic table must contain the column TRAINTYPE ");
         }
 
         if (sourceFields.containsKey("ISTUNNEL")) {
             isTunnel = rs.getBoolean(sourceFields.get("ISTUNNEL"));
+        }else{
+            System.out.print("The Rail Section table must contain the column ISTUNNEL.");
         }
 
         if (sourceFields.containsKey("IDTUNNEL")) {
@@ -230,6 +267,8 @@ public class RailWayLWIterator implements Iterator<RailWayLWIterator.RailWayLWGe
 
         if (sourceFields.containsKey("NTRACK")) {
             nbTrack = rs.getInt(sourceFields.get("NTRACK"));
+        }else{
+            System.out.print("The Rail Section table must contain the column NTRACK.");
         }
 
 
