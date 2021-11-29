@@ -117,7 +117,7 @@ class TestNoiseModelling extends JdbcTestCase {
 
 
         new Import_File().exec(connection,
-                ["pathFile" : TestNoiseModelling.getResource("Train/casTest/RAIL_SECTIONS.shp").getPath(),
+                ["pathFile" : TestNoiseModelling.getResource("Train/casTest/RAIL_SECTION.shp").getPath(),
                  "inputSRID": "2154"])
 
         new Import_File().exec(connection,
@@ -131,7 +131,7 @@ class TestNoiseModelling extends JdbcTestCase {
 
         String res = new Railway_Emission_from_Traffic().exec(connection,
                 ["tableRailwayTraffic": "RAIL_TRAFFIC",
-                 "tableRailwayTrack": "RAIL_SECTIONS"
+                 "tableRailwayTrack": "RAIL_SECTION"
                 ])
 
         def fieldNames = JDBCUtilities.getFieldNames(connection.getMetaData(), "LW_RAILWAY")
