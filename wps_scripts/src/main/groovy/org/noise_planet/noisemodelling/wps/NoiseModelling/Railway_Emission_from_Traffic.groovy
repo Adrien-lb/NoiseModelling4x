@@ -18,6 +18,7 @@ import geoserver.catalog.Store
 import groovy.sql.Sql
 import org.geotools.jdbc.JDBCDataStore
 import org.h2gis.functions.spatial.edit.ST_AddZ
+import org.h2gis.functions.spatial.edit.ST_UpdateZ
 import org.h2gis.utilities.SFSUtilities
 import org.h2gis.utilities.SpatialResultSet
 import org.h2gis.utilities.TableLocation
@@ -264,7 +265,7 @@ def exec(Connection connection, input) {
                     Geometry trackGeometry = (Geometry) geometries.get(nTrack)
                     Geometry sourceGeometry = trackGeometry.copy()
                     // offset geometry z
-                    sourceGeometry.apply(new ST_AddZ.AddZCoordinateSequenceFilter(heightSource))
+                    sourceGeometry.apply(new ST_UpdateZ.UpdateZCoordinateSequenceFilter(heightSource,1))
                     def batchData = [pk as int, sourceGeometry as Geometry, directivityId as int]
                     batchData.addAll(LWDay)
                     batchData.addAll(LWEvening)

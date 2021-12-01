@@ -117,12 +117,19 @@ class TestNoiseModelling extends JdbcTestCase {
 
 
         new Import_File().exec(connection,
-                ["pathFile" : TestNoiseModelling.getResource("Train/casTest/RAIL_SECTION.shp").getPath(),
-                 "inputSRID": "2154"])
+                ["pathFile" : TestNoiseModelling.getResource("Train/casTest/Dpt40/SEC_RAIL_41.shp").getPath(),
+                 "inputSRID": "2154", "tableName" :"RAIL_SECTION"])
+
+        //["pathFile" : TestNoiseModelling.getResource("Train/casTest/RAIL_SECTION.shp").getPath(),
+        // "inputSRID": "2154"])
 
         new Import_File().exec(connection,
-                ["pathFile" : TestNoiseModelling.getResource("Train/casTest/RAIL_TRAFFIC.dbf").getPath(),
-                 "inputSRID": "2154"])
+
+                ["pathFile" : TestNoiseModelling.getResource("Train/casTest/Dpt40/TRAF_RAIL_41.dbf").getPath(),
+                 "inputSRID": "2154", "tableName" :"RAIL_TRAFFIC"])
+
+                //["pathFile" : TestNoiseModelling.getResource("Train/casTest/RAIL_TRAFFIC.dbf").getPath(),
+                // "inputSRID": "2154"])
 
         new Import_File().exec(connection,
                 ["pathFile" : TestNoiseModelling.getResource("Train/receivers_Railway_.shp").getPath(),
