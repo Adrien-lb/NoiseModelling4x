@@ -31,6 +31,8 @@ public class RailWayLWIterator implements Iterator<RailWayLWIterator.RailWayLWGe
     private RailWayLWGeom railWayLWfinal = new RailWayLWGeom();
     private String tableTrain;
     private String tableTrack;
+    private double speedUse;
+    private int bridgeUse;
 
     private int nbTrack = 1;
     private LDENConfig ldenConfig;
@@ -87,12 +89,12 @@ public class RailWayLWIterator implements Iterator<RailWayLWIterator.RailWayLWGe
             if (spatialResultSet == null) {
                 spatialResultSet = connection.createStatement().executeQuery("SELECT r1.*, r2.* FROM " + tableTrain + " r1, " + tableTrack + " r2 WHERE r1.IDSECTION= R2.IDSECTION ; ").unwrap(SpatialResultSet.class);
                 spatialResultSet.next();
-
                 railWayLWsum = getRailwayEmissionFromResultSet(spatialResultSet, "DAY");
                 railWayLWsumDay = getRailwayEmissionFromResultSet(spatialResultSet, "DAY");
                 railWayLWsumEvening = getRailwayEmissionFromResultSet(spatialResultSet, "EVENING");
                 railWayLWsumNight = getRailwayEmissionFromResultSet(spatialResultSet, "NIGHT");
-
+                speedUse=railWayLWsumDay.getSpeedUse();
+                bridgeUse=railWayLWsumDay.getBridgeUse();
                 railWayLWfinal.setNbTrack(spatialResultSet.getInt("NTRACK"));
                 if (hasColumn(spatialResultSet, "GS")) railWayLWfinal.setGs(spatialResultSet.getDouble("GS"));
 
@@ -106,6 +108,7 @@ public class RailWayLWIterator implements Iterator<RailWayLWIterator.RailWayLWGe
                     railWayLWsumDay = RailWayLW.sumRailWayLW(railWayLWsumDay, getRailwayEmissionFromResultSet(spatialResultSet, "DAY"));
                     railWayLWsumEvening = RailWayLW.sumRailWayLW(railWayLWsumEvening, getRailwayEmissionFromResultSet(spatialResultSet, "EVENING"));
                     railWayLWsumNight = RailWayLW.sumRailWayLW(railWayLWsumNight, getRailwayEmissionFromResultSet(spatialResultSet, "NIGHT"));
+
                 } else {
                     railWayLWfinal.setRailWayLW(railWayLWsum);
                     railWayLWfinal.setRailWayLWDay(railWayLWsumDay);
@@ -121,6 +124,8 @@ public class RailWayLWIterator implements Iterator<RailWayLWIterator.RailWayLWGe
                     railWayLWsumDay = getRailwayEmissionFromResultSet(spatialResultSet, "DAY");
                     railWayLWsumEvening = getRailwayEmissionFromResultSet(spatialResultSet, "EVENING");
                     railWayLWsumNight = getRailwayEmissionFromResultSet(spatialResultSet, "NIGHT");
+                    railWayLWfinal.setSpeedUse(railWayLWsumDay.getSpeedUse());
+                    railWayLWfinal.setBridgeUse(railWayLWsumDay.getBridgeUse());
                     railWayLWfinal.setRailWayLW(railWayLWsum);
                     railWayLWfinal.setRailWayLWDay(railWayLWsumDay);
                     railWayLWfinal.setRailWayLWEvening(railWayLWsumEvening);
@@ -262,6 +267,8 @@ public class RailWayLWIterator implements Iterator<RailWayLWIterator.RailWayLWGe
         private RailWayLW railWayLWDay;
         private RailWayLW railWayLWEvening;
         private RailWayLW railWayLWNight;
+        private double speedUse;
+        private int bridgeUse;
         private List<LineString> geometry;
         private int pk;
         private int nbTrack;
@@ -279,6 +286,12 @@ public class RailWayLWIterator implements Iterator<RailWayLWIterator.RailWayLWGe
 
         public RailWayLW getRailWayLW() {
             return railWayLW;
+        }
+        public double getSpeedUse() {
+            return speedUse;
+        }
+        public int getBridgeUse() {
+            return bridgeUse;
         }
 
         public void setRailWayLW(RailWayLW railWayLW) {
@@ -304,6 +317,12 @@ public class RailWayLWIterator implements Iterator<RailWayLWIterator.RailWayLWGe
 
         public void setRailWayLWNight(RailWayLW railWayLWNight) {
             this.railWayLWNight = railWayLWNight;
+        }
+        public void setSpeedUse(double speedUse) {
+            this.speedUse = speedUse;
+        }
+        public void setBridgeUse(int bridgeUse) {
+            this.bridgeUse = bridgeUse;
         }
 
         public int getNbTrack() {

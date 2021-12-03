@@ -214,9 +214,9 @@ def exec(Connection connection, input) {
         double[] LWNight
         double heightSource
         int directivityId
-        double speedUse = railWayLWIterator.railWayLWsum.getSpeedUse();
-        int bridgeUse = railWayLWIterator.railWayLWsum.getBridgeUse();
-        int iSourceMax=6;
+        double speedUse = railWayLWGeom.getSpeedUse()
+        int bridgeUse = railWayLWGeom.getBridgeUse()
+        int iSourceMax=6
 
         for (int iSource = 0; iSource < iSourceMax; iSource++) {
             switch (iSource) {
