@@ -347,7 +347,7 @@ public class EvaluateRailwaySourceCnossos {
             for(int idFreq = 0; idFreq < 24; idFreq++) {
                 lWSpectre[idFreq] =-99;
             }
-            RailWayLW lWRailWay = new RailWayLW(lWSpectre, lWSpectre, lWSpectre, lWSpectre, lWSpectre, lWSpectre);
+            RailWayLW lWRailWay = new RailWayLW(lWSpectre, lWSpectre, lWSpectre, lWSpectre, lWSpectre, lWSpectre,speed,bridgeId);
             return lWRailWay;
         }else {
             //  Rolling noise calcul
@@ -370,7 +370,7 @@ public class EvaluateRailwaySourceCnossos {
                 lWBridge[i] = Vperhour2NoiseLevel(lWBridge[i], vehPerHour*getNbCoach(typeVehicle), speed);
             }
 
-            RailWayLW lWRailWay = new RailWayLW(lWRolling, lWTractionA, lWTractionB, lWAerodynamicA, lWAerodynamicB, lWBridge);
+            RailWayLW lWRailWay = new RailWayLW(lWRolling, lWTractionA, lWTractionB, lWAerodynamicA, lWAerodynamicB, lWBridge, speed, bridgeId);
             return lWRailWay;
         }
     }

@@ -40,7 +40,9 @@ public class RailWayLW {
         TRACTIONB,
         AERODYNAMICA,
         AERODYNAMICB,
-        BRIDGE
+        BRIDGE,
+        SPEEDUSE,
+        BRIDGEUSE
     }
 
     /**
@@ -56,6 +58,8 @@ public class RailWayLW {
     private double[] lWAerodynamicA;
     private double[] lWAerodynamicB;
     private double[] lWBridge;
+    private double speedUse;
+    private int bridgeUse;
 
 
     public void setLWRolling(double[] LWRolling) {
@@ -76,6 +80,12 @@ public class RailWayLW {
     public void setLWBridge(double[] LWBridge) {
         this.lWBridge = LWBridge;
     }
+    public void setSpeedUse(double SpeedUse) {
+        this.speedUse = SpeedUse;
+    }
+    public void setBridgeUse(int BridgeUse) {
+        this.bridgeUse = BridgeUse;
+    }
 
     public double[] getLWRolling() {
         return lWRolling;
@@ -95,11 +105,17 @@ public class RailWayLW {
     public double[] getLWBridge() {
         return lWBridge;
     }
+    public double getSpeedUse() {
+        return speedUse;
+    }
+    public int getBridgeUse() {
+        return bridgeUse;
+    }
 
     public RailWayLW(){
     }
 
-    public RailWayLW(double[] lWRolling, double[] lWTractionA, double[] lWTractionB, double[] lWAerodynamicA, double[] lWAerodynamicB, double[] lWBridge){
+    public RailWayLW(double[] lWRolling, double[] lWTractionA, double[] lWTractionB, double[] lWAerodynamicA, double[] lWAerodynamicB, double[] lWBridge, double speedUse, int bridgeUse){
 
         setLWRolling(lWRolling);
         setLWTractionA(lWTractionA);
@@ -107,8 +123,11 @@ public class RailWayLW {
         setLWAerodynamicA(lWAerodynamicA);
         setLWAerodynamicB(lWAerodynamicB);
         setLWBridge(lWBridge);
+        setSpeedUse(speedUse);
+        setBridgeUse(bridgeUse);
 
     }
+
 
     /**
      * Sum two train emission instances
