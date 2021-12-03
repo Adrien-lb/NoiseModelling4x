@@ -93,8 +93,8 @@ public class RailWayLWIterator implements Iterator<RailWayLWIterator.RailWayLWGe
                 railWayLWsumDay = getRailwayEmissionFromResultSet(spatialResultSet, "DAY");
                 railWayLWsumEvening = getRailwayEmissionFromResultSet(spatialResultSet, "EVENING");
                 railWayLWsumNight = getRailwayEmissionFromResultSet(spatialResultSet, "NIGHT");
-                speedUse=railWayLWsumDay.getSpeedUse();
-                bridgeUse=railWayLWsumDay.getBridgeUse();
+                speedUse=railWayLWsum.getSpeedUse();
+                bridgeUse=railWayLWsum.getBridgeUse();
                 railWayLWfinal.setNbTrack(spatialResultSet.getInt("NTRACK"));
                 if (hasColumn(spatialResultSet, "GS")) railWayLWfinal.setGs(spatialResultSet.getDouble("GS"));
 
@@ -114,6 +114,8 @@ public class RailWayLWIterator implements Iterator<RailWayLWIterator.RailWayLWGe
                     railWayLWfinal.setRailWayLWDay(railWayLWsumDay);
                     railWayLWfinal.setRailWayLWEvening(railWayLWsumEvening);
                     railWayLWfinal.setRailWayLWNight(railWayLWsumNight);
+                    railWayLWfinal.setSpeedUse(speedUse);
+                    railWayLWfinal.setBridgeUse(bridgeUse);
                     RailWayLWGeom previousRailWayLW = railWayLWfinal;
                     railWayLWfinal = new RailWayLWGeom();
                     railWayLWfinal.setGeometry(splitGeometry(spatialResultSet.getGeometry()));
@@ -124,8 +126,10 @@ public class RailWayLWIterator implements Iterator<RailWayLWIterator.RailWayLWGe
                     railWayLWsumDay = getRailwayEmissionFromResultSet(spatialResultSet, "DAY");
                     railWayLWsumEvening = getRailwayEmissionFromResultSet(spatialResultSet, "EVENING");
                     railWayLWsumNight = getRailwayEmissionFromResultSet(spatialResultSet, "NIGHT");
-                    railWayLWfinal.setSpeedUse(railWayLWsumDay.getSpeedUse());
-                    railWayLWfinal.setBridgeUse(railWayLWsumDay.getBridgeUse());
+                    speedUse = railWayLWsum.getSpeedUse();
+                    bridgeUse = railWayLWsum.getBridgeUse();
+                    railWayLWfinal.setSpeedUse(speedUse);
+                    railWayLWfinal.setBridgeUse(bridgeUse);
                     railWayLWfinal.setRailWayLW(railWayLWsum);
                     railWayLWfinal.setRailWayLWDay(railWayLWsumDay);
                     railWayLWfinal.setRailWayLWEvening(railWayLWsumEvening);
