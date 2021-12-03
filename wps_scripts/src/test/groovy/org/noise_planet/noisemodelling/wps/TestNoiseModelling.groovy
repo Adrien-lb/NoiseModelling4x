@@ -172,10 +172,8 @@ class TestNoiseModelling extends JdbcTestCase {
         def receiversLvl = sql.rows("SELECT * FROM LDAY_GEOM ORDER BY IDRECEIVER")
 
         String export = new Export_Table().exec(connection,
-                ["exportPath"   : "target/LDAY_GEOM_rail.geojson",
-                 "tableToExport": "LDAY_GEOM"])
-
-        assertEquals(64.27,receiversLvl[0]["LEQ"] as Double,0.1)
+                ["exportPath"   : "target/LW_RAILWAY.geojson",
+                 "tableToExport": "LW_RAILWAY"])
     }
 
 

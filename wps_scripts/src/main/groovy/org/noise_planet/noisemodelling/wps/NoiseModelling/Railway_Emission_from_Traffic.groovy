@@ -214,7 +214,11 @@ def exec(Connection connection, input) {
         double[] LWNight
         double heightSource
         int directivityId
-        for (int iSource = 0; iSource < 6; iSource++) {
+        double speedUse = railWayLWIterator.railWayLWsum.getSpeedUse();
+        int bridgeUse = railWayLWIterator.railWayLWsum.getBridgeUse();
+        int iSourceMax=6;
+
+        for (int iSource = 0; iSource < iSourceMax; iSource++) {
             switch (iSource) {
                 case 0:
                     LWDay = railWayLWDay.getLWRolling()
@@ -238,39 +242,56 @@ def exec(Connection connection, input) {
                     directivityId = 3
                     break
                 case 3:
-                    LWDay = railWayLWDay.getLWAerodynamicA()
-                    LWEvening = railWayLWEvening.getLWAerodynamicA()
-                    LWNight = railWayLWNight.getLWAerodynamicA()
-                    heightSource = 0.5
-                    directivityId = 4
-                    break
+                    if(speedUse<200){break}
+                    else{
+                        LWDay = railWayLWDay.getLWAerodynamicA()
+                        LWEvening = railWayLWEvening.getLWAerodynamicA()
+                        LWNight = railWayLWNight.getLWAerodynamicA()
+                        heightSource = 0.5
+                        directivityId = 4
+                        break
+                    }
                 case 4:
-                    LWDay = railWayLWDay.getLWAerodynamicB()
-                    LWEvening = railWayLWEvening.getLWAerodynamicB()
-                    LWNight = railWayLWNight.getLWAerodynamicB()
-                    heightSource = 4
-                    directivityId = 5
-                    break
+                    if(speedUse<200){break}
+                    else{
+                        LWDay = railWayLWDay.getLWAerodynamicB()
+                        LWEvening = railWayLWEvening.getLWAerodynamicB()
+                        LWNight = railWayLWNight.getLWAerodynamicB()
+                        heightSource = 4
+                        directivityId = 5
+                        break
+                    }
                 case 5:
-                    LWDay = railWayLWDay.getLWBridge()
-                    LWEvening = railWayLWEvening.getLWBridge()
-                    LWNight = railWayLWNight.getLWBridge()
-                    heightSource = 0.5
-                    directivityId = 6
-                    break
-            }
-            for (int nTrack = 0; nTrack < geometries.size(); nTrack++) {
+                    if(bridgeUse!=0){
+                        LWDay = railWayLWDay.getLWBridge()
+                        LWEvening = railWayLWEvening.getLWBridge()
+                        LWNight = railWayLWNight.getLWBridge()
+                        heightSource = 0.5
+                        directivityId = 6
+                        break
+                    }else{
+                        break
+                    }
 
-                sql.withBatch(100, insertIntoQuery.toString()) { ps ->
-                    Geometry trackGeometry = (Geometry) geometries.get(nTrack)
-                    Geometry sourceGeometry = trackGeometry.copy()
-                    // offset geometry z
-                    sourceGeometry.apply(new ST_UpdateZ.UpdateZCoordinateSequenceFilter(heightSource,1))
-                    def batchData = [pk as int, sourceGeometry as Geometry, directivityId as int]
-                    batchData.addAll(LWDay)
-                    batchData.addAll(LWEvening)
-                    batchData.addAll(LWNight)
-                    ps.addBatch(batchData)
+            }
+            if(iSource==3&&speedUse<200){}
+            else if(iSource==4&&speedUse<200){}
+            else if(iSource==5&&bridgeUse==0){}
+            else{
+                for (int nTrack = 0; nTrack < geometries.size(); nTrack++) {
+
+                    sql.withBatch(100, insertIntoQuery.toString()) { ps ->
+                        Geometry trackGeometry = (Geometry) geometries.get(nTrack)
+                        Geometry sourceGeometry = trackGeometry.copy()
+                        // offset geometry z
+                        sourceGeometry.apply(new ST_UpdateZ.UpdateZCoordinateSequenceFilter(heightSource, 1))
+                        def batchData = [pk as int, sourceGeometry as Geometry, directivityId as int]
+                        batchData.addAll(LWDay)
+                        batchData.addAll(LWEvening)
+                        batchData.addAll(LWNight)
+                        ps.addBatch(batchData)
+
+                    }
                 }
             }
         }
