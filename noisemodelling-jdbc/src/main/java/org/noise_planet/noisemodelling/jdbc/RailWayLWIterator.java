@@ -89,6 +89,7 @@ public class RailWayLWIterator implements Iterator<RailWayLWIterator.RailWayLWGe
             if (spatialResultSet == null) {
                 spatialResultSet = connection.createStatement().executeQuery("SELECT r1.*, r2.* FROM " + tableTrain + " r1, " + tableTrack + " r2 WHERE r1.IDSECTION= R2.IDSECTION ; ").unwrap(SpatialResultSet.class);
                 spatialResultSet.next();
+
                 railWayLWsum = getRailwayEmissionFromResultSet(spatialResultSet, "DAY");
                 railWayLWsumDay = getRailwayEmissionFromResultSet(spatialResultSet, "DAY");
                 railWayLWsumEvening = getRailwayEmissionFromResultSet(spatialResultSet, "EVENING");
@@ -391,118 +392,6 @@ public class RailWayLWIterator implements Iterator<RailWayLWIterator.RailWayLWGe
         }
 
     }
-
-   /* public checkDataBase(ResultSet rs){
-
-        public Map<String, Integer> sourceFields = null;
-        if (sourceFields == null) {
-            sourceFields = new HashMap<>();
-            int fieldId = 1;
-            for (String fieldName : JDBCUtilities.getFieldNames(rs.getMetaData())) {
-                sourceFields.put(fieldName.toUpperCase(), fieldId++);
-            }
-        }
-        if (sourceFields.containsKey("TRAINSPD")) {
-
-        }else{
-            System.out.print("The Rail Traffic table must contain the column TRAINSPD.");
-        }
-
-        if (sourceFields.containsKey("T" + period)) {
-
-        }else{
-            System.out.print("The Rail Traffic table must contain the column T "+ period);
-        }
-
-        if (sourceFields.containsKey("ROLLINGCONDITION")) {
-
-        }else{
-            System.out.print("The Rail Section table must contain the column ROLLINGCONDITION ");
-        }
-
-        if (sourceFields.containsKey("IDLINGTIME")) {
-
-        }else{
-            System.out.print("The Rail Section table must contain the column IDLINGTIME ");
-        }
-
-        if (sourceFields.containsKey("TRANSFER")) {
-
-        }else{
-            System.out.print("The Rail Section table must contain the column TRANSFER.");
-        }
-
-        if (sourceFields.containsKey("ROUGHNESS")) {
-
-        }else{
-            System.out.print("The Rail Section table must contain the column ROUGHNESS.");
-        }
-
-        if (sourceFields.containsKey("IMPACT")) {
-
-        }else{
-            System.out.print("The Rail Section table must contain the column IMPACT.");
-        }
-
-        if (sourceFields.containsKey("BRIDGE")) {
-
-        }else{
-            System.out.print("The Rail Section table must contain the column BRIDGE.");
-        }
-
-        if (sourceFields.containsKey("CURVATURE")) {
-
-        }else{
-            System.out.print("The Rail Section table must contain the column CURVATURE.");
-        }
-
-        if (sourceFields.containsKey("TRACKSPD")) {
-
-        }else{
-            System.out.print("The Rail Section table must contain the column TRACKSPD.");
-        }
-
-        if (sourceFields.containsKey("TRACKSPC")) {
-
-        }else{
-            System.out.print("The Rail Section table must contain the column TRACKSPC. \n");
-        }
-
-        if (sourceFields.containsKey("COMSPD")) {
-
-        }else{
-            System.out.print("The Rail Section table must contain the column COMSPD.");
-        }
-
-        if (sourceFields.containsKey("TRAINTYPE")) {
-
-        }else{
-            System.out.print("The Rail Traffic table must contain the column TRAINTYPE ");
-        }
-
-        if (sourceFields.containsKey("ISTUNNEL")) {
-
-        }else{
-            System.out.print("The Rail Section table must contain the column ISTUNNEL.");
-        }
-
-        if (sourceFields.containsKey("IDTUNNEL")) {
-
-            if (rs.getString(sourceFields.get("IDTUNNEL")) ==  null) {
-
-            } else {
-                isTunnel = !rs.getString(sourceFields.get("IDTUNNEL")).isEmpty();
-            }
-        }
-
-        if (sourceFields.containsKey("NTRACK")) {
-
-        }else{
-            System.out.print("The Rail Section table must contain the column NTRACK.");
-        }
-
-    }*/
-
 }
 
 
