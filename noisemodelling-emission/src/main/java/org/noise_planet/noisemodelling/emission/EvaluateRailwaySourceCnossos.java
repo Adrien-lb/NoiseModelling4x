@@ -337,9 +337,7 @@ public class EvaluateRailwaySourceCnossos {
         // get speed of the vehicle
         double speed = min(speedVehicle,min(speedTrack, speedCommercial));
 
-        boolean isTunnel = false ;//trackParameters.getIsTunnel();
-        // %% Take into account the number of coach and the number of units
-        // 10*log10(NbUnit*NbCoach);
+        boolean isTunnel = trackParameters.getIsTunnel();
 
 
         if(isTunnel){
