@@ -40,7 +40,9 @@ public class RailWayLW {
         TRACTIONB,
         AERODYNAMICA,
         AERODYNAMICB,
-        BRIDGE
+        BRIDGE,
+        SPEEDUSE,
+        BRIDGEUSE
     }
 
     /**
