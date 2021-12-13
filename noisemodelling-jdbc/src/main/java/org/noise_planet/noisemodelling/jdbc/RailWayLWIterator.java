@@ -95,6 +95,9 @@ public class RailWayLWIterator implements Iterator<RailWayLWIterator.RailWayLWGe
 
                 railWayLWfinal.setNbTrack(spatialResultSet.getInt("NTRACK"));
                 if (hasColumn(spatialResultSet, "GS")) railWayLWfinal.setGs(spatialResultSet.getDouble("GS"));
+                if (hasColumn(spatialResultSet, "IDSECTION")) railWayLWfinal.setIdSection(spatialResultSet.getString("IDSECTION"));
+                if (hasColumn(spatialResultSet, "UUEID")) railWayLWfinal.setUueid(spatialResultSet.getString("UUEID"));
+
 
                 currentIdSection = spatialResultSet.getInt("PK");
                 railWayLWfinal.setPK(currentIdSection);
@@ -117,6 +120,8 @@ public class RailWayLWIterator implements Iterator<RailWayLWIterator.RailWayLWGe
                     railWayLWfinal.setPK(spatialResultSet.getInt("PK"));
                     railWayLWfinal.setNbTrack(spatialResultSet.getInt("NTRACK"));
                     if (hasColumn(spatialResultSet, "GS")) railWayLWfinal.setGs(spatialResultSet.getDouble("GS"));
+                    if (hasColumn(spatialResultSet, "IDSECTION")) railWayLWfinal.setIdSection(spatialResultSet.getString("IDSECTION"));
+                    if (hasColumn(spatialResultSet, "UUEID")) railWayLWfinal.setUueid(spatialResultSet.getString("UUEID"));
                     railWayLWsum = getRailwayEmissionFromResultSet(spatialResultSet, "DAY");
                     railWayLWsumDay = getRailwayEmissionFromResultSet(spatialResultSet, "DAY");
                     railWayLWsumEvening = getRailwayEmissionFromResultSet(spatialResultSet, "EVENING");
@@ -266,6 +271,26 @@ public class RailWayLWIterator implements Iterator<RailWayLWIterator.RailWayLWGe
         private int pk;
         private int nbTrack;
 
+        private double gs;
+        private String idSection;
+        private String uueid;
+
+        public String getIdSection() {
+            return idSection;
+        }
+
+        public void setIdSection(String idSection) {
+            this.idSection = idSection;
+        }
+
+        public String getUueid() {
+            return uueid;
+        }
+
+        public void setUueid(String uueid) {
+            this.uueid = uueid;
+        }
+
         public double getGs() {
             return gs;
         }
@@ -273,10 +298,7 @@ public class RailWayLWIterator implements Iterator<RailWayLWIterator.RailWayLWGe
         public void setGs(double gs) {
             this.gs = gs;
         }
-
-        private double gs;
-
-
+        
         public RailWayLW getRailWayLW() {
             return railWayLW;
         }
