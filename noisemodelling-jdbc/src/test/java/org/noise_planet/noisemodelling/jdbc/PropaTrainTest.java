@@ -227,8 +227,8 @@ public class PropaTrainTest {
         importFiles(connection);
         computeLW(connection);
 
-      //  List<String> configs = Arrays.asList("ref","ref_dem","ref_g","F0", "F1", "F2", "F3", "C0","C1","C2","C3","C4","C5","C6");
-        List<String> configs = Arrays.asList("C0","F0","C1","F1");
+        //List<String> configs = Arrays.asList("ref","ref_dem","ref_g","F0", "F1", "F2", "F3", "C0","C1","C2","C3","C4","C5","C6");
+        List<String> configs = Arrays.asList("C0","C4");
 
         //  List<String> configs = Arrays.asList("ref","ref_g","ref_dem");
 
@@ -236,14 +236,14 @@ public class PropaTrainTest {
             System.out.println(configName);
 
             // ecran
-            double screenHeight = 30.0;
+            double screenHeight = 3.0;
             if (configName.equals("C1")) screenHeight = 2.0;
 
             double G = 0;
             if (configName.equals("C3")) G = 1;
 
             double screenDepth = 0.5;
-            if (configName.equals("C2")) screenHeight = 1;
+            if (configName.equals("C2")) screenDepth = 1;
 
             // Receivers
             String rcvName = "RECEPTEURS";
@@ -278,11 +278,11 @@ public class PropaTrainTest {
                     configName.equals("C3") ||
                     configName.equals("C4") ||
                     configName.equals("C5") ||
-                    configName.equals("C6")) landcover = "G0";
+                    configName.equals("C6")) landcover = "G1";
 
             // Config
             int orderRef = 0;
-            if (configName.equals("C4")) orderRef = 4;
+            if (configName.equals("C3")||configName.equals("C4")) orderRef = 1;
             boolean dif = true;
             if (configName.equals("C5")) dif = false;
 
@@ -297,6 +297,7 @@ public class PropaTrainTest {
                     configName.equals("F3")) buildingTable = "BUILDINGS";
             connection.createStatement().execute("DROP TABLE SCREENS IF EXISTS");
             connection.createStatement().execute("CREATE TABLE SCREENS AS SELECT ST_BUFFER(the_geom, "+screenDepth+", 'join=mitre endcap=flat') as the_geom, pk as pk, "+screenHeight+" as height, "+G+" as g FROM Rail_protect");
+            //connection.createStatement().execute("CREATE TABLE SCREENS AS SELECT ST_BUFFER(the_geom, "+screenDepth+", 'join=mitre endcap=flat') as the_geom, pk as pk, "+screenHeight+" as height, 1 as g FROM Rail_protect");
 
             // RECEIVERS
             int nbReceivers = 0;
