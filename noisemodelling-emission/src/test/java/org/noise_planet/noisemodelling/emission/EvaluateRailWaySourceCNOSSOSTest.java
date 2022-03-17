@@ -388,7 +388,7 @@ public class EvaluateRailWaySourceCNOSSOSTest {
 
 
         double[] expectedValuesLWRolling = new double[]{48.5606,49.5910,51.5763,56.4920,55.5831,55.4623,55.2207,56.4663,56.3912,
-                56.7350,59.9648,62.8745,62.6585,59.6990,57.3252,59.7649,61.1898,60.5615,58.7027,55.6686,49.3786,48.0600,45.9195};
+                56.7350,56.4837,59.9648,62.8745,62.6585,59.6990,57.3252,59.7649,61.1898,60.5615,58.7027,55.6686,49.3786,48.0600,45.9195};
         RailwayVehicleParametersCnossos vehicleParameters = new RailwayVehicleParametersCnossos(vehCat, vehicleSpeed,vehiclePerHour, rollingCondition,idlingTime);
         vehicleParameters.setSpectreVer(2);
         RailwayTrackParametersCnossos trackParameters = new RailwayTrackParametersCnossos(vMaxInfra, trackTransfer, railRoughness,
