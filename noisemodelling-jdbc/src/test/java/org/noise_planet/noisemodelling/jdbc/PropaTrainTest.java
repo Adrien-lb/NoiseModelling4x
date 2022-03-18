@@ -228,9 +228,9 @@ public class PropaTrainTest {
         importFiles(connection);
         computeLW(connection);
 
-        List<String> configs = Arrays.asList("F0", "F1", "F2", "F3", "C0","C1","C2","C3","C4","C5","C6");
+        //List<String> configs = Arrays.asList("F0", "F1", "F2", "F3", "C0","C1","C2","C3","C4","C5","C6");
 
-        //List<String> configs = Arrays.asList("C3","C4");
+        List<String> configs = Arrays.asList("F0","F1","F2","F3");
 
 
         for (String configName : configs) {
@@ -331,7 +331,8 @@ public class PropaTrainTest {
             System.out.println("buildingTable:" + buildingTable);
 
             PropagationProcessPathData environmentalData = new PropagationProcessPathData(false);
-            double[] DEFAULT_WIND_ROSE = new double[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+            double p = 1;
+            double[] DEFAULT_WIND_ROSE = new double[]{p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p};
             environmentalData.setWindRose(DEFAULT_WIND_ROSE);
             pointNoiseMap.setPropagationProcessPathData(environmentalData);
 

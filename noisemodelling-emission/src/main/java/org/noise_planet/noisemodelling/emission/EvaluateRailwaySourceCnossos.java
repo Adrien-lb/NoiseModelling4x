@@ -471,11 +471,6 @@ public class EvaluateRailwaySourceCnossos {
                 } else if (curvature == 3) {
                     lW[idFreq] = lW[idFreq] + 8;
                 }
-                if (spectreVer==2){
-                    if (bridgeId == 2) {
-                        lW[idFreq] = lW[idFreq] + 5;
-                    }
-                }
             }
         }else if(ref.equals("Bridge")){
             double [] lWBridge= new double[24];
