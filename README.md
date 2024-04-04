@@ -7,7 +7,7 @@
 
 NoiseModelling
 ======
-test
+
 NoiseModelling is a library capable of producing noise maps. 
 It can be freely used either for research and education, as well as by experts in a professional use.
 
