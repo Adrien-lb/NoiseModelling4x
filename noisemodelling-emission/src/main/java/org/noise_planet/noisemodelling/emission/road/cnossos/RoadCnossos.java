@@ -336,7 +336,7 @@ public class RoadCnossos {
         double hgvMotorLvl = getCoeff("ap", freqParam, "3", coeffVer) + getCoeff("bp", freqParam, "3", coeffVer) * (roadCnossosParameters.getSpeedHgv() - vRef) / vRef;
         double wheelaMotorLvl = getCoeff("ap", freqParam, "4a", coeffVer) + getCoeff("bp", freqParam, "4a", coeffVer) * (roadCnossosParameters.getSpeedWav() - vRef) / vRef;
         double wheelbMotorLvl = getCoeff("ap", freqParam, "4b", coeffVer) + getCoeff("bp", freqParam, "4b", coeffVer) * (roadCnossosParameters.getSpeedWbv() - vRef) / vRef;
-        double evMotorLvl = getCoeff("ap", freqParam, "5", coeffVer) + getCoeff("bp", freqParam, "5", 2) * (roadCnossosParameters.getSpeedEv() - vRef) / vRef;
+        double evMotorLvl = getCoeff("ap", freqParam, "5", 2) + getCoeff("bp", freqParam, "5", 2) * (roadCnossosParameters.getSpeedEv() - vRef) / vRef;
 
 
         // Effect of road gradients
