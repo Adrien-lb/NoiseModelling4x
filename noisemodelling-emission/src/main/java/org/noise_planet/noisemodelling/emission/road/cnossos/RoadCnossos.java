@@ -428,10 +428,12 @@ public class RoadCnossos {
             double lvCompound_InverseSlope = sumDbValues(lvRoadLvl, lvMotorLvl);
             double medCompound_InverseSlope = sumDbValues(medRoadLvl, medMotorLvl);
             double hgvCompound_InverseSlope = sumDbValues(hgvRoadLvl, hgvMotorLvl);
+            double evCompound_InverseSlope = sumDbValues(evRoadLvl, evMotorLvl);
 
             lvLvl = sumDbValues(Vperhour2NoiseLevel(lvCompound, roadCnossosParameters.getLvPerHour() / 2, roadCnossosParameters.getSpeedLv()), Vperhour2NoiseLevel(lvCompound_InverseSlope, roadCnossosParameters.getLvPerHour() / 2, roadCnossosParameters.getSpeedLv()));
             medLvl = sumDbValues(Vperhour2NoiseLevel(medCompound, roadCnossosParameters.getMvPerHour() / 2, roadCnossosParameters.getSpeedMv()), Vperhour2NoiseLevel(medCompound_InverseSlope, roadCnossosParameters.getMvPerHour() / 2, roadCnossosParameters.getSpeedMv()));
             hgvLvl = sumDbValues(Vperhour2NoiseLevel(hgvCompound, roadCnossosParameters.getHgvPerHour() / 2, roadCnossosParameters.getSpeedHgv()), Vperhour2NoiseLevel(hgvCompound_InverseSlope, roadCnossosParameters.getHgvPerHour() / 2, roadCnossosParameters.getSpeedHgv()));
+            evLvl = sumDbValues(Vperhour2NoiseLevel(lvCompound, roadCnossosParameters.getEvPerHour() / 2, roadCnossosParameters.getSpeedEv()), Vperhour2NoiseLevel(evCompound_InverseSlope, roadCnossosParameters.getEvPerHour() / 2, roadCnossosParameters.getSpeedEv()));
         }
 
         return sumDb5(lvLvl, medLvl, hgvLvl, wheelaLvl, wheelbLvl, evLvl);
