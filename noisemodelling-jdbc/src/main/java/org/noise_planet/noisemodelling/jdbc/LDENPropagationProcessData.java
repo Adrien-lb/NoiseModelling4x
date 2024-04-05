@@ -140,11 +140,13 @@ public class LDENPropagationProcessData extends CnossosPropagationData {
         double hgv_speed = 0;
         double wav_speed = 0;
         double wbv_speed = 0;
+        double ev_speed = 0;
         double lvPerHour = 0;
         double mvPerHour = 0;
         double hgvPerHour = 0;
         double wavPerHour = 0;
         double wbvPerHour = 0;
+        double evPerHour = 0;
         double temperature = 20.0;
         String roadSurface = "NL08";
         double tsStud = 0;
@@ -235,7 +237,7 @@ public class LDENPropagationProcessData extends CnossosPropagationData {
         int idFreq = 0;
         for (int freq : ldenConfig.propagationProcessPathDataDay.freq_lvl) {
             RoadCnossosParameters rsParametersCnossos = new RoadCnossosParameters(lv_speed, mv_speed, hgv_speed, wav_speed,
-                    wbv_speed,lvPerHour, mvPerHour, hgvPerHour, wavPerHour, wbvPerHour, freq, temperature,
+                    wbv_speed,ev_speed,lvPerHour, mvPerHour, hgvPerHour, wavPerHour, wbvPerHour, evPerHour, freq, temperature,
                     roadSurface, tsStud, pmStud, junctionDistance, junctionType);
             rsParametersCnossos.setSlopePercentage(slope);
             rsParametersCnossos.setWay(way);

@@ -25,6 +25,7 @@ public class RoadCnossosParameters {
     private double hgvPerHour; // Qm yearly average per hour
     private double wavPerHour; // Qm yearly average per hour
     private double wbvPerHour; // Qm yearly average per hour
+    private double evPerHour; // Qm yearly average per hour
 
 
     private int frequency; // Frequency in Hz
@@ -45,6 +46,7 @@ public class RoadCnossosParameters {
     private double speedHgv; // cat 3 vehicle speed  (in km/h)
     private double speedWav; // cat 4a vehicle speed  (in km/h)
     private double speedWbv; // cat 4b vehicle speed  (in km/h)
+    private double speedEv; // cat 5 vehicle speed  (in km/h)
 
     private int fileVersion = 2; // default coefficient version (1 = 2015, 2 = 2020)
 
@@ -68,11 +70,13 @@ public class RoadCnossosParameters {
      * @param hgv_speed   Average heavy goods vehicle speed
      * @param wav_speed   Average light 2 wheels vehicle speed
      * @param wbv_speed   Average heavy 2 wheels vehicle speed
+     * @param ev_speed    Average electrical vehicle speed
      * @param lvPerHour   Average light vehicle per hour
      * @param mvPerHour   Average heavy vehicle per hour
      * @param hgvPerHour  Average heavy vehicle per hour
      * @param wavPerHour  Average heavy vehicle per hour
      * @param wbvPerHour  Average heavy vehicle per hour
+     * @param evPerHour  Average electrical vehicle per hour
      * @param frequency   Studied Frequency (must be octave band)
      * @param Temperature Temperature (Celsius)
      * @param roadSurface roadSurface empty default, NL01 FR01 .. (look at src/main/resources/org/noise_planet/noisemodelling/emission/RoadCnossos_2020.json)
@@ -81,7 +85,7 @@ public class RoadCnossosParameters {
      * @param Junc_dist   Distance to the junction (in m) near an intersection, the road segment should be cut into small parts of 10 m..
      * @param Junc_type   Type of junction (1 =traffic lights ; 2 = roundabout), take into account the effect of acceleration and deceleration near the intersection.
      */
-    public RoadCnossosParameters(double lv_speed, double mv_speed, double hgv_speed, double wav_speed, double wbv_speed, double lvPerHour, double mvPerHour, double hgvPerHour, double wavPerHour, double wbvPerHour, int frequency, double Temperature, String roadSurface, double Ts_stud, double Pm_stud, double Junc_dist, int Junc_type) {
+    public RoadCnossosParameters(double lv_speed, double mv_speed, double hgv_speed, double wav_speed, double wbv_speed, double ev_speed, double lvPerHour, double mvPerHour, double hgvPerHour, double wavPerHour, double wbvPerHour, double evPerHour, int frequency, double Temperature, String roadSurface, double Ts_stud, double Pm_stud, double Junc_dist, int Junc_type) {
 
         if (lvPerHour < 0)
             throw new IllegalArgumentException("The flow rate of light vehicles is less than zero on one section.");
@@ -103,6 +107,8 @@ public class RoadCnossosParameters {
             throw new IllegalArgumentException("The speed of 2W(a) vehicles is less than zero on one section.");
         if (wbv_speed < 0)
             throw new IllegalArgumentException("The speed of 2W(b) vehicles is less than zero on one section.");
+        if (ev_speed < 0)
+            throw new IllegalArgumentException("The speed of electrical vehicles is less than zero on one section.");
         if (Ts_stud < 0 || Ts_stud > 12)
             throw new IllegalArgumentException("The number of months of snow tire use is impossible for a section (<0 or >12).");
         if (Junc_type < 0 || Junc_type > 2) throw new IllegalArgumentException("Unlnown Junction type for a section.");
@@ -111,6 +117,7 @@ public class RoadCnossosParameters {
         this.hgvPerHour = Math.max(0, hgvPerHour);
         this.wavPerHour = Math.max(0, wavPerHour);
         this.wbvPerHour = Math.max(0, wbvPerHour);
+        this.evPerHour = Math.max(0, evPerHour);
         this.frequency = Math.max(0, frequency);
         this.temperature = Temperature;
         this.roadSurface = roadSurface;
@@ -123,6 +130,7 @@ public class RoadCnossosParameters {
         this.speedHgv = hgv_speed;
         this.speedWav = wav_speed;
         this.speedWbv = wbv_speed;
+        this.speedEv = ev_speed;
     }
 
     /**
@@ -258,6 +266,7 @@ public class RoadCnossosParameters {
         speedMv = getVPl(speedLv, speed_max, roadtype, roadSubType);
         speedWav = getVPl(speedLv, speed_max, roadtype, roadSubType);
         speedWbv = getVPl(speedLv, speed_max, roadtype, roadSubType);
+        speedEv = getVPl(speedLv, speed_max, roadtype, roadSubType);
     }
 
     /**
@@ -287,6 +296,9 @@ public class RoadCnossosParameters {
 
     public double getWbvPerHour() {
         return wbvPerHour;
+    }
+    public double getEvPerHour() {
+        return evPerHour;
     }
 
     public double getSlopePercentage() {
@@ -376,6 +388,13 @@ public class RoadCnossosParameters {
             speedWbv = 20;
         }
         return speedWbv;
+    }
+
+    public double getSpeedEv() throws IOException {
+        if (speedEv < 20) {
+            speedEv = 20;
+        }
+        return speedEv;
     }
 
     public int getFrequency() {

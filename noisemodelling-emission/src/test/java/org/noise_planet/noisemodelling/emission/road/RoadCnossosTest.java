@@ -22,6 +22,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * Test the Road model CNOSSOS as implemented in RoadCnossos.java
  * @author Pierre Aumond, Univ. Gustave eiffel
+ * @author Adrien Le Bellec, Univ. Gustave eiffel
  */
 
 
@@ -42,6 +43,8 @@ public class RoadCnossosTest {
         int wav_per_hour = 1000;
         double wbv_speed = 70;
         int wbv_per_hour = 1000;
+        double ev_speed = 0;
+        int ev_per_hour = 0;
         int FreqParam = 8000;
         double Temperature = 15;
         String RoadSurface = "NL01";
@@ -49,7 +52,7 @@ public class RoadCnossosTest {
         double Ts_stud = 4;
         double Junc_dist = 200;
         int Junc_type = 1;
-        RoadCnossosParameters rsParameters = new RoadCnossosParameters(lv_speed, mv_speed, hgv_speed, wav_speed, wbv_speed, lv_per_hour, mv_per_hour, hgv_per_hour, wav_per_hour, wbv_per_hour, FreqParam, Temperature, RoadSurface, Ts_stud, Pm_stud, Junc_dist, Junc_type);
+        RoadCnossosParameters rsParameters = new RoadCnossosParameters(lv_speed, mv_speed, hgv_speed, wav_speed, wbv_speed, ev_speed, lv_per_hour, mv_per_hour, hgv_per_hour, wav_per_hour, wbv_per_hour, ev_per_hour, FreqParam, Temperature, RoadSurface, Ts_stud, Pm_stud, Junc_dist, Junc_type);
         rsParameters.setSlopePercentage_without_limit(10);
         rsParameters.setFileVersion(1);
         assertEquals(77.6711, RoadCnossos.evaluate(rsParameters), EPSILON_TEST1);
@@ -68,6 +71,8 @@ public class RoadCnossosTest {
         int wav_per_hour = 1000;
         double wbv_speed = 32;
         int wbv_per_hour = 1100;
+        double ev_speed = 0;
+        int ev_per_hour = 0;
         int FreqParam = 1000;
         double Temperature = 5;
         String RoadSurface = "NL02";
@@ -75,7 +80,7 @@ public class RoadCnossosTest {
         double Ts_stud = 4;
         double Junc_dist = 200;
         int Junc_type = 1;
-        RoadCnossosParameters rsParameters = new RoadCnossosParameters(lv_speed, mv_speed, hgv_speed, wav_speed, wbv_speed, lv_per_hour, mv_per_hour, hgv_per_hour, wav_per_hour, wbv_per_hour, FreqParam, Temperature, RoadSurface, Ts_stud, Pm_stud, Junc_dist, Junc_type);
+        RoadCnossosParameters rsParameters = new RoadCnossosParameters(lv_speed, mv_speed, hgv_speed, wav_speed, wbv_speed, ev_speed, lv_per_hour, mv_per_hour, hgv_per_hour, wav_per_hour, wbv_per_hour, ev_per_hour, FreqParam, Temperature, RoadSurface, Ts_stud, Pm_stud, Junc_dist, Junc_type);
         rsParameters.setSlopePercentage_without_limit(-5);
         rsParameters.setFileVersion(1);
         assertEquals(79.6814, RoadCnossos.evaluate(rsParameters), EPSILON_TEST1);
@@ -94,6 +99,8 @@ public class RoadCnossosTest {
         int wav_per_hour = 100;
         double wbv_speed = 32;
         int wbv_per_hour = 100;
+        double ev_speed = 0;
+        int ev_per_hour = 0;
         int FreqParam = 8000;
         double Temperature = -5;
         String RoadSurface = "NL03";
@@ -102,7 +109,7 @@ public class RoadCnossosTest {
         double Junc_dist = 200;
         int Junc_type = 1;
 
-        RoadCnossosParameters rsParameters = new RoadCnossosParameters(lv_speed, mv_speed, hgv_speed, wav_speed, wbv_speed, lv_per_hour, mv_per_hour, hgv_per_hour, wav_per_hour, wbv_per_hour, FreqParam, Temperature, RoadSurface, Ts_stud, Pm_stud, Junc_dist, Junc_type);
+        RoadCnossosParameters rsParameters = new RoadCnossosParameters(lv_speed, mv_speed, hgv_speed, wav_speed, wbv_speed, ev_speed, lv_per_hour, mv_per_hour, hgv_per_hour, wav_per_hour, wbv_per_hour, ev_per_hour, FreqParam, Temperature, RoadSurface, Ts_stud, Pm_stud, Junc_dist, Junc_type);
         rsParameters.setSlopePercentage_without_limit(-7);
         rsParameters.setFileVersion(1);
         assertEquals(58.8222, RoadCnossos.evaluate(rsParameters), EPSILON_TEST1);
@@ -122,6 +129,8 @@ public class RoadCnossosTest {
         int wav_per_hour = 100;
         double wbv_speed = 32;
         int wbv_per_hour = 100;
+        double ev_speed = 0;
+        int ev_per_hour = 0;
         int FreqParam = 63;
         double Temperature = -5;
         String RoadSurface = "NL03";
@@ -129,7 +138,7 @@ public class RoadCnossosTest {
         double Ts_stud = 4.;
         double Junc_dist = 50;
         int Junc_type = 1;
-        RoadCnossosParameters rsParameters = new RoadCnossosParameters(lv_speed, mv_speed, hgv_speed, wav_speed, wbv_speed, lv_per_hour, mv_per_hour, hgv_per_hour, wav_per_hour, wbv_per_hour, FreqParam, Temperature, RoadSurface, Ts_stud, Pm_stud, Junc_dist, Junc_type);
+        RoadCnossosParameters rsParameters = new RoadCnossosParameters(lv_speed, mv_speed, hgv_speed, wav_speed, wbv_speed, ev_speed, lv_per_hour, mv_per_hour, hgv_per_hour, wav_per_hour, wbv_per_hour, ev_per_hour, FreqParam, Temperature, RoadSurface, Ts_stud, Pm_stud, Junc_dist, Junc_type);
         rsParameters.setSlopePercentage_without_limit(-7);
         rsParameters.setFileVersion(1);
         assertEquals(82.785, RoadCnossos.evaluate(rsParameters), EPSILON_TEST1);
@@ -148,6 +157,8 @@ public class RoadCnossosTest {
         int wav_per_hour = 1000;
         double wbv_speed = 70;
         int wbv_per_hour = 1000;
+        double ev_speed = 0;
+        int ev_per_hour = 0;
         int FreqParam = 4000;
         double Temperature = 15;
         String RoadSurface = "NL01";
@@ -155,7 +166,7 @@ public class RoadCnossosTest {
         double Ts_stud = 4.;
         double Junc_dist = 30;
         int Junc_type = 2;
-        RoadCnossosParameters rsParameters = new RoadCnossosParameters(lv_speed, mv_speed, hgv_speed, wav_speed, wbv_speed, lv_per_hour, mv_per_hour, hgv_per_hour, wav_per_hour, wbv_per_hour, FreqParam, Temperature, RoadSurface, Ts_stud, Pm_stud, Junc_dist, Junc_type);
+        RoadCnossosParameters rsParameters = new RoadCnossosParameters(lv_speed, mv_speed, hgv_speed, wav_speed, wbv_speed, ev_speed, lv_per_hour, mv_per_hour, hgv_per_hour, wav_per_hour, wbv_per_hour, ev_per_hour, FreqParam, Temperature, RoadSurface, Ts_stud, Pm_stud, Junc_dist, Junc_type);
         rsParameters.setSlopePercentage_without_limit(10);
         rsParameters.setFileVersion(1);
         assertEquals(85.4991, RoadCnossos.evaluate(rsParameters), EPSILON_TEST1);
@@ -184,11 +195,11 @@ public class RoadCnossosTest {
         double juncDist = 200;
         int juncType = 1;
         double[] expectedValues = new double[]{88.421, 77.1136, 75.5712, 75.6919, 73.6689, 71.3471, 68.1195, 63.4796};
-        for (int idFreq = 1; idFreq < FREQUENCIES.length; idFreq++) {
+        for (int idFreq = 0; idFreq < FREQUENCIES.length; idFreq++) {
             RoadCnossosParameters rsParameters = new RoadCnossosParameters(vehicleSpeed, vehicleSpeed, vehicleSpeed,
-                    vehicleSpeed, vehicleSpeed, "1".equals(vehCat) ? vehiclePerHour : 0,
+                    vehicleSpeed, vehicleSpeed, vehicleSpeed, "1".equals(vehCat) ? vehiclePerHour : 0,
                     "2".equals(vehCat) ? vehiclePerHour : 0, "3".equals(vehCat) ? vehiclePerHour : 0,
-                    "4a".equals(vehCat) ? vehiclePerHour : 0, "4b".equals(vehCat) ? vehiclePerHour : 0,
+                    "4a".equals(vehCat) ? vehiclePerHour : 0, "4b".equals(vehCat) ? vehiclePerHour : 0, "5".equals(vehCat) ? vehiclePerHour : 0,
                     FREQUENCIES[idFreq], temperature, surfRef, tsStud, pmStud, juncDist, juncType);
             rsParameters.setSlopePercentage(slope);
             rsParameters.setFileVersion(1);
@@ -209,11 +220,11 @@ public class RoadCnossosTest {
         double juncDist = 200;
         int juncType = 1;
         double[] expectedValues = new double[]{88.421, 77.09, 75.54, 75.01, 72.79, 71.13, 68.07, 63.44};
-        for (int idFreq = 1; idFreq < FREQUENCIES.length; idFreq++) {
+        for (int idFreq = 0; idFreq < FREQUENCIES.length; idFreq++) {
             RoadCnossosParameters rsParameters = new RoadCnossosParameters(vehicleSpeed, vehicleSpeed, vehicleSpeed,
-                    vehicleSpeed, vehicleSpeed, "1".equals(vehCat) ? vehiclePerHour : 0,
+                    vehicleSpeed, vehicleSpeed, vehicleSpeed, "1".equals(vehCat) ? vehiclePerHour : 0,
                     "2".equals(vehCat) ? vehiclePerHour : 0, "3".equals(vehCat) ? vehiclePerHour : 0,
-                    "4a".equals(vehCat) ? vehiclePerHour : 0, "4b".equals(vehCat) ? vehiclePerHour : 0,
+                    "4a".equals(vehCat) ? vehiclePerHour : 0, "4b".equals(vehCat) ? vehiclePerHour : 0, "5".equals(vehCat) ? vehiclePerHour : 0,
                     FREQUENCIES[idFreq], temperature, surfRef, tsStud, pmStud, juncDist, juncType);
             rsParameters.setSlopePercentage(slope);
             rsParameters.setWay(3);
@@ -236,17 +247,42 @@ public class RoadCnossosTest {
         double juncDist = 200;
         int juncType = 1;
         double[] expectedValues = new double[]{88.421,77.09,75.54,75.01,72.79,71.13,68.07,63.44};
-        for(int idFreq = 1; idFreq < FREQUENCIES.length; idFreq++) {
+        for(int idFreq = 0; idFreq < FREQUENCIES.length; idFreq++) {
             RoadCnossosParameters rsParameters = new RoadCnossosParameters(vehicleSpeed, vehicleSpeed, vehicleSpeed,
-                    vehicleSpeed, vehicleSpeed, "1".equals(vehCat) ? vehiclePerHour : 0,
+                    vehicleSpeed, vehicleSpeed, vehicleSpeed, "1".equals(vehCat) ? vehiclePerHour : 0,
                     "2".equals(vehCat) ? vehiclePerHour : 0, "3".equals(vehCat) ? vehiclePerHour : 0,
-                    "4a".equals(vehCat) ? vehiclePerHour : 0, "4b".equals(vehCat) ? vehiclePerHour : 0,
+                    "4a".equals(vehCat) ? vehiclePerHour : 0, "4b".equals(vehCat) ? vehiclePerHour : 0, "5".equals(vehCat) ? vehiclePerHour : 0,
                     FREQUENCIES[idFreq], temperature, surfRef, tsStud, pmStud, juncDist, juncType);
             rsParameters.setSlopePercentage(slope);
             rsParameters.setWay(3);
             rsParameters.setFileVersion(1);
             RoadCnossos.evaluate(rsParameters);
 
+        }
+    }
+
+    @Test
+    public void CnossosElectricalEmissionTest() throws IOException {
+        String vehCat = "5";
+        double vehiclePerHour = 160;
+        double vehicleSpeed = 30;
+        double tsStud = 0.5;
+        String surfRef = "NL01";
+        double temperature = 20;
+        double pmStud = 1;
+        double slope = 0;
+        double juncDist = 200;
+        int juncType = 1;
+        double[] expectedValues = new double[]{49.331, 51.199, 50.656, 60.913, 65.411, 60.281, 49.719, 38.751};
+        for (int idFreq = 0; idFreq < FREQUENCIES.length; idFreq++) {
+            RoadCnossosParameters rsParameters = new RoadCnossosParameters(vehicleSpeed, vehicleSpeed, vehicleSpeed,
+                    vehicleSpeed, vehicleSpeed, vehicleSpeed, "1".equals(vehCat) ? vehiclePerHour : 0,
+                    "2".equals(vehCat) ? vehiclePerHour : 0, "3".equals(vehCat) ? vehiclePerHour : 0,
+                    "4a".equals(vehCat) ? vehiclePerHour : 0, "4b".equals(vehCat) ? vehiclePerHour : 0, "5".equals(vehCat) ? vehiclePerHour : 0,
+                    FREQUENCIES[idFreq], temperature, surfRef, tsStud, pmStud, juncDist, juncType);
+            rsParameters.setSlopePercentage(slope);
+            rsParameters.setFileVersion(2);
+            assertEquals(String.format("%d Hz", FREQUENCIES[idFreq]), expectedValues[idFreq], RoadCnossos.evaluate(rsParameters), EPSILON_TEST1);
         }
     }
 }

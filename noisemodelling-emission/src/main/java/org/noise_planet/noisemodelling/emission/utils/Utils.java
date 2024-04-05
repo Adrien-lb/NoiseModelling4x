@@ -165,8 +165,8 @@ public class Utils {
      * @param dB5 value in dB
      * @return
      */
-    public static Double sumDb5(Double dB1, Double dB2, Double dB3, Double dB4, Double dB5) {
-        return wToDb(dbToW(dB1) + dbToW(dB2) + dbToW(dB3) + dbToW(dB4) + dbToW(dB5));
+    public static Double sumDb5(Double dB1, Double dB2, Double dB3, Double dB4, Double dB5 , Double dB6) {
+        return wToDb(dbToW(dB1) + dbToW(dB2) + dbToW(dB3) + dbToW(dB4) + dbToW(dB5) + dbToW(dB6));
     }
 
 
