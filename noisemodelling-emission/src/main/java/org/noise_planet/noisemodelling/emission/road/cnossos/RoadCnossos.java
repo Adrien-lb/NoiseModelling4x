@@ -273,6 +273,16 @@ public class RoadCnossos {
                     deltaSlope = deltaSlope + (roadCnossosParameters.getSpeedHgv() / 100) * (Math.min(12, slope)) / 0.8;
                 }
                 break;
+            case "5":
+                // Electrical vehicles (cat 5) - hypotesis same as cat1
+                if (slope < -6) {
+                    deltaSlope = (Math.min(12, -slope) - 6);
+                } else if (slope <= 2) {
+                    deltaSlope = 0.;
+                } else {
+                    deltaSlope = ((roadCnossosParameters.getSpeedLv() / 100) * ((Math.min(12, slope) - 2) / 1.5));
+                }
+                break;
         }
         // no effects on cat 4 vehicles Eq. 2.2.16
 
@@ -295,8 +305,6 @@ public class RoadCnossos {
         final String roadSurface = roadCnossosParameters.getRoadSurface();
         final int coeffVer = roadCnossosParameters.getFileVersion();
         double vRef = 70.;
-        double evRoadLvl;
-        double evMotorLvl;
         /**
          * Rolling Noise
          */
@@ -305,12 +313,8 @@ public class RoadCnossos {
         double medRoadLvl = getNoiseLvl(getCoeff("ar", freqParam, "2", coeffVer), getCoeff("br", freqParam, "2", coeffVer), roadCnossosParameters.getSpeedMv(), vRef);
         double hgvRoadLvl = getNoiseLvl(getCoeff("ar", freqParam, "3", coeffVer), getCoeff("br", freqParam, "3", coeffVer), roadCnossosParameters.getSpeedHgv(), vRef);
         // Rolling noise is only for categories 5
+        double evRoadLvl = getNoiseLvl(getCoeff("ar", freqParam, "5", 2), getCoeff("br", freqParam, "5", coeffVer), roadCnossosParameters.getSpeedEv(), vRef);
 
-        if (coeffVer==2) {
-            evRoadLvl = getNoiseLvl(getCoeff("ar", freqParam, "5", coeffVer), getCoeff("br", freqParam, "5", coeffVer), roadCnossosParameters.getSpeedEv(), vRef);
-        } else {
-            evRoadLvl = getNoiseLvl(getCoeff("ar", freqParam, "1", coeffVer), getCoeff("br", freqParam, "1", coeffVer), roadCnossosParameters.getSpeedLv(), vRef);
-        }
 
         // Correction for studded tyres - Eq. 2.2.6
         if (Pm_stud > 0 && Ts_stud > 0) {
@@ -332,12 +336,9 @@ public class RoadCnossos {
         double hgvMotorLvl = getCoeff("ap", freqParam, "3", coeffVer) + getCoeff("bp", freqParam, "3", coeffVer) * (roadCnossosParameters.getSpeedHgv() - vRef) / vRef;
         double wheelaMotorLvl = getCoeff("ap", freqParam, "4a", coeffVer) + getCoeff("bp", freqParam, "4a", coeffVer) * (roadCnossosParameters.getSpeedWav() - vRef) / vRef;
         double wheelbMotorLvl = getCoeff("ap", freqParam, "4b", coeffVer) + getCoeff("bp", freqParam, "4b", coeffVer) * (roadCnossosParameters.getSpeedWbv() - vRef) / vRef;
+        double evMotorLvl = getCoeff("ap", freqParam, "5", coeffVer) + getCoeff("bp", freqParam, "5", 2) * (roadCnossosParameters.getSpeedEv() - vRef) / vRef;
 
-        if (coeffVer==2) {
-            evMotorLvl = getCoeff("ap", freqParam, "5", coeffVer) + getCoeff("bp", freqParam, "5", coeffVer) * (roadCnossosParameters.getSpeedEv() - vRef) / vRef;
-        } else {
-            evMotorLvl = getCoeff("ap", freqParam, "1", coeffVer) + getCoeff("bp", freqParam, "1", coeffVer) * (roadCnossosParameters.getSpeedLv() - vRef) / vRef;
-        }
+
         // Effect of road gradients
         // This correction implicitly includes the effect of slope on speed.
         // Light vehicles (cat 1) - Eq 2.2.13
@@ -369,36 +370,29 @@ public class RoadCnossos {
         lvRoadLvl = lvRoadLvl + getCr("1", Junc_type, coeffVer) * coefficientJunctionDistance;
         medRoadLvl = medRoadLvl + getCr("2", Junc_type, coeffVer) * coefficientJunctionDistance;
         hgvRoadLvl = hgvRoadLvl + getCr("3", Junc_type, coeffVer) * coefficientJunctionDistance;
+        evRoadLvl = evRoadLvl + getCr("5", Junc_type, 2) * coefficientJunctionDistance;
 
-        if (coeffVer==2) {
-            evRoadLvl = evRoadLvl + getCr("5", Junc_type, coeffVer) * coefficientJunctionDistance;
-        }
         // Effect of the acceleration and deceleration of vehicles - Propulsion Noise Eq 2.2.18
         lvMotorLvl = lvMotorLvl + getCp("1", Junc_type, coeffVer) * coefficientJunctionDistance;
         medMotorLvl = medMotorLvl + getCp("2", Junc_type, coeffVer) * coefficientJunctionDistance;
         hgvMotorLvl = hgvMotorLvl + getCp("3", Junc_type, coeffVer) * coefficientJunctionDistance;
         wheelaMotorLvl = wheelaMotorLvl + getCp("4a", Junc_type, coeffVer) * coefficientJunctionDistance;
         wheelbMotorLvl = wheelbMotorLvl + getCp("4b", Junc_type, coeffVer) * coefficientJunctionDistance;
-        if (coeffVer==2) {
-            evMotorLvl = evMotorLvl + getCp("5", Junc_type, coeffVer) * coefficientJunctionDistance;
-        }else{
-            evMotorLvl = lvMotorLvl + getCp("1", Junc_type, coeffVer) * coefficientJunctionDistance;
-        }
+
+        evMotorLvl = evMotorLvl + getCp("5", Junc_type, 2) * coefficientJunctionDistance;
         // Effect of the type of road surface - Eq. 2.2.19
         lvRoadLvl = lvRoadLvl + getNoiseLvl(getA_RoadSurfaceCoeff(freqParam, "1", roadCnossosParameters.getRoadSurface(), coeffVer), getB_RoadSurfaceCoeff("1", roadSurface, coeffVer), roadCnossosParameters.getSpeedLv(), 70.);
         medRoadLvl = medRoadLvl + getNoiseLvl(getA_RoadSurfaceCoeff(freqParam, "2", roadCnossosParameters.getRoadSurface(), coeffVer), getB_RoadSurfaceCoeff("2", roadSurface, coeffVer), roadCnossosParameters.getSpeedMv(), 70.);
         hgvRoadLvl = hgvRoadLvl + getNoiseLvl(getA_RoadSurfaceCoeff(freqParam, "3", roadCnossosParameters.getRoadSurface(), coeffVer), getB_RoadSurfaceCoeff("3", roadSurface, coeffVer), roadCnossosParameters.getSpeedHgv(), 70.);
 
-        if (coeffVer==2) {
-            evRoadLvl = evRoadLvl + getNoiseLvl(getA_RoadSurfaceCoeff(freqParam, "5", roadCnossosParameters.getRoadSurface(), coeffVer), getB_RoadSurfaceCoeff("5", roadSurface, coeffVer), roadCnossosParameters.getSpeedEv(), 70.);
-        }
+        evRoadLvl = evRoadLvl + getNoiseLvl(getA_RoadSurfaceCoeff(freqParam, "5", roadCnossosParameters.getRoadSurface(), coeffVer), getB_RoadSurfaceCoeff("5", roadSurface, 2), roadCnossosParameters.getSpeedEv(), 70.);
         // Correction road on propulsion noise - Eq. 2.2.20
         lvMotorLvl = lvMotorLvl + Math.min(getA_RoadSurfaceCoeff(freqParam, "1", roadSurface, coeffVer), 0.);
         medMotorLvl = medMotorLvl + Math.min(getA_RoadSurfaceCoeff(freqParam, "2", roadSurface, coeffVer), 0.);
         hgvMotorLvl = hgvMotorLvl + Math.min(getA_RoadSurfaceCoeff(freqParam, "3", roadSurface, coeffVer), 0.);
         wheelaMotorLvl = wheelaMotorLvl + Math.min(getA_RoadSurfaceCoeff(freqParam, "4a", roadSurface, coeffVer), 0.);
         wheelbMotorLvl = wheelbMotorLvl + Math.min(getA_RoadSurfaceCoeff(freqParam, "4b", roadSurface, coeffVer), 0.);
-        evMotorLvl = evMotorLvl + Math.min(getA_RoadSurfaceCoeff(freqParam, "5", roadSurface, coeffVer), 0.);
+        evMotorLvl = evMotorLvl + Math.min(getA_RoadSurfaceCoeff(freqParam, "5", roadSurface, 2), 0.);
 
         /**
          * Combine Propulsion and Rolling Noise - Eq. 2.2.2
