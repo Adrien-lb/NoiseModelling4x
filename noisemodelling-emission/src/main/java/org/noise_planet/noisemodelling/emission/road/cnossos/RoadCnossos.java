@@ -313,7 +313,7 @@ public class RoadCnossos {
         double medRoadLvl = getNoiseLvl(getCoeff("ar", freqParam, "2", coeffVer), getCoeff("br", freqParam, "2", coeffVer), roadCnossosParameters.getSpeedMv(), vRef);
         double hgvRoadLvl = getNoiseLvl(getCoeff("ar", freqParam, "3", coeffVer), getCoeff("br", freqParam, "3", coeffVer), roadCnossosParameters.getSpeedHgv(), vRef);
         // Rolling noise is only for categories 5
-        double evRoadLvl = getNoiseLvl(getCoeff("ar", freqParam, "5", 2), getCoeff("br", freqParam, "5", 2), roadCnossosParameters.getSpeedEv(), vRef);
+        double evRoadLvl = getNoiseLvl(getCoeff("ar", freqParam, "5", coeffVer), getCoeff("br", freqParam, "5", coeffVer), roadCnossosParameters.getSpeedEv(), vRef);
 
 
         // Correction for studded tyres - Eq. 2.2.6
@@ -336,7 +336,7 @@ public class RoadCnossos {
         double hgvMotorLvl = getCoeff("ap", freqParam, "3", coeffVer) + getCoeff("bp", freqParam, "3", coeffVer) * (roadCnossosParameters.getSpeedHgv() - vRef) / vRef;
         double wheelaMotorLvl = getCoeff("ap", freqParam, "4a", coeffVer) + getCoeff("bp", freqParam, "4a", coeffVer) * (roadCnossosParameters.getSpeedWav() - vRef) / vRef;
         double wheelbMotorLvl = getCoeff("ap", freqParam, "4b", coeffVer) + getCoeff("bp", freqParam, "4b", coeffVer) * (roadCnossosParameters.getSpeedWbv() - vRef) / vRef;
-        double evMotorLvl = getCoeff("ap", freqParam, "5", 2) + getCoeff("bp", freqParam, "5", 2) * (roadCnossosParameters.getSpeedEv() - vRef) / vRef;
+        double evMotorLvl = getCoeff("ap", freqParam, "5", coeffVer) + getCoeff("bp", freqParam, "5", coeffVer) * (roadCnossosParameters.getSpeedEv() - vRef) / vRef;
 
 
         // Effect of road gradients
@@ -370,7 +370,7 @@ public class RoadCnossos {
         lvRoadLvl = lvRoadLvl + getCr("1", Junc_type, coeffVer) * coefficientJunctionDistance;
         medRoadLvl = medRoadLvl + getCr("2", Junc_type, coeffVer) * coefficientJunctionDistance;
         hgvRoadLvl = hgvRoadLvl + getCr("3", Junc_type, coeffVer) * coefficientJunctionDistance;
-        evRoadLvl = evRoadLvl + getCr("5", Junc_type, 2) * coefficientJunctionDistance;
+        evRoadLvl = evRoadLvl + getCr("5", Junc_type, coeffVer) * coefficientJunctionDistance;
 
         // Effect of the acceleration and deceleration of vehicles - Propulsion Noise Eq 2.2.18
         lvMotorLvl = lvMotorLvl + getCp("1", Junc_type, coeffVer) * coefficientJunctionDistance;
@@ -392,7 +392,7 @@ public class RoadCnossos {
         hgvMotorLvl = hgvMotorLvl + Math.min(getA_RoadSurfaceCoeff(freqParam, "3", roadSurface, coeffVer), 0.);
         wheelaMotorLvl = wheelaMotorLvl + Math.min(getA_RoadSurfaceCoeff(freqParam, "4a", roadSurface, coeffVer), 0.);
         wheelbMotorLvl = wheelbMotorLvl + Math.min(getA_RoadSurfaceCoeff(freqParam, "4b", roadSurface, coeffVer), 0.);
-        evMotorLvl = evMotorLvl + Math.min(getA_RoadSurfaceCoeff(freqParam, "5", roadSurface, 2), 0.);
+        evMotorLvl = evMotorLvl + Math.min(getA_RoadSurfaceCoeff(freqParam, "5", roadSurface, coeffVer), 0.);
 
         /**
          * Combine Propulsion and Rolling Noise - Eq. 2.2.2
