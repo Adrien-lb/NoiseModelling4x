@@ -313,7 +313,7 @@ public class RoadCnossos {
         double medRoadLvl = getNoiseLvl(getCoeff("ar", freqParam, "2", coeffVer), getCoeff("br", freqParam, "2", coeffVer), roadCnossosParameters.getSpeedMv(), vRef);
         double hgvRoadLvl = getNoiseLvl(getCoeff("ar", freqParam, "3", coeffVer), getCoeff("br", freqParam, "3", coeffVer), roadCnossosParameters.getSpeedHgv(), vRef);
         // Rolling noise is only for categories 5
-        double evRoadLvl = getNoiseLvl(getCoeff("ar", freqParam, "5", 2), getCoeff("br", freqParam, "5", coeffVer), roadCnossosParameters.getSpeedEv(), vRef);
+        double evRoadLvl = getNoiseLvl(getCoeff("ar", freqParam, "5", 2), getCoeff("br", freqParam, "5", 2), roadCnossosParameters.getSpeedEv(), vRef);
 
 
         // Correction for studded tyres - Eq. 2.2.6
