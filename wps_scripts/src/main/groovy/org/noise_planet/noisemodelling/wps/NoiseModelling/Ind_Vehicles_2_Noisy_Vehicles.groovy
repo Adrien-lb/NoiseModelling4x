@@ -26,6 +26,8 @@ import org.h2gis.utilities.GeometryTableUtilities
 import org.h2gis.utilities.TableLocation
 import org.h2gis.utilities.wrapper.ConnectionWrapper
 import org.locationtech.jts.geom.*
+import org.noise_planet.noisemodelling.emission.railway.cnossos.RailwayTrackCnossosParameters
+import org.noise_planet.noisemodelling.emission.railway.cnossos.RailwayVehicleCnossosParameters
 import org.noise_planet.noisemodelling.emission.road.cnossosvar.RoadVehicleCnossosvar
 import org.noise_planet.noisemodelling.emission.road.cnossosvar.RoadVehicleCnossosvarParameters
 
@@ -684,7 +686,38 @@ class VehicleEmissionProcessData {
 
         return res_LV
     }
+    /*
+        getTrainsLevel
+        ailwayCnossos.setVehicleDataFile("RailwayVehiclesNMPB.json");
+        railwayCnossos.setTrainSetDataFile("RailwayTrainsets.json");
+        railwayCnossos.setRailwayDataFile("RailwayCnossosSNCF_2021.json");
 
+
+        String vehCat = "notsupported";
+
+        double vehicleSpeed = 80;
+        int rollingCondition = 0;
+        double idlingTime = 0;
+
+        int nTracks = 2;
+        int trackTransfer = 7;
+        int railRoughness = 3;
+        int impactNoise = 1;
+        int bridgeTransfert = 0;
+        int curvature = 0;
+        boolean isTunnel = false;
+
+        double vMaxInfra = 160;
+        double vehicleCommercial = 120;
+
+        double vehiclePerHour = (1000 * vehicleSpeed); //for one vehicle
+
+        RailwayVehicleCnossosParameters vehicleParameters = new RailwayVehicleCnossosParameters(vehCat, vehicleSpeed, vehiclePerHour, rollingCondition, idlingTime);
+        vehicleParameters.setFileVersion("EU");
+        RailwayTrackCnossosParameters trackParameters = new RailwayTrackCnossosParameters(vMaxInfra, trackTransfer, railRoughness,
+                impactNoise, bridgeTransfert, curvature, vehicleCommercial, isTunnel, nTracks);
+        railwayCnossos.evaluate(vehicleParameters, trackParameters);
+    */
 
 
 }
