@@ -11,7 +11,8 @@ import org.noise_planet.noisemodelling.wps.Acoustic_Tools.DynamicIndicators;
 import org.noise_planet.noisemodelling.wps.Database_Manager.Add_Primary_Key;
 import org.noise_planet.noisemodelling.wps.Dynamic.Flow_2_Noisy_Vehicles;
 import org.noise_planet.noisemodelling.wps.Dynamic.Ind_Vehicles_2_Noisy_Vehicles;
-import org.noise_planet.noisemodelling.wps.Dynamic.Noise_From_Attenuation_Matrix;
+import org.noise_planet.noisemodelling.wps.Dynamic.Ind_Train_2_Noisy_Train;
+import org.noise_planet.noisemodelling.wps.Dynamic.Noise_Train_From_Attenuation_Matrix;
 import org.noise_planet.noisemodelling.wps.Dynamic.Noise_From_Attenuation_Matrix;
 import org.noise_planet.noisemodelling.wps.Dynamic.Point_Source_From_Network
 import org.noise_planet.noisemodelling.wps.Dynamic.Split_Sources_Period
@@ -22,6 +23,7 @@ import org.noise_planet.noisemodelling.wps.Import_and_Export.Export_Table;
 import org.noise_planet.noisemodelling.wps.Import_and_Export.Import_File;
 import org.noise_planet.noisemodelling.wps.Import_and_Export.Import_OSM;
 import org.noise_planet.noisemodelling.wps.NoiseModelling.Noise_level_from_source
+import org.noise_planet.noisemodelling.wps.NoiseModelling.Noise_level_from_train_source
 import org.noise_planet.noisemodelling.wps.Receivers.Regular_Grid
 
 
