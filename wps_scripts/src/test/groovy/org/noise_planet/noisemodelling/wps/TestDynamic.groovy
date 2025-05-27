@@ -446,6 +446,7 @@ class TestDynamic extends JdbcTestCase {
                 trainCoefficientsData: Railway.class.getResource("RailwayCnossosSNCF_2021.json").toString()
         ])
 
+
         //new Export_Table().exec(connection, [exportPath:"build/SOURCES_GEOM.shp",
         //                                     tableToExport:"SOURCES_GEOM"])
 
@@ -455,6 +456,11 @@ class TestDynamic extends JdbcTestCase {
         def cols = sql.rows("SELECT MIN(PERIOD::long) min_period, MAX(PERIOD::long) max_period FROM SOURCES_EMISSION")[0]
         assertEquals(1734297901, cols["min_period"])
         assertEquals(1734297955, cols["max_period"])
+
+        new Export_Table().exec(connection,
+                ["tableToExport"   : "SPATIAL_REF_SYS",
+                 "exportPath"   : "C:\\Users\\lebellec\\Documents\\1_Projets\\NoiseModelling\\mars2025\\testPosition.shp"
+                ])
     }
     void testDynamicIndividualTrainTutorial() {
 
@@ -479,13 +485,13 @@ class TestDynamic extends JdbcTestCase {
 
         // Import the train network
         new Import_File().exec(connection,
-                ["pathFile" :TestDatabaseManager.getResource("Dynamic/train_network_32635.geojson").getPath() ,
+                ["pathFile" :TestDatabaseManager.getResource("Dynamic/TrainSourceEvaluation/train_network_32635.geojson").getPath() ,
                  "inputSRID": "32635",
                  "tableName": "rail_track"])
 
         // Import the vehicles trajectories
         new Import_File().exec(connection,
-                ["pathFile" : TestDatabaseManager.getResource("Dynamic/pointTrainDynamic.geojson").getPath() ,
+                ["pathFile" : TestDatabaseManager.getResource("Dynamic/TrainSourceEvaluation/pointTrainDynamic.geojson").getPath() ,
                  "inputSRID": "32635",
                  "tableName": "vehicle"])
 
