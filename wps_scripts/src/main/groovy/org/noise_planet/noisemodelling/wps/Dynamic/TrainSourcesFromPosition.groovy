@@ -33,9 +33,15 @@ import org.locationtech.jts.geom.LineString
 import org.locationtech.jts.geom.MultiLineString
 import org.locationtech.jts.geom.Point
 import org.locationtech.jts.triangulate.quadedge.Vertex
+import org.noise_planet.noisemodelling.emission.railway.cnossos.RailWayCnossosParameters
 import org.noise_planet.noisemodelling.emission.railway.cnossos.RailwayCnossos
 import org.noise_planet.noisemodelling.emission.railway.cnossos.RailwayTrackCnossosParameters
 import org.noise_planet.noisemodelling.emission.railway.cnossos.RailwayVehicleCnossosParameters
+
+import org.noise_planet.noisemodelling.emission.railway.cnossosvar.RailwayCnossosvar;
+import org.noise_planet.noisemodelling.emission.railway.cnossosvar.RailwayVehicleCnossosParametersvar;
+
+
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
@@ -57,6 +63,13 @@ inputs = [
                 title: 'Railway geometries table',
                 description: 'Table that contains geometries of rails. Wagons will be attached to the provided linestring',
                 type: String.class
+        ],
+        fieldSpeed: [
+                name: 'Field train Speed set',
+                title: 'Field train Speed set',
+                description: 'Name of the field that identifies the train characteristics. Default speed',
+                min:0, max:1,
+                type: Double.class
         ],
         fieldTrainset: [
                 name: 'Field train set',
@@ -151,6 +164,11 @@ def exec(Connection connection, Map input) {
     final def railwayGeometries = input["railwayGeometries"] as String
     final def trainsPosition = input["trainsPosition"] as String
 
+    def fieldSpeed = "speed"
+    if(input["fieldSpeed"]) {
+        fieldSpeed = input["fieldSpeed"] as String
+    }
+
     def fieldTrainset = "train_set"
     if(input["fieldTrainset"]) {
         fieldTrainset = input["fieldTrainset"] as String
@@ -235,18 +253,20 @@ def exec(Connection connection, Map input) {
     // Currently all sound sources are duplicated at each time step
     // it would be efficient to merge the same kind of source source generated at the same location (with an appropriate snap distance)
     int sourceCounter = 1
+
     def bands =  ["HZ50", "HZ63", "HZ80", "HZ100", "HZ125", "HZ160", "HZ200", "HZ250", "HZ315", "HZ400", "HZ500",
                   "HZ630", "HZ800", "HZ1000", "HZ1250", "HZ1600", "HZ2000", "HZ2500", "HZ3150", "HZ4000", "HZ5000",
                   "HZ6300", "HZ8000", "HZ10000"]
     sql.execute("DROP TABLE IF EXISTS SOURCES_GEOM")
     sql.execute("DROP TABLE IF EXISTS SOURCES_EMISSION")
     sql.execute("CREATE TABLE SOURCES_GEOM(IDSOURCE integer primary key,timestep long, THE_GEOM GEOMETRY(POINTZ, $srid), DIR_ID integer, YAW real, PITCH real, ROLL real)".toString())
-    sql.execute("CREATE TABLE SOURCES_EMISSION(IDSOURCE integer, PERIOD VARCHAR, ${bands.collect(){it+" real"}.join(", ")})".toString())
+    sql.execute("CREATE TABLE SOURCES_EMISSION(IDSOURCE integer, PERIOD VARCHAR, DIR_ID integer, ${bands.collect(){it+" real"}.join(", ")})".toString())
 
-    sql.withBatch(BATCH_SIZE, "INSERT INTO SOURCES_GEOM(IDSOURCE,TIMESTEP, THE_GEOM, DIR_ID, YAW, PITCH, ROLL) VALUES (?, ?, ?, ?, ?, ?, 0)") { BatchingPreparedStatementWrapper sourceGeomBatch ->
-        sql.withBatch(BATCH_SIZE, "INSERT INTO SOURCES_EMISSION(IDSOURCE, PERIOD, ${bands.join(", ")}) VALUES (?, ?," +
+    sql.withBatch(BATCH_SIZE, "INSERT INTO SOURCES_GEOM(IDSOURCE,TIMESTEP,THE_GEOM, DIR_ID, YAW, PITCH, ROLL) VALUES (?, ?, ?, ?, ?, ?, 0)") { BatchingPreparedStatementWrapper sourceGeomBatch ->
+        sql.withBatch(BATCH_SIZE, "INSERT INTO SOURCES_EMISSION(IDSOURCE, PERIOD, DIR_ID,${bands.join(", ")}) VALUES (?, ?, ?," +
                 " ${(["?"] * bands.size()).join(", ")})") { BatchingPreparedStatementWrapper sourcePowerBatch ->
-            sql.eachRow("SELECT $fieldTimeStep, $fieldTrainId, $fieldTrainset, the_geom FROM $trainsPosition ORDER BY $fieldTrainId, $fieldTimeStep".toString()) { rs ->
+           sql.eachRow('SELECT v.THE_GEOM, v.TRAIN_ID, v.TIMESTEP, v.TRAIN_SET, v.SPEED, r.NTRACK, r.TRACKTRANS, r.RAILROUGHN, r.IMPACTNOIS, r.CURVATURE, r.BRIDGETRAN FROM ' + trainsPosition + ' v INNER JOIN ' + railwayGeometries + ' r ON v.IDSECTION = r.IDSECTION;') { rs ->
+
                 String trainset = rs.getString(fieldTrainset)
                 String trainId = rs.getString(fieldTrainId)
                 long timeStep = rs.getLong(fieldTimeStep)
@@ -254,24 +274,21 @@ def exec(Connection connection, Map input) {
                 if (trainset != previousTrainset || trainId != previousTrainId) {
                     // New train configuration
                     // Precompute source distribution
-                    double vehicleSpeed = 160
-                    double vehiclePerHour = 1
-                    int rollingCondition = 0
-                    double idlingTime = 0
-                    int trackTransfer = 4
-                    int impactNoise = 0
-                    int bridgeTransfer = 0
-                    int curvature = 0
-                    int railRoughness = 1
-                    int nbTrack = 2
-                    double vMaxInfra = 160
-                    double commercialSpeed = 160
+                    double trainSpeed = rs.getDouble("SPEED")
+                    int trackTransfer = rs.getInt("TRACKTRANS")
+                    int impactNoise = rs.getInt("IMPACTNOIS")
+                    int bridgeTransfer = rs.getInt("BRIDGETRAN")
+                    int curvature = rs.getInt("CURVATURE")
+                    int railRoughness = rs.getInt("RAILROUGHN")
+                    int nbTrack = rs.getInt("NTRACK")
+                    double vMaxInfra = trainSpeed
+                    double commercialSpeed = trainSpeed
                     boolean isTunnel = false
                     RailwayTrackCnossosParameters trackParameters = new RailwayTrackCnossosParameters(vMaxInfra, trackTransfer, railRoughness,
                             impactNoise, bridgeTransfer, curvature, commercialSpeed, isTunnel, nbTrack)
-                    RailwayVehicleCnossosParameters vehicleParameters = new RailwayVehicleCnossosParameters(trainset, vehicleSpeed,
-                            vehiclePerHour / (double) nbTrack, rollingCondition, idlingTime);
-                    trainInfo = new TrainInfo(railway, trackParameters, vehicleParameters)
+                    RailwayVehicleCnossosParametersvar vehicleParameters = new RailwayVehicleCnossosParametersvar(trainset, trainSpeed, 0, 0);
+
+                    trainInfo = new TrainInfo(railway, trackParameters, vehicleParameters, trainSpeed)
                     previousTrainset = trainset
                     previousTrainId = trainId
                 }
@@ -287,24 +304,46 @@ def exec(Connection connection, Map input) {
                 // The direction is currently deduced from the previous position of the specific train (so no sources on the first time step)
                 // it could be also provided using a field (same order or reverse) according to the orientation (order of points) of the geometry the rail ?
                 trainInfo.updatePosition(trainPosition.coordinate)
+
                 if(trainInfo.trainTipRail != null) {
                     for(VehicleInfo vehicleInfo in trainInfo.trainComposition) {
                         // Insert the source emission into the output table
-                        int idSource = sourceCounter++
-                        def sourcePower = [idSource, timeStep.toString()] as List<Object>
-                        sourcePower = sourcePower + ([90.0] * bands.size()  as List<Object>)
-                        sourcePowerBatch.addBatch(sourcePower)
                         // Insert the source geometry and directivity into the output table
-                        int directivityId = 0 // train source directivity identifier
                         Point point = trainPosition.getFactory().createPoint(vehicleInfo.source.position)
                         point.setSRID(srid)
-                        def sourceGeom = [idSource, timeStep, point, directivityId, vehicleInfo.source.yaw, vehicleInfo.source.pitch] as List<Object>
-                        sourceGeomBatch.addBatch(sourceGeom)
+                        for (int directivityId = 0; directivityId < 6; ++directivityId){
+                            int idSource = sourceCounter++
+                            def sourcePower = [idSource, timeStep.toString(), directivityId] as List<Object>
+                            switch(directivityId){
+                                case    0:
+                                    sourcePower = sourcePower + (vehicleInfo.rolling as List<Object>)
+                                    break;
+                                case    1:
+                                    sourcePower = sourcePower + (vehicleInfo.tractionA as List<Object>)
+                                    break;
+                                case    2:
+                                    sourcePower = sourcePower + (vehicleInfo.tractionB as List<Object>)
+                                    break;
+                                case    3:
+                                    sourcePower = sourcePower + (vehicleInfo.aerodynamicA as List<Object>)
+                                    break;
+                                case    4:
+                                    sourcePower = sourcePower + (vehicleInfo.aerodynamicB as List<Object>)
+                                    break;
+                                case    5:
+                                    sourcePower = sourcePower + (vehicleInfo.bridge as List<Object>)
+                                    break;
+                            }
+                            sourcePowerBatch.addBatch(sourcePower)
+                            def sourceGeom = [idSource, timeStep, point, directivityId, vehicleInfo.source.yaw, vehicleInfo.source.pitch] as List<Object>
+                            sourceGeomBatch.addBatch(sourceGeom)
+                        }
                     }
                 }
             }
         }
     }
+    int i =1
 }
 
 
@@ -313,7 +352,7 @@ class TrainInfo {
     static final double LOOK_FOR_CLOSEST_RAIL = 1.0 // will look for another closest rail if we are at least from this distance of the old rail
     RailwayCnossos railway
     RailwayTrackCnossosParameters trackParameters
-    RailwayVehicleCnossosParameters vehicleParameters
+    RailwayVehicleCnossosParametersvar vehicleParameters
     List<VehicleInfo> trainComposition = new ArrayList<>()
     // Keep track of the rail associated with the train
     AreaRails nearbyRails = new AreaRails()
@@ -321,22 +360,46 @@ class TrainInfo {
     Coordinate trainPosition = new Coordinate(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY)
     LineString trainTipRail = null
 
-    TrainInfo(RailwayCnossos railway, RailwayTrackCnossosParameters trackParameters, RailwayVehicleCnossosParameters vehicleParameters) {
+    TrainInfo(RailwayCnossos railway, RailwayTrackCnossosParameters trackParameters, RailwayVehicleCnossosParametersvar vehicleParameters,double trainSpeed) {
         this.railway = railway
         this.trackParameters = trackParameters
         this.vehicleParameters = vehicleParameters
+
+        RailwayCnossosvar railwayCnossosvar = new RailwayCnossosvar();
+        RailWayCnossosParameters  trainSourceLevel = new RailWayCnossosParameters();
+
+
         // Precompute all sources positions normalized to distance from the tip of first vehicle
         // vehicleParameters.typeVehicle define a specific train composition (main engine - wagons etc)
         // Look for this vehicle in the JSON document
+
+
         JsonNode trainNode = railway.trainsetData.get(vehicleParameters.typeVehicle)
+
         if(trainNode instanceof ContainerNode) {
             // in vehicleNode we have a map with the key that define the "wagon" type and the value is the quantity (int)
             // The first element is supposed to be the engine, then other elements may not represent the real order of wagons
             double tipDistanceFromFirstVehicle = 0
             trainNode.fields().each {vehicle ->
+
                 def vehicleIdentifier = vehicle.key as String
                 def vehicleQuantity = vehicle.value.intValue()
                 // Look for the wagon characteristics
+
+                RailwayVehicleCnossosParametersvar vehicleParametersIdentifier = new RailwayVehicleCnossosParametersvar(vehicleIdentifier, trainSpeed, 0, 0);
+
+                railwayCnossosvar.setVehicleDataFile("RailwayVehiclesCnossos.json");
+                railwayCnossosvar.setTrainSetDataFile("RailwayTrainsets.json");
+                railwayCnossosvar.setRailwayDataFile("RailwayCnossosSNCF_2021.json");
+                trainSourceLevel = railwayCnossosvar.evaluate(vehicleParametersIdentifier, trackParameters);
+
+                double[] ROLLING = getSourceLevel("ROLLING", trainSourceLevel);
+                double[] TRACTIONA = getSourceLevel("TRACTIONA", trainSourceLevel);
+                double[] TRACTIONB = getSourceLevel("TRACTIONB", trainSourceLevel);
+                double[] AERODYNAMICA = getSourceLevel("AERODYNAMICA", trainSourceLevel);
+                double[] AERODYNAMICB = getSourceLevel("AERODYNAMICB", trainSourceLevel);
+                double[] BRIDGE = getSourceLevel("BRIDGE", trainSourceLevel);
+
                 JsonNode vehicleNode = railway.vehicleData.get(vehicleIdentifier)
                 if(vehicleNode instanceof ContainerNode) {
                     def maxSpeed = vehicleNode.get("Vmax").asDouble()
@@ -349,7 +412,8 @@ class TrainInfo {
                         // first source position is relative to the tip of the train (our the_geom coordinate)
                         double referenceDistance = trainComposition.isEmpty() ? firstSourcePosition : tipDistanceFromFirstVehicle + firstSourcePosition
                         for (coachId in 0..<nbCoach) {
-                            trainComposition.add(new VehicleInfo(referenceDistance, 0.5d, 0.0d))
+                            //TODO EDIT FOR ROLLING ...
+                            trainComposition.add(new VehicleInfo(referenceDistance, 0.5d, 0.0d, ROLLING,TRACTIONA,TRACTIONB,AERODYNAMICA,AERODYNAMICB,BRIDGE))
                             referenceDistance += sourceSpacing
                         }
                         // next vehicle tip position will be at this new location (we add the full vehicle length)
@@ -366,6 +430,7 @@ class TrainInfo {
             throw new IllegalArgumentException("Train identifier is set as '$vehicleParameters.typeVehicle' but such" +
                     " train composition is not defined (possible values $allTrains)")
         }
+
     }
 
     void updatePosition(Coordinate newPosition) {
@@ -449,6 +514,12 @@ class TrainInfo {
         }
         trainPosition = newPosition
     }
+
+    double[] getSourceLevel(String sourceType,RailWayCnossosParameters resultatslWRailWay){
+        double[] lWextract =resultatslWRailWay.getRailwaySourceList().get(sourceType).getlW();
+        return lWextract
+    }
+
 }
 
 
@@ -544,8 +615,15 @@ class VehicleInfo {
     double distanceFromTheGeom = 0 // source distance from the reference point
     double height = 0.5 // source height
     double lateralOffset = 0 // source lateral distance from the center of the train
+    double[] rolling = new double[24]
+    double[] tractionA = new double[24]
+    double[] tractionB = new double[24]
+    double[] aerodynamicA = new double[24]
+    double[] aerodynamicB = new double[24]
+    double[] bridge = new double[24]
 
-    PositionAndOrientation source = new PositionAndOrientation()
+
+            PositionAndOrientation source = new PositionAndOrientation()
 
     private LineString currentRail = null
     double currentRailLength = 0
@@ -556,10 +634,15 @@ class VehicleInfo {
     VehicleInfo() {
     }
 
-    VehicleInfo(double distanceFromTheGeom, double height, double lateralOffset) {
+    VehicleInfo(double distanceFromTheGeom, double height, double lateralOffset,double[] rolling,double[] tractionA,double[] tractionB,double[] aerodynamicA,double[] aerodynamicB,double[] bridge) {
         this.distanceFromTheGeom = distanceFromTheGeom
         this.height = height
-        this.lateralOffset = lateralOffset
+        this.rolling = rolling
+        this.tractionA = tractionA
+        this.tractionB = tractionB
+        this.aerodynamicA = aerodynamicA
+        this.aerodynamicB = aerodynamicB
+        this.bridge = bridge
     }
 
     LineString getCurrentRail() {
@@ -570,6 +653,7 @@ class VehicleInfo {
         this.currentRail = currentRail
         this.currentRailLength = currentRail.length
     }
+
 }
 
 /**
@@ -626,4 +710,5 @@ class AreaRails {
     }
 
 }
+
 

@@ -11,8 +11,9 @@
   {
    "type": "Feature",
    "properties": {
+    "idsection": 1,
     "pk": 1,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297900
@@ -27,9 +28,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 2,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297901
@@ -44,9 +46,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 3,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297902
@@ -61,9 +64,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 4,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297903
@@ -78,9 +82,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 5,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297904
@@ -95,9 +100,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 6,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297905
@@ -112,9 +118,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 7,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297906
@@ -129,9 +136,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 8,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297907
@@ -146,9 +154,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 9,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297908
@@ -163,9 +172,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 10,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297909
@@ -180,9 +190,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 11,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297910
@@ -197,9 +208,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 12,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297911
@@ -214,9 +226,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 13,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297912
@@ -231,9 +244,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 14,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297913
@@ -248,9 +262,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 15,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297914
@@ -265,9 +280,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 16,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297915
@@ -282,9 +298,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 17,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297916
@@ -299,9 +316,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 18,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297917
@@ -316,9 +334,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 19,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297918
@@ -333,9 +352,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 20,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297919
@@ -350,9 +370,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 21,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297920
@@ -367,9 +388,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 22,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297921
@@ -384,9 +406,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 23,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297922
@@ -401,9 +424,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 24,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297923
@@ -418,9 +442,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 25,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297924
@@ -435,9 +460,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 26,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297925
@@ -452,9 +478,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 27,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297926
@@ -469,9 +496,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 28,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297927
@@ -486,9 +514,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 29,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297928
@@ -503,9 +532,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 30,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297929
@@ -520,9 +550,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 31,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297930
@@ -537,9 +568,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 32,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297931
@@ -554,9 +586,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 33,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297932
@@ -571,9 +604,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 34,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297933
@@ -588,9 +622,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 35,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297934
@@ -605,9 +640,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 36,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297935
@@ -622,9 +658,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 37,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297936
@@ -639,9 +676,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 38,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297937
@@ -656,9 +694,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 39,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297938
@@ -673,9 +712,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 40,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297939
@@ -690,9 +730,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 41,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297940
@@ -707,9 +748,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 42,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297941
@@ -724,9 +766,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 43,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297942
@@ -741,9 +784,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 44,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297943
@@ -758,9 +802,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 45,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297944
@@ -775,9 +820,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 46,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297945
@@ -792,9 +838,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 47,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297946
@@ -809,9 +856,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 48,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297947
@@ -826,9 +874,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 49,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297948
@@ -843,9 +892,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 50,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297949
@@ -860,9 +910,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 51,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297950
@@ -877,9 +928,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 52,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297951
@@ -894,9 +946,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 53,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297952
@@ -911,9 +964,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 54,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297953
@@ -928,9 +982,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 55,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297954
@@ -945,9 +1000,10 @@
   },
   {
    "type": "Feature",
-   "properties": {
+   "properties": {        
+    "idsection": 1,
     "pk": 56,
-    "train_set": "TGV-D-10U2",
+    "train_set": "FRET",
     "train_id": 5480,
     "speed": 200,
     "timestep": 1734297955

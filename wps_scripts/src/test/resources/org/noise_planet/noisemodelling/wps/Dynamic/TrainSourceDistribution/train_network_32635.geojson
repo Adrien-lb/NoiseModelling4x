@@ -16,7 +16,7 @@
         "nTrack": 2,
         "speedTrack": 220,
         "trackTrans": 7,
-        "railRoughn": 3,
+        "railRoughn": 1,
         "impactNois": 1,
         "curvature": 0,
         "bridgeTran": 0,

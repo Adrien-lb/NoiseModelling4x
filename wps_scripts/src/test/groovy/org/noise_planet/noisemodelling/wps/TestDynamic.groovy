@@ -438,6 +438,7 @@ class TestDynamic extends JdbcTestCase {
         new TrainSourcesFromPosition().exec(connection, [
                 trainsPosition: "pointTrainDynamic",
                 railwayGeometries: "train_network_32635",
+                fieldSpeed: "speed",
                 fieldTrainset: "train_set",
                 fieldTrainId: "train_id",
                 fieldTimeStep: "timestep",
@@ -447,8 +448,16 @@ class TestDynamic extends JdbcTestCase {
         ])
 
 
-        //new Export_Table().exec(connection, [exportPath:"build/SOURCES_GEOM.shp",
-        //                                     tableToExport:"SOURCES_GEOM"])
+        new Export_Table().exec(connection, [exportPath:"C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/SOURCES_GEOM.shp",
+                                             tableToExport:"SOURCES_GEOM"])
+
+        new Export_Table().exec(connection,
+                ["tableToExport"   : "SOURCES_EMISSION",
+                 "exportPath"   : "C:\\Users\\lebellec\\Documents\\1_Projets\\NoiseModelling\\mars2025\\SOURCES_EMISSION.geojson"
+                ])
+        new Export_Table().exec(connection, [exportPath:"C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/SOURCES_EMISSION.geojson",
+                                             tableToExport:"SOURCES_EMISSION"])
+
 
         // Check output table content
         def sql = new Sql(connection)
@@ -457,10 +466,6 @@ class TestDynamic extends JdbcTestCase {
         assertEquals(1734297901, cols["min_period"])
         assertEquals(1734297955, cols["max_period"])
 
-        new Export_Table().exec(connection,
-                ["tableToExport"   : "SPATIAL_REF_SYS",
-                 "exportPath"   : "C:\\Users\\lebellec\\Documents\\1_Projets\\NoiseModelling\\mars2025\\testPosition.shp"
-                ])
     }
     void testDynamicIndividualTrainTutorial() {
 
