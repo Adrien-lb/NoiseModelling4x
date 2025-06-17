@@ -462,17 +462,17 @@ class TestDynamic extends JdbcTestCase {
 
     }
 
-
     void testDynamicIndividualTrainSimple() {
 
         // Import Buildings for your study area
         new Import_File().exec(connection,
-                ["pathFile" :  TestDatabaseManager.getResource("Dynamic/TrainDynamicTest/testBati.shp").getPath() ,
+                ["pathFile" :  TestDatabaseManager.getResource("Dynamic/TrainDynamicTest/testBati.geojson").getPath() ,
                  "inputSRID": "32635",
                  "tableName": "buildings"])
 
         new Import_File().exec(connection, [
                 pathFile: TestDynamic.getResource("Dynamic/TrainDynamicTest/receiverTest.geojson").getPath(),
+                "inputSRID": "32635",
                 "tableName": "RECEIVERS"])
 
         new Import_File().exec(connection, [
@@ -512,6 +512,7 @@ class TestDynamic extends JdbcTestCase {
                  "maxError" : 0.0,
                  "confMaxSrcDist" : 1000,
                  "confReflOrder" : 0,
+                 "paramWallAlpha" : 1,
                  "confDiffHorizontal" : true,
                  "confDiffVertical" : true,
                  "confExportSourceId": false
