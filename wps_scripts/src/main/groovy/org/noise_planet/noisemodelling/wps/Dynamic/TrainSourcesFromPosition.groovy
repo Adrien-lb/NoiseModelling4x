@@ -10,6 +10,12 @@
  * Contact: contact@noise-planet.org
  *
  */
+
+/**
+ * @Author Nicolas Fortin, Université Gustave Eiffel
+ * @Author Adrien Le Bellec, Université Gustave Eiffel
+ */
+
 package org.noise_planet.noisemodelling.wps.Dynamic
 
 import com.fasterxml.jackson.databind.JsonNode
@@ -64,13 +70,6 @@ inputs = [
                 description: 'Table that contains geometries of rails. Wagons will be attached to the provided linestring',
                 type: String.class
         ],
-        fieldSpeed: [
-                name: 'Field train Speed set',
-                title: 'Field train Speed set',
-                description: 'Name of the field that identifies the train characteristics. Default speed',
-                min:0, max:1,
-                type: Double.class
-        ],
         fieldTrainset: [
                 name: 'Field train set',
                 title: 'Field train set',
@@ -102,6 +101,13 @@ inputs = [
                 min:0, max:1,
                 type: String.class
         ],
+        /*sourceRelativePosition: [
+                name: 'Train source Position file',
+                title: 'Train source Position file',
+                description: 'File URL, specification of the train source position',
+                min:0, max:1,
+                type: String.class
+        ],*/
         trainVehicleData: [
                 name: 'Vehicles characteristics file',
                 title: 'Vehicles characteristics file',
@@ -164,11 +170,6 @@ def exec(Connection connection, Map input) {
     final def railwayGeometries = input["railwayGeometries"] as String
     final def trainsPosition = input["trainsPosition"] as String
 
-    def fieldSpeed = "speed"
-    if(input["fieldSpeed"]) {
-        fieldSpeed = input["fieldSpeed"] as String
-    }
-
     def fieldTrainset = "train_set"
     if(input["fieldTrainset"]) {
         fieldTrainset = input["fieldTrainset"] as String
@@ -182,6 +183,11 @@ def exec(Connection connection, Map input) {
     def fieldTimeStep = "period"
     if(input["fieldTrainset"]) {
         fieldTimeStep = input["fieldTimeStep"] as String
+    }
+
+    String sourceRelativePosition = "RailwaySourcePosition.json" as String
+    if(input["sourceRelativePosition"]) {
+        sourceRelativePosition = input["sourceRelativePosition"] as String
     }
 
     String trainTrainsetData = "RailwayTrainsets.json" as String
@@ -309,43 +315,61 @@ def exec(Connection connection, Map input) {
                     for(VehicleInfo vehicleInfo in trainInfo.trainComposition) {
                         // Insert the source emission into the output table
                         // Insert the source geometry and directivity into the output table
-                        Point point = trainPosition.getFactory().createPoint(vehicleInfo.source.position)
-                        point.setSRID(srid)
                         for (int directivityId = 0; directivityId < 6; ++directivityId){
                             int idSource = sourceCounter++
                             def sourcePower = [idSource, timeStep.toString(), directivityId] as List<Object>
-                            switch(directivityId){
-                                case    0:
-                                    sourcePower = sourcePower + (vehicleInfo.rolling as List<Object>)
-                                    break;
-                                case    1:
-                                    sourcePower = sourcePower + (vehicleInfo.tractionA as List<Object>)
-                                    break;
-                                case    2:
-                                    sourcePower = sourcePower + (vehicleInfo.tractionB as List<Object>)
-                                    break;
-                                case    3:
-                                    sourcePower = sourcePower + (vehicleInfo.aerodynamicA as List<Object>)
-                                    break;
-                                case    4:
-                                    sourcePower = sourcePower + (vehicleInfo.aerodynamicB as List<Object>)
-                                    break;
-                                case    5:
-                                    sourcePower = sourcePower + (vehicleInfo.bridge as List<Object>)
-                                    break;
+                            double[][] lWRailWay = [vehicleInfo.rolling , vehicleInfo.tractionA,vehicleInfo.tractionB , vehicleInfo.aerodynamicA,vehicleInfo.aerodynamicB , vehicleInfo.bridge ]
+                            sourcePower = sourcePower + (lWRailWay[directivityId] as List<Object>)
+
+                            //TODO edit if data extact position
+                            //double[] positionRelative = getRelativePosition(directivityId,null, vehicleInfo.source.yaw)
+                            Coordinate SourcePosition = new Coordinate(0,0,0)
+
+                            SourcePosition.setX(vehicleInfo.source.position.x)
+                            SourcePosition.setY(vehicleInfo.source.position.y)
+                            if (directivityId==2||directivityId==4){
+                                double directivityH = 4;
+                                SourcePosition.setZ(vehicleInfo.source.position.z+directivityH)
+                            } else {
+                                double directivityH = 0.5;
+                                SourcePosition.setZ(vehicleInfo.source.position.z+directivityH)
                             }
+                            Point point = trainPosition.getFactory().createPoint(SourcePosition)
+
+                            point.setSRID(srid)
                             sourcePowerBatch.addBatch(sourcePower)
                             def sourceGeom = [idSource, timeStep, point, directivityId, vehicleInfo.source.yaw, vehicleInfo.source.pitch] as List<Object>
                             sourceGeomBatch.addBatch(sourceGeom)
+
                         }
+
                     }
                 }
             }
         }
     }
-    int i =1
 }
 
+/*    def getRelativePosition(int directivityId, positionSource, double yaw) throws SQLException {
+        double heightDirectity
+        double[] positionRelative = new double[3]
+        if (positionSource != null){
+            positionRelative[0]=positionSource[0]/Math.sin(yaw)
+            positionRelative[1]=positionSource[1]/Math.sin(yaw)
+            positionRelative[2]=positionSource[2]
+        }else{
+            if (directivityId==2||directivityId==4){
+                heightDirectity = 4
+            }else{
+                heightDirectity = 0.5
+            }
+            positionRelative[0]=0
+            positionRelative[1]=0
+            positionRelative[2]=heightDirectity
+        }
+        return positionRelative
+    }
+*/
 
 @CompileStatic
 class TrainInfo {
@@ -412,8 +436,7 @@ class TrainInfo {
                         // first source position is relative to the tip of the train (our the_geom coordinate)
                         double referenceDistance = trainComposition.isEmpty() ? firstSourcePosition : tipDistanceFromFirstVehicle + firstSourcePosition
                         for (coachId in 0..<nbCoach) {
-                            //TODO EDIT FOR ROLLING ...
-                            trainComposition.add(new VehicleInfo(referenceDistance, 0.5d, 0.0d, ROLLING,TRACTIONA,TRACTIONB,AERODYNAMICA,AERODYNAMICB,BRIDGE))
+                            trainComposition.add(new VehicleInfo(referenceDistance, 0.0d, 0.0d, ROLLING,TRACTIONA,TRACTIONB,AERODYNAMICA,AERODYNAMICB,BRIDGE))
                             referenceDistance += sourceSpacing
                         }
                         // next vehicle tip position will be at this new location (we add the full vehicle length)
@@ -520,6 +543,9 @@ class TrainInfo {
         return lWextract
     }
 
+
+
+
 }
 
 
@@ -613,7 +639,7 @@ class PositionAndOrientation {
 @CompileStatic
 class VehicleInfo {
     double distanceFromTheGeom = 0 // source distance from the reference point
-    double height = 0.5 // source height
+    double height = 0 // source height
     double lateralOffset = 0 // source lateral distance from the center of the train
     double[] rolling = new double[24]
     double[] tractionA = new double[24]
@@ -710,5 +736,4 @@ class AreaRails {
     }
 
 }
-
 
