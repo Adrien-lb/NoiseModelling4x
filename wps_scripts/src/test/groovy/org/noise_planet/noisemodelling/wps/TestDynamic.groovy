@@ -11,8 +11,6 @@ import org.noise_planet.noisemodelling.wps.Acoustic_Tools.DynamicIndicators;
 import org.noise_planet.noisemodelling.wps.Database_Manager.Add_Primary_Key;
 import org.noise_planet.noisemodelling.wps.Dynamic.Flow_2_Noisy_Vehicles;
 import org.noise_planet.noisemodelling.wps.Dynamic.Ind_Vehicles_2_Noisy_Vehicles;
-import org.noise_planet.noisemodelling.wps.Dynamic.Ind_Train_2_Noisy_Train;
-import org.noise_planet.noisemodelling.wps.Dynamic.Noise_Train_From_Attenuation_Matrix;
 import org.noise_planet.noisemodelling.wps.Dynamic.Noise_From_Attenuation_Matrix;
 import org.noise_planet.noisemodelling.wps.Dynamic.Point_Source_From_Network
 import org.noise_planet.noisemodelling.wps.Dynamic.Split_Sources_Period
@@ -484,7 +482,7 @@ class TestDynamic extends JdbcTestCase {
                 pathFile: TestDynamic.getResource("Dynamic/TrainDynamicTest/testTrainNetwork.geojson").getPath(),
                 "inputSRID": "32635",
                 "tableName": "rail_track"])
-
+        // TODO prevoir le ENRICH_DEM_with_rail
 
         // Create a table with the noise level from the vehicles and snap the vehicles to the discretized network
         new TrainSourcesFromPosition().exec(connection, [
@@ -497,6 +495,7 @@ class TestDynamic extends JdbcTestCase {
                 trainVehicleData: Railway.class.getResource("RailwayVehiclesCnossos.json").toString(),
                 trainCoefficientsData: Railway.class.getResource("RailwayCnossosSNCF_2021.json").toString()
         ])
+
 
         new Set_Height().exec(connection,
                 [ "tableName":"RECEIVERS",
@@ -573,14 +572,20 @@ class TestDynamic extends JdbcTestCase {
 
 
         new Delaunay_Grid().exec(connection, ["buildingTableName"  : "buildings",
-                                              "sourcesTableName"   : "SOURCES_GEOM"]);
+                                              "sourcesTableName"   : "rail_track",
+                                              "maxArea" : 120
+                                            ]);
 
         new Set_Height().exec(connection,
                 [ "tableName":"RECEIVERS",
                   "height": 1.5
                 ])
 
-        // TODO faire un équivalent pour la stratégie du train !
+        // TODO faire un équivalent pour la stratégie du train ! a faire le snap de propa (check la position des sources et en prendre 1 seule ?)
+        // quelle strategie si position exacte des sources car actuellement point sources aux mêmes endroits
+        // TODO DOPPLER ?
+
+
         // Compute the attenuation noise level from the network sources (SOURCES_0DB) to the receivers
         new Noise_level_from_train_source().exec(connection,
                 ["tableBuilding"   : "BUILDINGS",

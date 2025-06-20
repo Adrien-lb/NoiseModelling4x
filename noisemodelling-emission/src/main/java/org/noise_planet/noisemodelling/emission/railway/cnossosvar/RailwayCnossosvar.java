@@ -304,11 +304,11 @@ public class RailwayCnossosvar extends org.noise_planet.noisemodelling.emission.
             double[] lW = getLWRolling(typeVehicle, trackRoughnessId, impactId,  curvature, speed, trackTransferId, trackFileVersion, axlesPerVeh);
             railWayParameters.addRailwaySource("ROLLING", new LineSource(lW,0.5, "ROLLING"));
             lW = getLWTraction(typeVehicle,  runningCondition,  "A", vehicleFileVersion);
-            railWayParameters.addRailwaySource("TRACTIONA", new LineSource(lW,0.05, "TRACTIONA"));
+            railWayParameters.addRailwaySource("TRACTIONA", new LineSource(lW,0.5, "TRACTIONA"));
             lW =  getLWTraction(typeVehicle,  runningCondition,  "B", vehicleFileVersion);
             railWayParameters.addRailwaySource("TRACTIONB", new LineSource(lW,4, "TRACTIONB"));
             lW = getLWAero(typeVehicle,   speed, "A", vehicleFileVersion);
-            railWayParameters.addRailwaySource("AERODYNAMICA", new LineSource(lW,0.05, "AERODYNAMICA"));
+            railWayParameters.addRailwaySource("AERODYNAMICA", new LineSource(lW,0.5, "AERODYNAMICA"));
             lW = getLWAero(typeVehicle,   speed, "B", vehicleFileVersion);
             railWayParameters.addRailwaySource("AERODYNAMICB", new LineSource(lW,4, "AERODYNAMICB"));
             lW =  getLWBridge(typeVehicle, trackRoughnessId, impactId, bridgeId, speed, trackFileVersion,axlesPerVeh);

@@ -315,11 +315,11 @@ def exec(Connection connection, Map input) {
                     for(VehicleInfo vehicleInfo in trainInfo.trainComposition) {
                         // Insert the source emission into the output table
                         // Insert the source geometry and directivity into the output table
-                        for (int directivityId = 0; directivityId < 6; ++directivityId){
+                        for (int directivityId = 1; directivityId <= 6; ++directivityId){
                             int idSource = sourceCounter++
                             def sourcePower = [idSource, timeStep.toString(), directivityId] as List<Object>
                             double[][] lWRailWay = [vehicleInfo.rolling , vehicleInfo.tractionA,vehicleInfo.tractionB , vehicleInfo.aerodynamicA,vehicleInfo.aerodynamicB , vehicleInfo.bridge ]
-                            sourcePower = sourcePower + (lWRailWay[directivityId] as List<Object>)
+                            sourcePower = sourcePower + (lWRailWay[directivityId-1] as List<Object>)
 
                             //TODO edit if data extact position
                             //double[] positionRelative = getRelativePosition(directivityId,null, vehicleInfo.source.yaw)
@@ -327,7 +327,8 @@ def exec(Connection connection, Map input) {
 
                             SourcePosition.setX(vehicleInfo.source.position.x)
                             SourcePosition.setY(vehicleInfo.source.position.y)
-                            if (directivityId==2||directivityId==4){
+
+                            if (directivityId==3||directivityId==5){
                                 double directivityH = 4;
                                 SourcePosition.setZ(vehicleInfo.source.position.z+directivityH)
                             } else {
