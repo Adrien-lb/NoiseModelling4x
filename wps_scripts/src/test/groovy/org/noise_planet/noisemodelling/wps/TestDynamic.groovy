@@ -475,6 +475,7 @@ class TestDynamic extends JdbcTestCase {
 
         new Import_File().exec(connection, [
                 pathFile: TestDynamic.getResource("Dynamic/TrainDynamicTest/PointFastTrain.geojson").getPath(),
+                //pathFile: TestDynamic.getResource("Dynamic/TrainDynamicTest/SimplePointFastTrain.geojson").getPath(),
                 "inputSRID": "32635",
                 "tableName": "vehicle"])
 
@@ -495,13 +496,20 @@ class TestDynamic extends JdbcTestCase {
                 trainVehicleData: Railway.class.getResource("RailwayVehiclesCnossos.json").toString(),
                 trainCoefficientsData: Railway.class.getResource("RailwayCnossosSNCF_2021.json").toString()
         ])
+        */new Delaunay_Grid().exec(connection, ["buildingTableName"  : "buildings",
+                                              "sourcesTableName"   : "rail_track",
+                                              "maxArea" : 1000
+        ]);
 
 
         new Set_Height().exec(connection,
                 [ "tableName":"RECEIVERS",
                   "height": 1.5
-                ])
+                ])*/
+
+
         // TODO faire un équivalent pour la stratégie du train !
+        // TODO Edit faire un paramètre d'entré pour selectionner le type de source ('all','Rolling',...)
         // Compute the attenuation noise level from the network sources (SOURCES_0DB) to the receivers
         new Noise_level_from_train_source().exec(connection,
                 ["tableBuilding"   : "BUILDINGS",
@@ -509,26 +517,39 @@ class TestDynamic extends JdbcTestCase {
                  "tableSourcesEmission" : "SOURCES_EMISSION",
                  "tableReceivers": "RECEIVERS",
                  "maxError" : 0.0,
-                 "confMaxSrcDist" : 1000,
+                 "confMaxSrcDist" : 500,
                  "confReflOrder" : 0,
                  "paramWallAlpha" : 1,
                  "confDiffHorizontal" : true,
                  "confDiffVertical" : true,
                  "confExportSourceId": false
+                 //"confRaysName":'file:///C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/Test/map.kml',
+
                 ])
+        new Create_Isosurface().exec(connection,
+                [resultTable: "RECEIVERS_LEVEL",
+                 smoothCoefficient : 0])
 
 
         new Export_Table().exec(connection,
                 ["tableToExport"   : "RECEIVERS_LEVEL",
-                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/Test/testReceiversDynamic.shp"
+                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/testReceiversDynamic.shp"
+                 //"exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/Test/SimpletestReceiversDynamic.shp"
                 ])
 
-        new Export_Table().exec(connection, [exportPath:"C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/Test/SOURCES_EMISSION.dbf",
+
+        new Export_Table().exec(connection, [exportPath:"C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/CONTOURING_NOISE_MAP.shp",
+                                             tableToExport: "CONTOURING_NOISE_MAP"])
+
+
+        new Export_Table().exec(connection, [exportPath:"C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/SOURCES_EMISSION.dbf",
+        //new Export_Table().exec(connection, [exportPath:"C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/Test/SimpleSOURCES_EMISSION.dbf",
                                              tableToExport:"SOURCES_EMISSION"])
 
         new Export_Table().exec(connection,
                 ["tableToExport"   : "SOURCES_GEOM",
-                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/Test/SOURCES_GEOM.shp"
+                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/SOURCES_GEOM.shp"
+                 //"exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/Test/SimpleSOURCES_GEOM.shp"
                 ])
     }
 
@@ -573,7 +594,7 @@ class TestDynamic extends JdbcTestCase {
 
         new Delaunay_Grid().exec(connection, ["buildingTableName"  : "buildings",
                                               "sourcesTableName"   : "rail_track",
-                                              "maxArea" : 120
+                                              "maxArea" : 500
                                             ]);
 
         new Set_Height().exec(connection,

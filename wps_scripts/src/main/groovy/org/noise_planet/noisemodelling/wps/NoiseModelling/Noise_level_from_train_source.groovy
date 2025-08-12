@@ -427,6 +427,8 @@ def exec(Connection connection, Map input) {
         tableSourceDirectivity = tableSourceDirectivity.toUpperCase()
     }
 
+
+
     boolean recordProfile = false
     if (input['confRecordProfile']) {
         recordProfile = input['confRecordProfile']
@@ -524,11 +526,6 @@ def exec(Connection connection, Map input) {
         parameters.keepAbsorption = true
         parameters.setMaximumRaysOutputCount(maximumRaysToExport)
     }
-
-    pointNoiseMap.setComputeHorizontalDiffraction(compute_vertical_diffraction)
-    pointNoiseMap.setComputeVerticalDiffraction(compute_horizontal_diffraction)
-    pointNoiseMap.setSoundReflectionOrder(reflexion_order)
-    pointNoiseMap.setFrequencyFieldPrepend(frequencyFieldPrepend)
 
 
     // Set environmental parameters

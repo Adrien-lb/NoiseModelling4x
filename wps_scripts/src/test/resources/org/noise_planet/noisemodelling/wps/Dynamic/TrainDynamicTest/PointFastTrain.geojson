@@ -37,7 +37,7 @@
     "field_1": 2,
     "pk": 2,
     "idSection": 1,
-    "x": 2.25,
+    "x": 6.944444444444445,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -49,7 +49,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     2.25,
+     6.944444444444445,
      0.0
     ]
    }
@@ -60,7 +60,7 @@
     "field_1": 3,
     "pk": 3,
     "idSection": 1,
-    "x": 4.5,
+    "x": 13.88888888888889,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -72,7 +72,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     4.5,
+     13.88888888888889,
      0.0
     ]
    }
@@ -83,7 +83,7 @@
     "field_1": 4,
     "pk": 4,
     "idSection": 1,
-    "x": 6.75,
+    "x": 20.833333333333336,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -95,7 +95,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     6.75,
+     20.833333333333336,
      0.0
     ]
    }
@@ -106,7 +106,7 @@
     "field_1": 5,
     "pk": 5,
     "idSection": 1,
-    "x": 9.0,
+    "x": 27.77777777777778,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -118,7 +118,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     9.0,
+     27.77777777777778,
      0.0
     ]
    }
@@ -129,7 +129,7 @@
     "field_1": 6,
     "pk": 6,
     "idSection": 1,
-    "x": 11.25,
+    "x": 34.72222222222222,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -141,7 +141,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     11.25,
+     34.72222222222222,
      0.0
     ]
    }
@@ -152,7 +152,7 @@
     "field_1": 7,
     "pk": 7,
     "idSection": 1,
-    "x": 13.5,
+    "x": 41.66666666666667,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -164,7 +164,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     13.5,
+     41.66666666666667,
      0.0
     ]
    }
@@ -175,7 +175,7 @@
     "field_1": 8,
     "pk": 8,
     "idSection": 1,
-    "x": 15.75,
+    "x": 48.611111111111114,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -187,7 +187,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.75,
+     48.611111111111114,
      0.0
     ]
    }
@@ -198,7 +198,7 @@
     "field_1": 9,
     "pk": 9,
     "idSection": 1,
-    "x": 18.0,
+    "x": 55.55555555555556,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -210,7 +210,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.0,
+     55.55555555555556,
      0.0
     ]
    }
@@ -221,7 +221,7 @@
     "field_1": 10,
     "pk": 10,
     "idSection": 1,
-    "x": 20.25,
+    "x": 62.5,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -233,7 +233,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     20.25,
+     62.5,
      0.0
     ]
    }
@@ -244,7 +244,7 @@
     "field_1": 11,
     "pk": 11,
     "idSection": 1,
-    "x": 22.5,
+    "x": 69.44444444444444,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -256,7 +256,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     22.5,
+     69.44444444444444,
      0.0
     ]
    }
@@ -267,7 +267,7 @@
     "field_1": 12,
     "pk": 12,
     "idSection": 1,
-    "x": 24.75,
+    "x": 76.38888888888889,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -279,7 +279,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     24.75,
+     76.38888888888889,
      0.0
     ]
    }
@@ -290,7 +290,7 @@
     "field_1": 13,
     "pk": 13,
     "idSection": 1,
-    "x": 27.0,
+    "x": 83.33333333333334,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -302,7 +302,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     27.0,
+     83.33333333333334,
      0.0
     ]
    }
@@ -313,7 +313,7 @@
     "field_1": 14,
     "pk": 14,
     "idSection": 1,
-    "x": 29.25,
+    "x": 90.27777777777779,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -325,7 +325,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     29.25,
+     90.27777777777779,
      0.0
     ]
    }
@@ -336,7 +336,7 @@
     "field_1": 15,
     "pk": 15,
     "idSection": 1,
-    "x": 31.5,
+    "x": 97.22222222222223,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -348,7 +348,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     31.5,
+     97.22222222222223,
      0.0
     ]
    }
@@ -359,7 +359,7 @@
     "field_1": 16,
     "pk": 16,
     "idSection": 1,
-    "x": 33.75,
+    "x": 104.16666666666667,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -371,7 +371,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     33.75,
+     104.16666666666667,
      0.0
     ]
    }
@@ -382,7 +382,7 @@
     "field_1": 17,
     "pk": 17,
     "idSection": 1,
-    "x": 36.0,
+    "x": 111.11111111111111,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -394,7 +394,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     36.0,
+     111.11111111111111,
      0.0
     ]
    }
@@ -405,7 +405,7 @@
     "field_1": 18,
     "pk": 18,
     "idSection": 1,
-    "x": 38.25,
+    "x": 118.05555555555556,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -417,7 +417,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     38.25,
+     118.05555555555556,
      0.0
     ]
    }
@@ -428,7 +428,7 @@
     "field_1": 19,
     "pk": 19,
     "idSection": 1,
-    "x": 40.5,
+    "x": 125.0,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -440,7 +440,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     40.5,
+     125.0,
      0.0
     ]
    }
@@ -451,7 +451,7 @@
     "field_1": 20,
     "pk": 20,
     "idSection": 1,
-    "x": 42.75,
+    "x": 131.94444444444446,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -463,7 +463,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     42.75,
+     131.94444444444446,
      0.0
     ]
    }
@@ -474,7 +474,7 @@
     "field_1": 21,
     "pk": 21,
     "idSection": 1,
-    "x": 45.0,
+    "x": 138.88888888888889,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -486,7 +486,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     45.0,
+     138.88888888888889,
      0.0
     ]
    }
@@ -497,7 +497,7 @@
     "field_1": 22,
     "pk": 22,
     "idSection": 1,
-    "x": 47.25,
+    "x": 145.83333333333334,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -509,7 +509,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     47.25,
+     145.83333333333334,
      0.0
     ]
    }
@@ -520,7 +520,7 @@
     "field_1": 23,
     "pk": 23,
     "idSection": 1,
-    "x": 49.5,
+    "x": 152.77777777777777,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -532,7 +532,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     49.5,
+     152.77777777777777,
      0.0
     ]
    }
@@ -543,7 +543,7 @@
     "field_1": 24,
     "pk": 24,
     "idSection": 1,
-    "x": 51.75,
+    "x": 159.72222222222223,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -555,7 +555,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     51.75,
+     159.72222222222223,
      0.0
     ]
    }
@@ -566,7 +566,7 @@
     "field_1": 25,
     "pk": 25,
     "idSection": 1,
-    "x": 54.0,
+    "x": 166.66666666666669,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -578,7 +578,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     54.0,
+     166.66666666666669,
      0.0
     ]
    }
@@ -589,7 +589,7 @@
     "field_1": 26,
     "pk": 26,
     "idSection": 1,
-    "x": 56.25,
+    "x": 173.61111111111111,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -601,7 +601,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     56.25,
+     173.61111111111111,
      0.0
     ]
    }
@@ -612,7 +612,7 @@
     "field_1": 27,
     "pk": 27,
     "idSection": 1,
-    "x": 58.5,
+    "x": 180.55555555555557,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -624,7 +624,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     58.5,
+     180.55555555555557,
      0.0
     ]
    }
@@ -635,7 +635,7 @@
     "field_1": 28,
     "pk": 28,
     "idSection": 1,
-    "x": 60.75,
+    "x": 187.5,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -647,7 +647,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     60.75,
+     187.5,
      0.0
     ]
    }
@@ -658,7 +658,7 @@
     "field_1": 29,
     "pk": 29,
     "idSection": 1,
-    "x": 63.0,
+    "x": 194.44444444444446,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -670,7 +670,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     63.0,
+     194.44444444444446,
      0.0
     ]
    }
@@ -681,7 +681,7 @@
     "field_1": 30,
     "pk": 30,
     "idSection": 1,
-    "x": 65.25,
+    "x": 201.38888888888889,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -693,7 +693,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     65.25,
+     201.38888888888889,
      0.0
     ]
    }
@@ -704,7 +704,7 @@
     "field_1": 31,
     "pk": 31,
     "idSection": 1,
-    "x": 67.5,
+    "x": 208.33333333333334,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -716,7 +716,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     67.5,
+     208.33333333333334,
      0.0
     ]
    }
@@ -727,7 +727,7 @@
     "field_1": 32,
     "pk": 32,
     "idSection": 1,
-    "x": 69.75,
+    "x": 215.27777777777777,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -739,7 +739,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     69.75,
+     215.27777777777777,
      0.0
     ]
    }
@@ -750,7 +750,7 @@
     "field_1": 33,
     "pk": 33,
     "idSection": 1,
-    "x": 72.0,
+    "x": 222.22222222222223,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -762,7 +762,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     72.0,
+     222.22222222222223,
      0.0
     ]
    }
@@ -773,7 +773,7 @@
     "field_1": 34,
     "pk": 34,
     "idSection": 1,
-    "x": 74.25,
+    "x": 229.16666666666669,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -785,7 +785,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     74.25,
+     229.16666666666669,
      0.0
     ]
    }
@@ -796,7 +796,7 @@
     "field_1": 35,
     "pk": 35,
     "idSection": 1,
-    "x": 76.5,
+    "x": 236.11111111111111,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -808,7 +808,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     76.5,
+     236.11111111111111,
      0.0
     ]
    }
@@ -819,7 +819,7 @@
     "field_1": 36,
     "pk": 36,
     "idSection": 1,
-    "x": 78.75,
+    "x": 243.05555555555557,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -831,7 +831,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     78.75,
+     243.05555555555557,
      0.0
     ]
    }
@@ -842,7 +842,7 @@
     "field_1": 37,
     "pk": 37,
     "idSection": 1,
-    "x": 81.0,
+    "x": 250.0,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -854,7 +854,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     81.0,
+     250.0,
      0.0
     ]
    }
@@ -865,7 +865,7 @@
     "field_1": 38,
     "pk": 38,
     "idSection": 1,
-    "x": 83.25,
+    "x": 256.94444444444446,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -877,7 +877,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     83.25,
+     256.94444444444446,
      0.0
     ]
    }
@@ -888,7 +888,7 @@
     "field_1": 39,
     "pk": 39,
     "idSection": 1,
-    "x": 85.5,
+    "x": 263.8888888888889,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -900,7 +900,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     85.5,
+     263.8888888888889,
      0.0
     ]
    }
@@ -911,7 +911,7 @@
     "field_1": 40,
     "pk": 40,
     "idSection": 1,
-    "x": 87.75,
+    "x": 270.8333333333333,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -923,7 +923,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     87.75,
+     270.8333333333333,
      0.0
     ]
    }
@@ -934,7 +934,7 @@
     "field_1": 41,
     "pk": 41,
     "idSection": 1,
-    "x": 90.0,
+    "x": 277.77777777777777,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -946,7 +946,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     90.0,
+     277.77777777777777,
      0.0
     ]
    }
@@ -957,7 +957,7 @@
     "field_1": 42,
     "pk": 42,
     "idSection": 1,
-    "x": 92.25,
+    "x": 284.72222222222223,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -969,7 +969,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     92.25,
+     284.72222222222223,
      0.0
     ]
    }
@@ -980,7 +980,7 @@
     "field_1": 43,
     "pk": 43,
     "idSection": 1,
-    "x": 94.5,
+    "x": 291.6666666666667,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -992,7 +992,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     94.5,
+     291.6666666666667,
      0.0
     ]
    }
@@ -1003,7 +1003,7 @@
     "field_1": 44,
     "pk": 44,
     "idSection": 1,
-    "x": 96.75,
+    "x": 298.61111111111114,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1015,7 +1015,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     96.75,
+     298.61111111111114,
      0.0
     ]
    }
@@ -1026,7 +1026,7 @@
     "field_1": 45,
     "pk": 45,
     "idSection": 1,
-    "x": 99.0,
+    "x": 305.55555555555554,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1038,7 +1038,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     99.0,
+     305.55555555555554,
      0.0
     ]
    }
@@ -1049,7 +1049,7 @@
     "field_1": 46,
     "pk": 46,
     "idSection": 1,
-    "x": 101.25,
+    "x": 312.5,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1061,7 +1061,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     101.25,
+     312.5,
      0.0
     ]
    }
@@ -1072,7 +1072,7 @@
     "field_1": 47,
     "pk": 47,
     "idSection": 1,
-    "x": 103.5,
+    "x": 319.44444444444446,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1084,7 +1084,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     103.5,
+     319.44444444444446,
      0.0
     ]
    }
@@ -1095,7 +1095,7 @@
     "field_1": 48,
     "pk": 48,
     "idSection": 1,
-    "x": 105.75,
+    "x": 326.3888888888889,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1107,7 +1107,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     105.75,
+     326.3888888888889,
      0.0
     ]
    }
@@ -1118,7 +1118,7 @@
     "field_1": 49,
     "pk": 49,
     "idSection": 1,
-    "x": 108.0,
+    "x": 333.33333333333337,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1130,7 +1130,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     108.0,
+     333.33333333333337,
      0.0
     ]
    }
@@ -1141,7 +1141,7 @@
     "field_1": 50,
     "pk": 50,
     "idSection": 1,
-    "x": 110.25,
+    "x": 340.27777777777777,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1153,7 +1153,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     110.25,
+     340.27777777777777,
      0.0
     ]
    }
@@ -1164,7 +1164,7 @@
     "field_1": 51,
     "pk": 51,
     "idSection": 1,
-    "x": 112.5,
+    "x": 347.22222222222223,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1176,7 +1176,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     112.5,
+     347.22222222222223,
      0.0
     ]
    }
@@ -1187,7 +1187,7 @@
     "field_1": 52,
     "pk": 52,
     "idSection": 1,
-    "x": 114.75,
+    "x": 354.1666666666667,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1199,7 +1199,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     114.75,
+     354.1666666666667,
      0.0
     ]
    }
@@ -1210,7 +1210,7 @@
     "field_1": 53,
     "pk": 53,
     "idSection": 1,
-    "x": 117.0,
+    "x": 361.11111111111114,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1222,7 +1222,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     117.0,
+     361.11111111111114,
      0.0
     ]
    }
@@ -1233,7 +1233,7 @@
     "field_1": 54,
     "pk": 54,
     "idSection": 1,
-    "x": 119.25,
+    "x": 368.05555555555554,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1245,7 +1245,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     119.25,
+     368.05555555555554,
      0.0
     ]
    }
@@ -1256,7 +1256,7 @@
     "field_1": 55,
     "pk": 55,
     "idSection": 1,
-    "x": 121.5,
+    "x": 375.0,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1268,7 +1268,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     121.5,
+     375.0,
      0.0
     ]
    }
@@ -1279,7 +1279,7 @@
     "field_1": 56,
     "pk": 56,
     "idSection": 1,
-    "x": 123.75,
+    "x": 381.94444444444446,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1291,7 +1291,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     123.75,
+     381.94444444444446,
      0.0
     ]
    }
@@ -1302,7 +1302,7 @@
     "field_1": 57,
     "pk": 57,
     "idSection": 1,
-    "x": 126.0,
+    "x": 388.8888888888889,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1314,7 +1314,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     126.0,
+     388.8888888888889,
      0.0
     ]
    }
@@ -1325,7 +1325,7 @@
     "field_1": 58,
     "pk": 58,
     "idSection": 1,
-    "x": 128.25,
+    "x": 395.83333333333337,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1337,7 +1337,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     128.25,
+     395.83333333333337,
      0.0
     ]
    }
@@ -1348,7 +1348,7 @@
     "field_1": 59,
     "pk": 59,
     "idSection": 1,
-    "x": 130.5,
+    "x": 402.77777777777777,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1360,7 +1360,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     130.5,
+     402.77777777777777,
      0.0
     ]
    }
@@ -1371,7 +1371,7 @@
     "field_1": 60,
     "pk": 60,
     "idSection": 1,
-    "x": 132.75,
+    "x": 409.72222222222223,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1383,7 +1383,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     132.75,
+     409.72222222222223,
      0.0
     ]
    }
@@ -1394,7 +1394,7 @@
     "field_1": 61,
     "pk": 61,
     "idSection": 1,
-    "x": 135.0,
+    "x": 416.6666666666667,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1406,7 +1406,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     135.0,
+     416.6666666666667,
      0.0
     ]
    }
@@ -1417,7 +1417,7 @@
     "field_1": 62,
     "pk": 62,
     "idSection": 1,
-    "x": 137.25,
+    "x": 423.61111111111114,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1429,7 +1429,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     137.25,
+     423.61111111111114,
      0.0
     ]
    }
@@ -1440,7 +1440,7 @@
     "field_1": 63,
     "pk": 63,
     "idSection": 1,
-    "x": 139.5,
+    "x": 430.55555555555554,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1452,7 +1452,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     139.5,
+     430.55555555555554,
      0.0
     ]
    }
@@ -1463,7 +1463,7 @@
     "field_1": 64,
     "pk": 64,
     "idSection": 1,
-    "x": 141.75,
+    "x": 437.5,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1475,7 +1475,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     141.75,
+     437.5,
      0.0
     ]
    }
@@ -1486,7 +1486,7 @@
     "field_1": 65,
     "pk": 65,
     "idSection": 1,
-    "x": 144.0,
+    "x": 444.44444444444446,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1498,7 +1498,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     144.0,
+     444.44444444444446,
      0.0
     ]
    }
@@ -1509,7 +1509,7 @@
     "field_1": 66,
     "pk": 66,
     "idSection": 1,
-    "x": 146.25,
+    "x": 451.3888888888889,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1521,7 +1521,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     146.25,
+     451.3888888888889,
      0.0
     ]
    }
@@ -1532,7 +1532,7 @@
     "field_1": 67,
     "pk": 67,
     "idSection": 1,
-    "x": 148.5,
+    "x": 458.33333333333337,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1544,7 +1544,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     148.5,
+     458.33333333333337,
      0.0
     ]
    }
@@ -1555,7 +1555,7 @@
     "field_1": 68,
     "pk": 68,
     "idSection": 1,
-    "x": 150.75,
+    "x": 465.27777777777777,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1567,7 +1567,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     150.75,
+     465.27777777777777,
      0.0
     ]
    }
@@ -1578,7 +1578,7 @@
     "field_1": 69,
     "pk": 69,
     "idSection": 1,
-    "x": 153.0,
+    "x": 472.22222222222223,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1590,7 +1590,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     153.0,
+     472.22222222222223,
      0.0
     ]
    }
@@ -1601,7 +1601,7 @@
     "field_1": 70,
     "pk": 70,
     "idSection": 1,
-    "x": 155.25,
+    "x": 479.1666666666667,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1613,7 +1613,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     155.25,
+     479.1666666666667,
      0.0
     ]
    }
@@ -1624,7 +1624,7 @@
     "field_1": 71,
     "pk": 71,
     "idSection": 1,
-    "x": 157.5,
+    "x": 486.11111111111114,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1636,7 +1636,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     157.5,
+     486.11111111111114,
      0.0
     ]
    }
@@ -1647,7 +1647,7 @@
     "field_1": 72,
     "pk": 72,
     "idSection": 1,
-    "x": 159.75,
+    "x": 493.05555555555554,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1659,7 +1659,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     159.75,
+     493.05555555555554,
      0.0
     ]
    }
@@ -1670,7 +1670,7 @@
     "field_1": 73,
     "pk": 73,
     "idSection": 1,
-    "x": 162.0,
+    "x": 500.0,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1682,7 +1682,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     162.0,
+     500.0,
      0.0
     ]
    }
@@ -1693,7 +1693,7 @@
     "field_1": 74,
     "pk": 74,
     "idSection": 1,
-    "x": 164.25,
+    "x": 506.9444444444444,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1705,7 +1705,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     164.25,
+     506.9444444444444,
      0.0
     ]
    }
@@ -1716,7 +1716,7 @@
     "field_1": 75,
     "pk": 75,
     "idSection": 1,
-    "x": 166.5,
+    "x": 513.8888888888889,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1728,7 +1728,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     166.5,
+     513.8888888888889,
      0.0
     ]
    }
@@ -1739,7 +1739,7 @@
     "field_1": 76,
     "pk": 76,
     "idSection": 1,
-    "x": 168.75,
+    "x": 520.8333333333334,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1751,7 +1751,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     168.75,
+     520.8333333333334,
      0.0
     ]
    }
@@ -1762,7 +1762,7 @@
     "field_1": 77,
     "pk": 77,
     "idSection": 1,
-    "x": 171.0,
+    "x": 527.7777777777778,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1774,7 +1774,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     171.0,
+     527.7777777777778,
      0.0
     ]
    }
@@ -1785,7 +1785,7 @@
     "field_1": 78,
     "pk": 78,
     "idSection": 1,
-    "x": 173.25,
+    "x": 534.7222222222223,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1797,7 +1797,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     173.25,
+     534.7222222222223,
      0.0
     ]
    }
@@ -1808,7 +1808,7 @@
     "field_1": 79,
     "pk": 79,
     "idSection": 1,
-    "x": 175.5,
+    "x": 541.6666666666666,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1820,7 +1820,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     175.5,
+     541.6666666666666,
      0.0
     ]
    }
@@ -1831,7 +1831,7 @@
     "field_1": 80,
     "pk": 80,
     "idSection": 1,
-    "x": 177.75,
+    "x": 548.6111111111111,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1843,7 +1843,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     177.75,
+     548.6111111111111,
      0.0
     ]
    }
@@ -1854,7 +1854,7 @@
     "field_1": 81,
     "pk": 81,
     "idSection": 1,
-    "x": 180.0,
+    "x": 555.5555555555555,
     "y": 0.0,
     "z": 0,
     "angle": 0,
@@ -1866,7 +1866,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     180.0,
+     555.5555555555555,
      0.0
     ]
    }
@@ -1877,3893 +1877,6 @@
     "field_1": 82,
     "pk": 82,
     "idSection": 1,
-    "x": 182.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734297981
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     182.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 83,
-    "pk": 83,
-    "idSection": 1,
-    "x": 184.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734297982
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     184.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 84,
-    "pk": 84,
-    "idSection": 1,
-    "x": 186.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734297983
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     186.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 85,
-    "pk": 85,
-    "idSection": 1,
-    "x": 189.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734297984
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     189.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 86,
-    "pk": 86,
-    "idSection": 1,
-    "x": 191.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734297985
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     191.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 87,
-    "pk": 87,
-    "idSection": 1,
-    "x": 193.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734297986
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     193.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 88,
-    "pk": 88,
-    "idSection": 1,
-    "x": 195.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734297987
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     195.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 89,
-    "pk": 89,
-    "idSection": 1,
-    "x": 198.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734297988
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     198.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 90,
-    "pk": 90,
-    "idSection": 1,
-    "x": 200.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734297989
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     200.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 91,
-    "pk": 91,
-    "idSection": 1,
-    "x": 202.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734297990
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     202.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 92,
-    "pk": 92,
-    "idSection": 1,
-    "x": 204.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734297991
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     204.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 93,
-    "pk": 93,
-    "idSection": 1,
-    "x": 207.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734297992
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     207.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 94,
-    "pk": 94,
-    "idSection": 1,
-    "x": 209.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734297993
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     209.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 95,
-    "pk": 95,
-    "idSection": 1,
-    "x": 211.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734297994
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     211.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 96,
-    "pk": 96,
-    "idSection": 1,
-    "x": 213.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734297995
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     213.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 97,
-    "pk": 97,
-    "idSection": 1,
-    "x": 216.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734297996
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     216.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 98,
-    "pk": 98,
-    "idSection": 1,
-    "x": 218.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734297997
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     218.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 99,
-    "pk": 99,
-    "idSection": 1,
-    "x": 220.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734297998
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     220.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 100,
-    "pk": 100,
-    "idSection": 1,
-    "x": 222.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734297999
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     222.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 101,
-    "pk": 101,
-    "idSection": 1,
-    "x": 225.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298000
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     225.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 102,
-    "pk": 102,
-    "idSection": 1,
-    "x": 227.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298001
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     227.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 103,
-    "pk": 103,
-    "idSection": 1,
-    "x": 229.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298002
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     229.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 104,
-    "pk": 104,
-    "idSection": 1,
-    "x": 231.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298003
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     231.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 105,
-    "pk": 105,
-    "idSection": 1,
-    "x": 234.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298004
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     234.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 106,
-    "pk": 106,
-    "idSection": 1,
-    "x": 236.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298005
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     236.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 107,
-    "pk": 107,
-    "idSection": 1,
-    "x": 238.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298006
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     238.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 108,
-    "pk": 108,
-    "idSection": 1,
-    "x": 240.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298007
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     240.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 109,
-    "pk": 109,
-    "idSection": 1,
-    "x": 243.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298008
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     243.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 110,
-    "pk": 110,
-    "idSection": 1,
-    "x": 245.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298009
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     245.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 111,
-    "pk": 111,
-    "idSection": 1,
-    "x": 247.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298010
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     247.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 112,
-    "pk": 112,
-    "idSection": 1,
-    "x": 249.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298011
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     249.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 113,
-    "pk": 113,
-    "idSection": 1,
-    "x": 252.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298012
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     252.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 114,
-    "pk": 114,
-    "idSection": 1,
-    "x": 254.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298013
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     254.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 115,
-    "pk": 115,
-    "idSection": 1,
-    "x": 256.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298014
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     256.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 116,
-    "pk": 116,
-    "idSection": 1,
-    "x": 258.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298015
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     258.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 117,
-    "pk": 117,
-    "idSection": 1,
-    "x": 261.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298016
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     261.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 118,
-    "pk": 118,
-    "idSection": 1,
-    "x": 263.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298017
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     263.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 119,
-    "pk": 119,
-    "idSection": 1,
-    "x": 265.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298018
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     265.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 120,
-    "pk": 120,
-    "idSection": 1,
-    "x": 267.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298019
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     267.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 121,
-    "pk": 121,
-    "idSection": 1,
-    "x": 270.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298020
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     270.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 122,
-    "pk": 122,
-    "idSection": 1,
-    "x": 272.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298021
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     272.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 123,
-    "pk": 123,
-    "idSection": 1,
-    "x": 274.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298022
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     274.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 124,
-    "pk": 124,
-    "idSection": 1,
-    "x": 276.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298023
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     276.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 125,
-    "pk": 125,
-    "idSection": 1,
-    "x": 279.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298024
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     279.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 126,
-    "pk": 126,
-    "idSection": 1,
-    "x": 281.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298025
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     281.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 127,
-    "pk": 127,
-    "idSection": 1,
-    "x": 283.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298026
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     283.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 128,
-    "pk": 128,
-    "idSection": 1,
-    "x": 285.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298027
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     285.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 129,
-    "pk": 129,
-    "idSection": 1,
-    "x": 288.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298028
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     288.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 130,
-    "pk": 130,
-    "idSection": 1,
-    "x": 290.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298029
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     290.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 131,
-    "pk": 131,
-    "idSection": 1,
-    "x": 292.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298030
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     292.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 132,
-    "pk": 132,
-    "idSection": 1,
-    "x": 294.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298031
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     294.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 133,
-    "pk": 133,
-    "idSection": 1,
-    "x": 297.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298032
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     297.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 134,
-    "pk": 134,
-    "idSection": 1,
-    "x": 299.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298033
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     299.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 135,
-    "pk": 135,
-    "idSection": 1,
-    "x": 301.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298034
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     301.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 136,
-    "pk": 136,
-    "idSection": 1,
-    "x": 303.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298035
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     303.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 137,
-    "pk": 137,
-    "idSection": 1,
-    "x": 306.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298036
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     306.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 138,
-    "pk": 138,
-    "idSection": 1,
-    "x": 308.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298037
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     308.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 139,
-    "pk": 139,
-    "idSection": 1,
-    "x": 310.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298038
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     310.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 140,
-    "pk": 140,
-    "idSection": 1,
-    "x": 312.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298039
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     312.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 141,
-    "pk": 141,
-    "idSection": 1,
-    "x": 315.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298040
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     315.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 142,
-    "pk": 142,
-    "idSection": 1,
-    "x": 317.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298041
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     317.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 143,
-    "pk": 143,
-    "idSection": 1,
-    "x": 319.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298042
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     319.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 144,
-    "pk": 144,
-    "idSection": 1,
-    "x": 321.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298043
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     321.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 145,
-    "pk": 145,
-    "idSection": 1,
-    "x": 324.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298044
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     324.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 146,
-    "pk": 146,
-    "idSection": 1,
-    "x": 326.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298045
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     326.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 147,
-    "pk": 147,
-    "idSection": 1,
-    "x": 328.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298046
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     328.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 148,
-    "pk": 148,
-    "idSection": 1,
-    "x": 330.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298047
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     330.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 149,
-    "pk": 149,
-    "idSection": 1,
-    "x": 333.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298048
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     333.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 150,
-    "pk": 150,
-    "idSection": 1,
-    "x": 335.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298049
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     335.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 151,
-    "pk": 151,
-    "idSection": 1,
-    "x": 337.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298050
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     337.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 152,
-    "pk": 152,
-    "idSection": 1,
-    "x": 339.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298051
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     339.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 153,
-    "pk": 153,
-    "idSection": 1,
-    "x": 342.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298052
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     342.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 154,
-    "pk": 154,
-    "idSection": 1,
-    "x": 344.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298053
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     344.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 155,
-    "pk": 155,
-    "idSection": 1,
-    "x": 346.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298054
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     346.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 156,
-    "pk": 156,
-    "idSection": 1,
-    "x": 348.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298055
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     348.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 157,
-    "pk": 157,
-    "idSection": 1,
-    "x": 351.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298056
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     351.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 158,
-    "pk": 158,
-    "idSection": 1,
-    "x": 353.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298057
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     353.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 159,
-    "pk": 159,
-    "idSection": 1,
-    "x": 355.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298058
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     355.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 160,
-    "pk": 160,
-    "idSection": 1,
-    "x": 357.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298059
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     357.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 161,
-    "pk": 161,
-    "idSection": 1,
-    "x": 360.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298060
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     360.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 162,
-    "pk": 162,
-    "idSection": 1,
-    "x": 362.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298061
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     362.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 163,
-    "pk": 163,
-    "idSection": 1,
-    "x": 364.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298062
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     364.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 164,
-    "pk": 164,
-    "idSection": 1,
-    "x": 366.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298063
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     366.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 165,
-    "pk": 165,
-    "idSection": 1,
-    "x": 369.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298064
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     369.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 166,
-    "pk": 166,
-    "idSection": 1,
-    "x": 371.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298065
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     371.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 167,
-    "pk": 167,
-    "idSection": 1,
-    "x": 373.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298066
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     373.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 168,
-    "pk": 168,
-    "idSection": 1,
-    "x": 375.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298067
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     375.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 169,
-    "pk": 169,
-    "idSection": 1,
-    "x": 378.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298068
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     378.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 170,
-    "pk": 170,
-    "idSection": 1,
-    "x": 380.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298069
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     380.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 171,
-    "pk": 171,
-    "idSection": 1,
-    "x": 382.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298070
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     382.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 172,
-    "pk": 172,
-    "idSection": 1,
-    "x": 384.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298071
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     384.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 173,
-    "pk": 173,
-    "idSection": 1,
-    "x": 387.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298072
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     387.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 174,
-    "pk": 174,
-    "idSection": 1,
-    "x": 389.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298073
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     389.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 175,
-    "pk": 175,
-    "idSection": 1,
-    "x": 391.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298074
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     391.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 176,
-    "pk": 176,
-    "idSection": 1,
-    "x": 393.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298075
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     393.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 177,
-    "pk": 177,
-    "idSection": 1,
-    "x": 396.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298076
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     396.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 178,
-    "pk": 178,
-    "idSection": 1,
-    "x": 398.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298077
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     398.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 179,
-    "pk": 179,
-    "idSection": 1,
-    "x": 400.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298078
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     400.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 180,
-    "pk": 180,
-    "idSection": 1,
-    "x": 402.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298079
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     402.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 181,
-    "pk": 181,
-    "idSection": 1,
-    "x": 405.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298080
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     405.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 182,
-    "pk": 182,
-    "idSection": 1,
-    "x": 407.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298081
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     407.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 183,
-    "pk": 183,
-    "idSection": 1,
-    "x": 409.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298082
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     409.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 184,
-    "pk": 184,
-    "idSection": 1,
-    "x": 411.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298083
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     411.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 185,
-    "pk": 185,
-    "idSection": 1,
-    "x": 414.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298084
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     414.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 186,
-    "pk": 186,
-    "idSection": 1,
-    "x": 416.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298085
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     416.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 187,
-    "pk": 187,
-    "idSection": 1,
-    "x": 418.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298086
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     418.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 188,
-    "pk": 188,
-    "idSection": 1,
-    "x": 420.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298087
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     420.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 189,
-    "pk": 189,
-    "idSection": 1,
-    "x": 423.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298088
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     423.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 190,
-    "pk": 190,
-    "idSection": 1,
-    "x": 425.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298089
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     425.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 191,
-    "pk": 191,
-    "idSection": 1,
-    "x": 427.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298090
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     427.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 192,
-    "pk": 192,
-    "idSection": 1,
-    "x": 429.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298091
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     429.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 193,
-    "pk": 193,
-    "idSection": 1,
-    "x": 432.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298092
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     432.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 194,
-    "pk": 194,
-    "idSection": 1,
-    "x": 434.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298093
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     434.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 195,
-    "pk": 195,
-    "idSection": 1,
-    "x": 436.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298094
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     436.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 196,
-    "pk": 196,
-    "idSection": 1,
-    "x": 438.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298095
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     438.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 197,
-    "pk": 197,
-    "idSection": 1,
-    "x": 441.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298096
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     441.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 198,
-    "pk": 198,
-    "idSection": 1,
-    "x": 443.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298097
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     443.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 199,
-    "pk": 199,
-    "idSection": 1,
-    "x": 445.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298098
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     445.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 200,
-    "pk": 200,
-    "idSection": 1,
-    "x": 447.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298099
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     447.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 201,
-    "pk": 201,
-    "idSection": 1,
-    "x": 450.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298100
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     450.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 202,
-    "pk": 202,
-    "idSection": 1,
-    "x": 452.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298101
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     452.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 203,
-    "pk": 203,
-    "idSection": 1,
-    "x": 454.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298102
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     454.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 204,
-    "pk": 204,
-    "idSection": 1,
-    "x": 456.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298103
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     456.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 205,
-    "pk": 205,
-    "idSection": 1,
-    "x": 459.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298104
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     459.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 206,
-    "pk": 206,
-    "idSection": 1,
-    "x": 461.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298105
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     461.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 207,
-    "pk": 207,
-    "idSection": 1,
-    "x": 463.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298106
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     463.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 208,
-    "pk": 208,
-    "idSection": 1,
-    "x": 465.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298107
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     465.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 209,
-    "pk": 209,
-    "idSection": 1,
-    "x": 468.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298108
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     468.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 210,
-    "pk": 210,
-    "idSection": 1,
-    "x": 470.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298109
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     470.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 211,
-    "pk": 211,
-    "idSection": 1,
-    "x": 472.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298110
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     472.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 212,
-    "pk": 212,
-    "idSection": 1,
-    "x": 474.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298111
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     474.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 213,
-    "pk": 213,
-    "idSection": 1,
-    "x": 477.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298112
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     477.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 214,
-    "pk": 214,
-    "idSection": 1,
-    "x": 479.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298113
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     479.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 215,
-    "pk": 215,
-    "idSection": 1,
-    "x": 481.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298114
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     481.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 216,
-    "pk": 216,
-    "idSection": 1,
-    "x": 483.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298115
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     483.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 217,
-    "pk": 217,
-    "idSection": 1,
-    "x": 486.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298116
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     486.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 218,
-    "pk": 218,
-    "idSection": 1,
-    "x": 488.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298117
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     488.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 219,
-    "pk": 219,
-    "idSection": 1,
-    "x": 490.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298118
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     490.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 220,
-    "pk": 220,
-    "idSection": 1,
-    "x": 492.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298119
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     492.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 221,
-    "pk": 221,
-    "idSection": 1,
-    "x": 495.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298120
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     495.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 222,
-    "pk": 222,
-    "idSection": 1,
-    "x": 497.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298121
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     497.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 223,
-    "pk": 223,
-    "idSection": 1,
-    "x": 499.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298122
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     499.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 224,
-    "pk": 224,
-    "idSection": 1,
-    "x": 501.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298123
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     501.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 225,
-    "pk": 225,
-    "idSection": 1,
-    "x": 504.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298124
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     504.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 226,
-    "pk": 226,
-    "idSection": 1,
-    "x": 506.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298125
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     506.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 227,
-    "pk": 227,
-    "idSection": 1,
-    "x": 508.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298126
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     508.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 228,
-    "pk": 228,
-    "idSection": 1,
-    "x": 510.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298127
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     510.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 229,
-    "pk": 229,
-    "idSection": 1,
-    "x": 513.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298128
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     513.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 230,
-    "pk": 230,
-    "idSection": 1,
-    "x": 515.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298129
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     515.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 231,
-    "pk": 231,
-    "idSection": 1,
-    "x": 517.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298130
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     517.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 232,
-    "pk": 232,
-    "idSection": 1,
-    "x": 519.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298131
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     519.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 233,
-    "pk": 233,
-    "idSection": 1,
-    "x": 522.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298132
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     522.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 234,
-    "pk": 234,
-    "idSection": 1,
-    "x": 524.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298133
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     524.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 235,
-    "pk": 235,
-    "idSection": 1,
-    "x": 526.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298134
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     526.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 236,
-    "pk": 236,
-    "idSection": 1,
-    "x": 528.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298135
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     528.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 237,
-    "pk": 237,
-    "idSection": 1,
-    "x": 531.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298136
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     531.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 238,
-    "pk": 238,
-    "idSection": 1,
-    "x": 533.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298137
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     533.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 239,
-    "pk": 239,
-    "idSection": 1,
-    "x": 535.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298138
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     535.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 240,
-    "pk": 240,
-    "idSection": 1,
-    "x": 537.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298139
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     537.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 241,
-    "pk": 241,
-    "idSection": 1,
-    "x": 540.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298140
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     540.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 242,
-    "pk": 242,
-    "idSection": 1,
-    "x": 542.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298141
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     542.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 243,
-    "pk": 243,
-    "idSection": 1,
-    "x": 544.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298142
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     544.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 244,
-    "pk": 244,
-    "idSection": 1,
-    "x": 546.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298143
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     546.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 245,
-    "pk": 245,
-    "idSection": 1,
-    "x": 549.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298144
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     549.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 246,
-    "pk": 246,
-    "idSection": 1,
-    "x": 551.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298145
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     551.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 247,
-    "pk": 247,
-    "idSection": 1,
-    "x": 553.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298146
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     553.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 248,
-    "pk": 248,
-    "idSection": 1,
-    "x": 555.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298147
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     555.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 249,
-    "pk": 249,
-    "idSection": 1,
-    "x": 558.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298148
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     558.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 250,
-    "pk": 250,
-    "idSection": 1,
-    "x": 560.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298149
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     560.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 251,
-    "pk": 251,
-    "idSection": 1,
     "x": 562.5,
     "y": 0.0,
     "z": 0,
@@ -5771,7 +1884,7 @@
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298150
+    "timestep": 1734297981
    },
    "geometry": {
     "type": "Point",
@@ -5784,22 +1897,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 252,
-    "pk": 252,
+    "field_1": 83,
+    "pk": 83,
     "idSection": 1,
-    "x": 564.75,
+    "x": 569.4444444444445,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298151
+    "timestep": 1734297982
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     564.75,
+     569.4444444444445,
      0.0
     ]
    }
@@ -5807,22 +1920,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 253,
-    "pk": 253,
+    "field_1": 84,
+    "pk": 84,
     "idSection": 1,
-    "x": 567.0,
+    "x": 576.3888888888889,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298152
+    "timestep": 1734297983
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     567.0,
+     576.3888888888889,
      0.0
     ]
    }
@@ -5830,22 +1943,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 254,
-    "pk": 254,
+    "field_1": 85,
+    "pk": 85,
     "idSection": 1,
-    "x": 569.25,
+    "x": 583.3333333333334,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298153
+    "timestep": 1734297984
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     569.25,
+     583.3333333333334,
      0.0
     ]
    }
@@ -5853,22 +1966,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 255,
-    "pk": 255,
+    "field_1": 86,
+    "pk": 86,
     "idSection": 1,
-    "x": 571.5,
+    "x": 590.2777777777778,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298154
+    "timestep": 1734297985
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     571.5,
+     590.2777777777778,
      0.0
     ]
    }
@@ -5876,22 +1989,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 256,
-    "pk": 256,
+    "field_1": 87,
+    "pk": 87,
     "idSection": 1,
-    "x": 573.75,
+    "x": 597.2222222222223,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298155
+    "timestep": 1734297986
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     573.75,
+     597.2222222222223,
      0.0
     ]
    }
@@ -5899,22 +2012,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 257,
-    "pk": 257,
+    "field_1": 88,
+    "pk": 88,
     "idSection": 1,
-    "x": 576.0,
+    "x": 604.1666666666666,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298156
+    "timestep": 1734297987
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     576.0,
+     604.1666666666666,
      0.0
     ]
    }
@@ -5922,22 +2035,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 258,
-    "pk": 258,
+    "field_1": 89,
+    "pk": 89,
     "idSection": 1,
-    "x": 578.25,
+    "x": 611.1111111111111,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298157
+    "timestep": 1734297988
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     578.25,
+     611.1111111111111,
      0.0
     ]
    }
@@ -5945,22 +2058,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 259,
-    "pk": 259,
+    "field_1": 90,
+    "pk": 90,
     "idSection": 1,
-    "x": 580.5,
+    "x": 618.0555555555555,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298158
+    "timestep": 1734297989
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     580.5,
+     618.0555555555555,
      0.0
     ]
    }
@@ -5968,22 +2081,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 260,
-    "pk": 260,
+    "field_1": 91,
+    "pk": 91,
     "idSection": 1,
-    "x": 582.75,
+    "x": 625.0,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298159
+    "timestep": 1734297990
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     582.75,
+     625.0,
      0.0
     ]
    }
@@ -5991,22 +2104,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 261,
-    "pk": 261,
+    "field_1": 92,
+    "pk": 92,
     "idSection": 1,
-    "x": 585.0,
+    "x": 631.9444444444445,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298160
+    "timestep": 1734297991
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     585.0,
+     631.9444444444445,
      0.0
     ]
    }
@@ -6014,22 +2127,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 262,
-    "pk": 262,
+    "field_1": 93,
+    "pk": 93,
     "idSection": 1,
-    "x": 587.25,
+    "x": 638.8888888888889,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298161
+    "timestep": 1734297992
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     587.25,
+     638.8888888888889,
      0.0
     ]
    }
@@ -6037,22 +2150,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 263,
-    "pk": 263,
+    "field_1": 94,
+    "pk": 94,
     "idSection": 1,
-    "x": 589.5,
+    "x": 645.8333333333334,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298162
+    "timestep": 1734297993
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     589.5,
+     645.8333333333334,
      0.0
     ]
    }
@@ -6060,22 +2173,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 264,
-    "pk": 264,
+    "field_1": 95,
+    "pk": 95,
     "idSection": 1,
-    "x": 591.75,
+    "x": 652.7777777777778,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298163
+    "timestep": 1734297994
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     591.75,
+     652.7777777777778,
      0.0
     ]
    }
@@ -6083,22 +2196,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 265,
-    "pk": 265,
+    "field_1": 96,
+    "pk": 96,
     "idSection": 1,
-    "x": 594.0,
+    "x": 659.7222222222223,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298164
+    "timestep": 1734297995
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     594.0,
+     659.7222222222223,
      0.0
     ]
    }
@@ -6106,22 +2219,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 266,
-    "pk": 266,
+    "field_1": 97,
+    "pk": 97,
     "idSection": 1,
-    "x": 596.25,
+    "x": 666.6666666666667,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298165
+    "timestep": 1734297996
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     596.25,
+     666.6666666666667,
      0.0
     ]
    }
@@ -6129,22 +2242,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 267,
-    "pk": 267,
+    "field_1": 98,
+    "pk": 98,
     "idSection": 1,
-    "x": 598.5,
+    "x": 673.6111111111111,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298166
+    "timestep": 1734297997
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     598.5,
+     673.6111111111111,
      0.0
     ]
    }
@@ -6152,22 +2265,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 268,
-    "pk": 268,
+    "field_1": 99,
+    "pk": 99,
     "idSection": 1,
-    "x": 600.75,
+    "x": 680.5555555555555,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298167
+    "timestep": 1734297998
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     600.75,
+     680.5555555555555,
      0.0
     ]
    }
@@ -6175,22 +2288,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 269,
-    "pk": 269,
+    "field_1": 100,
+    "pk": 100,
     "idSection": 1,
-    "x": 603.0,
+    "x": 687.5,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298168
+    "timestep": 1734297999
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     603.0,
+     687.5,
      0.0
     ]
    }
@@ -6198,22 +2311,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 270,
-    "pk": 270,
+    "field_1": 101,
+    "pk": 101,
     "idSection": 1,
-    "x": 605.25,
+    "x": 694.4444444444445,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298169
+    "timestep": 1734298000
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     605.25,
+     694.4444444444445,
      0.0
     ]
    }
@@ -6221,22 +2334,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 271,
-    "pk": 271,
+    "field_1": 102,
+    "pk": 102,
     "idSection": 1,
-    "x": 607.5,
+    "x": 701.3888888888889,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298170
+    "timestep": 1734298001
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     607.5,
+     701.3888888888889,
      0.0
     ]
    }
@@ -6244,22 +2357,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 272,
-    "pk": 272,
+    "field_1": 103,
+    "pk": 103,
     "idSection": 1,
-    "x": 609.75,
+    "x": 708.3333333333334,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298171
+    "timestep": 1734298002
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     609.75,
+     708.3333333333334,
      0.0
     ]
    }
@@ -6267,22 +2380,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 273,
-    "pk": 273,
+    "field_1": 104,
+    "pk": 104,
     "idSection": 1,
-    "x": 612.0,
+    "x": 715.2777777777778,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298172
+    "timestep": 1734298003
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     612.0,
+     715.2777777777778,
      0.0
     ]
    }
@@ -6290,22 +2403,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 274,
-    "pk": 274,
+    "field_1": 105,
+    "pk": 105,
     "idSection": 1,
-    "x": 614.25,
+    "x": 722.2222222222223,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298173
+    "timestep": 1734298004
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     614.25,
+     722.2222222222223,
      0.0
     ]
    }
@@ -6313,22 +2426,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 275,
-    "pk": 275,
+    "field_1": 106,
+    "pk": 106,
     "idSection": 1,
-    "x": 616.5,
+    "x": 729.1666666666667,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298174
+    "timestep": 1734298005
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     616.5,
+     729.1666666666667,
      0.0
     ]
    }
@@ -6336,22 +2449,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 276,
-    "pk": 276,
+    "field_1": 107,
+    "pk": 107,
     "idSection": 1,
-    "x": 618.75,
+    "x": 736.1111111111111,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298175
+    "timestep": 1734298006
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     618.75,
+     736.1111111111111,
      0.0
     ]
    }
@@ -6359,22 +2472,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 277,
-    "pk": 277,
+    "field_1": 108,
+    "pk": 108,
     "idSection": 1,
-    "x": 621.0,
+    "x": 743.0555555555555,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298176
+    "timestep": 1734298007
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     621.0,
+     743.0555555555555,
      0.0
     ]
    }
@@ -6382,22 +2495,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 278,
-    "pk": 278,
+    "field_1": 109,
+    "pk": 109,
     "idSection": 1,
-    "x": 623.25,
+    "x": 750.0,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298177
+    "timestep": 1734298008
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     623.25,
+     750.0,
      0.0
     ]
    }
@@ -6405,22 +2518,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 279,
-    "pk": 279,
+    "field_1": 110,
+    "pk": 110,
     "idSection": 1,
-    "x": 625.5,
+    "x": 756.9444444444445,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298178
+    "timestep": 1734298009
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     625.5,
+     756.9444444444445,
      0.0
     ]
    }
@@ -6428,22 +2541,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 280,
-    "pk": 280,
+    "field_1": 111,
+    "pk": 111,
     "idSection": 1,
-    "x": 627.75,
+    "x": 763.8888888888889,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298179
+    "timestep": 1734298010
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     627.75,
+     763.8888888888889,
      0.0
     ]
    }
@@ -6451,22 +2564,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 281,
-    "pk": 281,
+    "field_1": 112,
+    "pk": 112,
     "idSection": 1,
-    "x": 630.0,
+    "x": 770.8333333333334,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298180
+    "timestep": 1734298011
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     630.0,
+     770.8333333333334,
      0.0
     ]
    }
@@ -6474,22 +2587,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 282,
-    "pk": 282,
+    "field_1": 113,
+    "pk": 113,
     "idSection": 1,
-    "x": 632.25,
+    "x": 777.7777777777778,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298181
+    "timestep": 1734298012
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     632.25,
+     777.7777777777778,
      0.0
     ]
    }
@@ -6497,22 +2610,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 283,
-    "pk": 283,
+    "field_1": 114,
+    "pk": 114,
     "idSection": 1,
-    "x": 634.5,
+    "x": 784.7222222222223,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298182
+    "timestep": 1734298013
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     634.5,
+     784.7222222222223,
      0.0
     ]
    }
@@ -6520,22 +2633,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 284,
-    "pk": 284,
+    "field_1": 115,
+    "pk": 115,
     "idSection": 1,
-    "x": 636.75,
+    "x": 791.6666666666667,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298183
+    "timestep": 1734298014
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     636.75,
+     791.6666666666667,
      0.0
     ]
    }
@@ -6543,22 +2656,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 285,
-    "pk": 285,
+    "field_1": 116,
+    "pk": 116,
     "idSection": 1,
-    "x": 639.0,
+    "x": 798.6111111111111,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298184
+    "timestep": 1734298015
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     639.0,
+     798.6111111111111,
      0.0
     ]
    }
@@ -6566,22 +2679,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 286,
-    "pk": 286,
+    "field_1": 117,
+    "pk": 117,
     "idSection": 1,
-    "x": 641.25,
+    "x": 805.5555555555555,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298185
+    "timestep": 1734298016
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     641.25,
+     805.5555555555555,
      0.0
     ]
    }
@@ -6589,22 +2702,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 287,
-    "pk": 287,
+    "field_1": 118,
+    "pk": 118,
     "idSection": 1,
-    "x": 643.5,
+    "x": 812.5,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298186
+    "timestep": 1734298017
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     643.5,
+     812.5,
      0.0
     ]
    }
@@ -6612,22 +2725,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 288,
-    "pk": 288,
+    "field_1": 119,
+    "pk": 119,
     "idSection": 1,
-    "x": 645.75,
+    "x": 819.4444444444445,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298187
+    "timestep": 1734298018
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     645.75,
+     819.4444444444445,
      0.0
     ]
    }
@@ -6635,22 +2748,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 289,
-    "pk": 289,
+    "field_1": 120,
+    "pk": 120,
     "idSection": 1,
-    "x": 648.0,
+    "x": 826.3888888888889,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298188
+    "timestep": 1734298019
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     648.0,
+     826.3888888888889,
      0.0
     ]
    }
@@ -6658,22 +2771,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 290,
-    "pk": 290,
+    "field_1": 121,
+    "pk": 121,
     "idSection": 1,
-    "x": 650.25,
+    "x": 833.3333333333334,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298189
+    "timestep": 1734298020
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     650.25,
+     833.3333333333334,
      0.0
     ]
    }
@@ -6681,22 +2794,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 291,
-    "pk": 291,
+    "field_1": 122,
+    "pk": 122,
     "idSection": 1,
-    "x": 652.5,
+    "x": 840.2777777777778,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298190
+    "timestep": 1734298021
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     652.5,
+     840.2777777777778,
      0.0
     ]
    }
@@ -6704,22 +2817,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 292,
-    "pk": 292,
+    "field_1": 123,
+    "pk": 123,
     "idSection": 1,
-    "x": 654.75,
+    "x": 847.2222222222223,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298191
+    "timestep": 1734298022
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     654.75,
+     847.2222222222223,
      0.0
     ]
    }
@@ -6727,22 +2840,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 293,
-    "pk": 293,
+    "field_1": 124,
+    "pk": 124,
     "idSection": 1,
-    "x": 657.0,
+    "x": 854.1666666666667,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298192
+    "timestep": 1734298023
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     657.0,
+     854.1666666666667,
      0.0
     ]
    }
@@ -6750,22 +2863,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 294,
-    "pk": 294,
+    "field_1": 125,
+    "pk": 125,
     "idSection": 1,
-    "x": 659.25,
+    "x": 861.1111111111111,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298193
+    "timestep": 1734298024
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     659.25,
+     861.1111111111111,
      0.0
     ]
    }
@@ -6773,22 +2886,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 295,
-    "pk": 295,
+    "field_1": 126,
+    "pk": 126,
     "idSection": 1,
-    "x": 661.5,
+    "x": 868.0555555555555,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298194
+    "timestep": 1734298025
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     661.5,
+     868.0555555555555,
      0.0
     ]
    }
@@ -6796,22 +2909,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 296,
-    "pk": 296,
+    "field_1": 127,
+    "pk": 127,
     "idSection": 1,
-    "x": 663.75,
+    "x": 875.0,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298195
+    "timestep": 1734298026
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     663.75,
+     875.0,
      0.0
     ]
    }
@@ -6819,22 +2932,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 297,
-    "pk": 297,
+    "field_1": 128,
+    "pk": 128,
     "idSection": 1,
-    "x": 666.0,
+    "x": 881.9444444444445,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298196
+    "timestep": 1734298027
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     666.0,
+     881.9444444444445,
      0.0
     ]
    }
@@ -6842,22 +2955,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 298,
-    "pk": 298,
+    "field_1": 129,
+    "pk": 129,
     "idSection": 1,
-    "x": 668.25,
+    "x": 888.8888888888889,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298197
+    "timestep": 1734298028
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     668.25,
+     888.8888888888889,
      0.0
     ]
    }
@@ -6865,22 +2978,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 299,
-    "pk": 299,
+    "field_1": 130,
+    "pk": 130,
     "idSection": 1,
-    "x": 670.5,
+    "x": 895.8333333333334,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298198
+    "timestep": 1734298029
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     670.5,
+     895.8333333333334,
      0.0
     ]
    }
@@ -6888,22 +3001,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 300,
-    "pk": 300,
+    "field_1": 131,
+    "pk": 131,
     "idSection": 1,
-    "x": 672.75,
+    "x": 902.7777777777778,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298199
+    "timestep": 1734298030
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     672.75,
+     902.7777777777778,
      0.0
     ]
    }
@@ -6911,22 +3024,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 301,
-    "pk": 301,
+    "field_1": 132,
+    "pk": 132,
     "idSection": 1,
-    "x": 675.0,
+    "x": 909.7222222222223,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298200
+    "timestep": 1734298031
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     675.0,
+     909.7222222222223,
      0.0
     ]
    }
@@ -6934,22 +3047,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 302,
-    "pk": 302,
+    "field_1": 133,
+    "pk": 133,
     "idSection": 1,
-    "x": 677.25,
+    "x": 916.6666666666667,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298201
+    "timestep": 1734298032
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     677.25,
+     916.6666666666667,
      0.0
     ]
    }
@@ -6957,22 +3070,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 303,
-    "pk": 303,
+    "field_1": 134,
+    "pk": 134,
     "idSection": 1,
-    "x": 679.5,
+    "x": 923.6111111111111,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298202
+    "timestep": 1734298033
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     679.5,
+     923.6111111111111,
      0.0
     ]
    }
@@ -6980,22 +3093,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 304,
-    "pk": 304,
+    "field_1": 135,
+    "pk": 135,
     "idSection": 1,
-    "x": 681.75,
+    "x": 930.5555555555555,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298203
+    "timestep": 1734298034
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     681.75,
+     930.5555555555555,
      0.0
     ]
    }
@@ -7003,22 +3116,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 305,
-    "pk": 305,
+    "field_1": 136,
+    "pk": 136,
     "idSection": 1,
-    "x": 684.0,
+    "x": 937.5,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298204
+    "timestep": 1734298035
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     684.0,
+     937.5,
      0.0
     ]
    }
@@ -7026,22 +3139,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 306,
-    "pk": 306,
+    "field_1": 137,
+    "pk": 137,
     "idSection": 1,
-    "x": 686.25,
+    "x": 944.4444444444445,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298205
+    "timestep": 1734298036
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     686.25,
+     944.4444444444445,
      0.0
     ]
    }
@@ -7049,22 +3162,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 307,
-    "pk": 307,
+    "field_1": 138,
+    "pk": 138,
     "idSection": 1,
-    "x": 688.5,
+    "x": 951.3888888888889,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298206
+    "timestep": 1734298037
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     688.5,
+     951.3888888888889,
      0.0
     ]
    }
@@ -7072,22 +3185,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 308,
-    "pk": 308,
+    "field_1": 139,
+    "pk": 139,
     "idSection": 1,
-    "x": 690.75,
+    "x": 958.3333333333334,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298207
+    "timestep": 1734298038
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     690.75,
+     958.3333333333334,
      0.0
     ]
    }
@@ -7095,22 +3208,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 309,
-    "pk": 309,
+    "field_1": 140,
+    "pk": 140,
     "idSection": 1,
-    "x": 693.0,
+    "x": 965.2777777777778,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298208
+    "timestep": 1734298039
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     693.0,
+     965.2777777777778,
      0.0
     ]
    }
@@ -7118,22 +3231,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 310,
-    "pk": 310,
+    "field_1": 141,
+    "pk": 141,
     "idSection": 1,
-    "x": 695.25,
+    "x": 972.2222222222223,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298209
+    "timestep": 1734298040
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     695.25,
+     972.2222222222223,
      0.0
     ]
    }
@@ -7141,22 +3254,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 311,
-    "pk": 311,
+    "field_1": 142,
+    "pk": 142,
     "idSection": 1,
-    "x": 697.5,
+    "x": 979.1666666666667,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298210
+    "timestep": 1734298041
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     697.5,
+     979.1666666666667,
      0.0
     ]
    }
@@ -7164,22 +3277,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 312,
-    "pk": 312,
+    "field_1": 143,
+    "pk": 143,
     "idSection": 1,
-    "x": 699.75,
+    "x": 986.1111111111111,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298211
+    "timestep": 1734298042
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     699.75,
+     986.1111111111111,
      0.0
     ]
    }
@@ -7187,3058 +3300,22 @@
   {
    "type": "Feature",
    "properties": {
-    "field_1": 313,
-    "pk": 313,
+    "field_1": 144,
+    "pk": 144,
     "idSection": 1,
-    "x": 702.0,
+    "x": 993.0555555555555,
     "y": 0.0,
     "z": 0,
     "angle": 0,
     "train_id": 5480,
     "speed": 200,
     "train_set": "FRET",
-    "timestep": 1734298212
+    "timestep": 1734298043
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     702.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 314,
-    "pk": 314,
-    "idSection": 1,
-    "x": 704.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298213
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     704.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 315,
-    "pk": 315,
-    "idSection": 1,
-    "x": 706.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298214
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     706.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 316,
-    "pk": 316,
-    "idSection": 1,
-    "x": 708.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298215
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     708.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 317,
-    "pk": 317,
-    "idSection": 1,
-    "x": 711.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298216
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     711.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 318,
-    "pk": 318,
-    "idSection": 1,
-    "x": 713.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298217
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     713.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 319,
-    "pk": 319,
-    "idSection": 1,
-    "x": 715.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298218
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     715.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 320,
-    "pk": 320,
-    "idSection": 1,
-    "x": 717.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298219
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     717.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 321,
-    "pk": 321,
-    "idSection": 1,
-    "x": 720.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298220
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     720.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 322,
-    "pk": 322,
-    "idSection": 1,
-    "x": 722.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298221
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     722.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 323,
-    "pk": 323,
-    "idSection": 1,
-    "x": 724.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298222
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     724.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 324,
-    "pk": 324,
-    "idSection": 1,
-    "x": 726.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298223
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     726.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 325,
-    "pk": 325,
-    "idSection": 1,
-    "x": 729.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298224
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     729.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 326,
-    "pk": 326,
-    "idSection": 1,
-    "x": 731.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298225
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     731.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 327,
-    "pk": 327,
-    "idSection": 1,
-    "x": 733.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298226
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     733.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 328,
-    "pk": 328,
-    "idSection": 1,
-    "x": 735.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298227
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     735.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 329,
-    "pk": 329,
-    "idSection": 1,
-    "x": 738.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298228
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     738.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 330,
-    "pk": 330,
-    "idSection": 1,
-    "x": 740.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298229
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     740.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 331,
-    "pk": 331,
-    "idSection": 1,
-    "x": 742.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298230
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     742.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 332,
-    "pk": 332,
-    "idSection": 1,
-    "x": 744.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298231
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     744.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 333,
-    "pk": 333,
-    "idSection": 1,
-    "x": 747.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298232
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     747.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 334,
-    "pk": 334,
-    "idSection": 1,
-    "x": 749.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298233
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     749.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 335,
-    "pk": 335,
-    "idSection": 1,
-    "x": 751.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298234
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     751.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 336,
-    "pk": 336,
-    "idSection": 1,
-    "x": 753.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298235
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     753.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 337,
-    "pk": 337,
-    "idSection": 1,
-    "x": 756.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298236
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     756.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 338,
-    "pk": 338,
-    "idSection": 1,
-    "x": 758.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298237
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     758.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 339,
-    "pk": 339,
-    "idSection": 1,
-    "x": 760.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298238
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     760.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 340,
-    "pk": 340,
-    "idSection": 1,
-    "x": 762.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298239
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     762.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 341,
-    "pk": 341,
-    "idSection": 1,
-    "x": 765.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298240
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     765.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 342,
-    "pk": 342,
-    "idSection": 1,
-    "x": 767.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298241
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     767.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 343,
-    "pk": 343,
-    "idSection": 1,
-    "x": 769.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298242
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     769.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 344,
-    "pk": 344,
-    "idSection": 1,
-    "x": 771.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298243
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     771.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 345,
-    "pk": 345,
-    "idSection": 1,
-    "x": 774.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298244
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     774.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 346,
-    "pk": 346,
-    "idSection": 1,
-    "x": 776.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298245
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     776.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 347,
-    "pk": 347,
-    "idSection": 1,
-    "x": 778.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298246
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     778.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 348,
-    "pk": 348,
-    "idSection": 1,
-    "x": 780.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298247
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     780.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 349,
-    "pk": 349,
-    "idSection": 1,
-    "x": 783.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298248
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     783.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 350,
-    "pk": 350,
-    "idSection": 1,
-    "x": 785.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298249
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     785.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 351,
-    "pk": 351,
-    "idSection": 1,
-    "x": 787.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298250
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     787.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 352,
-    "pk": 352,
-    "idSection": 1,
-    "x": 789.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298251
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     789.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 353,
-    "pk": 353,
-    "idSection": 1,
-    "x": 792.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298252
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     792.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 354,
-    "pk": 354,
-    "idSection": 1,
-    "x": 794.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298253
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     794.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 355,
-    "pk": 355,
-    "idSection": 1,
-    "x": 796.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298254
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     796.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 356,
-    "pk": 356,
-    "idSection": 1,
-    "x": 798.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298255
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     798.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 357,
-    "pk": 357,
-    "idSection": 1,
-    "x": 801.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298256
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     801.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 358,
-    "pk": 358,
-    "idSection": 1,
-    "x": 803.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298257
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     803.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 359,
-    "pk": 359,
-    "idSection": 1,
-    "x": 805.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298258
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     805.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 360,
-    "pk": 360,
-    "idSection": 1,
-    "x": 807.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298259
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     807.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 361,
-    "pk": 361,
-    "idSection": 1,
-    "x": 810.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298260
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     810.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 362,
-    "pk": 362,
-    "idSection": 1,
-    "x": 812.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298261
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     812.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 363,
-    "pk": 363,
-    "idSection": 1,
-    "x": 814.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298262
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     814.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 364,
-    "pk": 364,
-    "idSection": 1,
-    "x": 816.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298263
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     816.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 365,
-    "pk": 365,
-    "idSection": 1,
-    "x": 819.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298264
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     819.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 366,
-    "pk": 366,
-    "idSection": 1,
-    "x": 821.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298265
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     821.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 367,
-    "pk": 367,
-    "idSection": 1,
-    "x": 823.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298266
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     823.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 368,
-    "pk": 368,
-    "idSection": 1,
-    "x": 825.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298267
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     825.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 369,
-    "pk": 369,
-    "idSection": 1,
-    "x": 828.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298268
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     828.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 370,
-    "pk": 370,
-    "idSection": 1,
-    "x": 830.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298269
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     830.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 371,
-    "pk": 371,
-    "idSection": 1,
-    "x": 832.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298270
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     832.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 372,
-    "pk": 372,
-    "idSection": 1,
-    "x": 834.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298271
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     834.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 373,
-    "pk": 373,
-    "idSection": 1,
-    "x": 837.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298272
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     837.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 374,
-    "pk": 374,
-    "idSection": 1,
-    "x": 839.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298273
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     839.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 375,
-    "pk": 375,
-    "idSection": 1,
-    "x": 841.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298274
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     841.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 376,
-    "pk": 376,
-    "idSection": 1,
-    "x": 843.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298275
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     843.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 377,
-    "pk": 377,
-    "idSection": 1,
-    "x": 846.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298276
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     846.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 378,
-    "pk": 378,
-    "idSection": 1,
-    "x": 848.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298277
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     848.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 379,
-    "pk": 379,
-    "idSection": 1,
-    "x": 850.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298278
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     850.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 380,
-    "pk": 380,
-    "idSection": 1,
-    "x": 852.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298279
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     852.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 381,
-    "pk": 381,
-    "idSection": 1,
-    "x": 855.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298280
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     855.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 382,
-    "pk": 382,
-    "idSection": 1,
-    "x": 857.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298281
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     857.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 383,
-    "pk": 383,
-    "idSection": 1,
-    "x": 859.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298282
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     859.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 384,
-    "pk": 384,
-    "idSection": 1,
-    "x": 861.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298283
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     861.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 385,
-    "pk": 385,
-    "idSection": 1,
-    "x": 864.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298284
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     864.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 386,
-    "pk": 386,
-    "idSection": 1,
-    "x": 866.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298285
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     866.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 387,
-    "pk": 387,
-    "idSection": 1,
-    "x": 868.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298286
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     868.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 388,
-    "pk": 388,
-    "idSection": 1,
-    "x": 870.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298287
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     870.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 389,
-    "pk": 389,
-    "idSection": 1,
-    "x": 873.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298288
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     873.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 390,
-    "pk": 390,
-    "idSection": 1,
-    "x": 875.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298289
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     875.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 391,
-    "pk": 391,
-    "idSection": 1,
-    "x": 877.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298290
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     877.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 392,
-    "pk": 392,
-    "idSection": 1,
-    "x": 879.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298291
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     879.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 393,
-    "pk": 393,
-    "idSection": 1,
-    "x": 882.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298292
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     882.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 394,
-    "pk": 394,
-    "idSection": 1,
-    "x": 884.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298293
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     884.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 395,
-    "pk": 395,
-    "idSection": 1,
-    "x": 886.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298294
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     886.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 396,
-    "pk": 396,
-    "idSection": 1,
-    "x": 888.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298295
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     888.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 397,
-    "pk": 397,
-    "idSection": 1,
-    "x": 891.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298296
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     891.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 398,
-    "pk": 398,
-    "idSection": 1,
-    "x": 893.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298297
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     893.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 399,
-    "pk": 399,
-    "idSection": 1,
-    "x": 895.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298298
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     895.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 400,
-    "pk": 400,
-    "idSection": 1,
-    "x": 897.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298299
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     897.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 401,
-    "pk": 401,
-    "idSection": 1,
-    "x": 900.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298300
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     900.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 402,
-    "pk": 402,
-    "idSection": 1,
-    "x": 902.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298301
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     902.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 403,
-    "pk": 403,
-    "idSection": 1,
-    "x": 904.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298302
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     904.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 404,
-    "pk": 404,
-    "idSection": 1,
-    "x": 906.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298303
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     906.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 405,
-    "pk": 405,
-    "idSection": 1,
-    "x": 909.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298304
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     909.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 406,
-    "pk": 406,
-    "idSection": 1,
-    "x": 911.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298305
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     911.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 407,
-    "pk": 407,
-    "idSection": 1,
-    "x": 913.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298306
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     913.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 408,
-    "pk": 408,
-    "idSection": 1,
-    "x": 915.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298307
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     915.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 409,
-    "pk": 409,
-    "idSection": 1,
-    "x": 918.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298308
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     918.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 410,
-    "pk": 410,
-    "idSection": 1,
-    "x": 920.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298309
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     920.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 411,
-    "pk": 411,
-    "idSection": 1,
-    "x": 922.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298310
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     922.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 412,
-    "pk": 412,
-    "idSection": 1,
-    "x": 924.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298311
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     924.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 413,
-    "pk": 413,
-    "idSection": 1,
-    "x": 927.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298312
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     927.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 414,
-    "pk": 414,
-    "idSection": 1,
-    "x": 929.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298313
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     929.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 415,
-    "pk": 415,
-    "idSection": 1,
-    "x": 931.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298314
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     931.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 416,
-    "pk": 416,
-    "idSection": 1,
-    "x": 933.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298315
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     933.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 417,
-    "pk": 417,
-    "idSection": 1,
-    "x": 936.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298316
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     936.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 418,
-    "pk": 418,
-    "idSection": 1,
-    "x": 938.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298317
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     938.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 419,
-    "pk": 419,
-    "idSection": 1,
-    "x": 940.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298318
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     940.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 420,
-    "pk": 420,
-    "idSection": 1,
-    "x": 942.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298319
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     942.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 421,
-    "pk": 421,
-    "idSection": 1,
-    "x": 945.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298320
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     945.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 422,
-    "pk": 422,
-    "idSection": 1,
-    "x": 947.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298321
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     947.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 423,
-    "pk": 423,
-    "idSection": 1,
-    "x": 949.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298322
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     949.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 424,
-    "pk": 424,
-    "idSection": 1,
-    "x": 951.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298323
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     951.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 425,
-    "pk": 425,
-    "idSection": 1,
-    "x": 954.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298324
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     954.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 426,
-    "pk": 426,
-    "idSection": 1,
-    "x": 956.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298325
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     956.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 427,
-    "pk": 427,
-    "idSection": 1,
-    "x": 958.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298326
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     958.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 428,
-    "pk": 428,
-    "idSection": 1,
-    "x": 960.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298327
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     960.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 429,
-    "pk": 429,
-    "idSection": 1,
-    "x": 963.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298328
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     963.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 430,
-    "pk": 430,
-    "idSection": 1,
-    "x": 965.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298329
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     965.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 431,
-    "pk": 431,
-    "idSection": 1,
-    "x": 967.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298330
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     967.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 432,
-    "pk": 432,
-    "idSection": 1,
-    "x": 969.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298331
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     969.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 433,
-    "pk": 433,
-    "idSection": 1,
-    "x": 972.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298332
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     972.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 434,
-    "pk": 434,
-    "idSection": 1,
-    "x": 974.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298333
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     974.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 435,
-    "pk": 435,
-    "idSection": 1,
-    "x": 976.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298334
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     976.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 436,
-    "pk": 436,
-    "idSection": 1,
-    "x": 978.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298335
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     978.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 437,
-    "pk": 437,
-    "idSection": 1,
-    "x": 981.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298336
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     981.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 438,
-    "pk": 438,
-    "idSection": 1,
-    "x": 983.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298337
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     983.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 439,
-    "pk": 439,
-    "idSection": 1,
-    "x": 985.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298338
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     985.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 440,
-    "pk": 440,
-    "idSection": 1,
-    "x": 987.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298339
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     987.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 441,
-    "pk": 441,
-    "idSection": 1,
-    "x": 990.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298340
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     990.0,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 442,
-    "pk": 442,
-    "idSection": 1,
-    "x": 992.25,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298341
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     992.25,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 443,
-    "pk": 443,
-    "idSection": 1,
-    "x": 994.5,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298342
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     994.5,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 444,
-    "pk": 444,
-    "idSection": 1,
-    "x": 996.75,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298343
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     996.75,
-     0.0
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "field_1": 445,
-    "pk": 445,
-    "idSection": 1,
-    "x": 999.0,
-    "y": 0.0,
-    "z": 0,
-    "angle": 0,
-    "train_id": 5480,
-    "speed": 200,
-    "train_set": "FRET",
-    "timestep": 1734298344
-   },
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     999.0,
+     993.0555555555555,
      0.0
     ]
    }

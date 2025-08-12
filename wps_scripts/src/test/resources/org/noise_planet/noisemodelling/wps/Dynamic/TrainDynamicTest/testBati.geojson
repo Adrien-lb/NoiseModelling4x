@@ -3,6 +3,7 @@
 "name": "testBati",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::32635" } },
 "features": [
-{ "type": "Feature", "properties": { "HEIGHT": 2.0, "PK": 1, "pop": 0.0 }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 440.077063398053838, -97.000387585937517 ], [ 457.235702058826973, -97.000387585937517 ], [ 459.523520546930058, -113.015117002659053 ], [ 441.22097264210538, -114.159026246710596 ], [ 440.077063398053838, -97.000387585937517 ] ] ] ] } }
+{ "type": "Feature", "properties": { "HEIGHT": 1.0, "PK": 1, "pop": 0.0 }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 40, -400 ], [ 45, -400 ], [ 45, -405 ], [ 40, -405 ], [ 40, -400 ] ] ] ] } },
+{ "type": "Feature", "properties": { "HEIGHT": 1.0, "PK": 2, "pop": 0.0 }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 40, 400 ], [ 45, 400 ], [ 45, 405 ], [ 40, 405 ], [ 40, 400 ] ] ] ] } }
 ]
 }
