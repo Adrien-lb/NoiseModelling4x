@@ -496,7 +496,8 @@ class TestDynamic extends JdbcTestCase {
                 trainVehicleData: Railway.class.getResource("RailwayVehiclesCnossos.json").toString(),
                 trainCoefficientsData: Railway.class.getResource("RailwayCnossosSNCF_2021.json").toString()
         ])
-        */new Delaunay_Grid().exec(connection, ["buildingTableName"  : "buildings",
+
+        /*new Delaunay_Grid().exec(connection, ["buildingTableName"  : "buildings",
                                               "sourcesTableName"   : "rail_track",
                                               "maxArea" : 1000
         ]);
@@ -515,9 +516,10 @@ class TestDynamic extends JdbcTestCase {
                 ["tableBuilding"   : "BUILDINGS",
                  "tableSources"   : "SOURCES_GEOM",
                  "tableSourcesEmission" : "SOURCES_EMISSION",
+                 "selectSource":"ROLLING",
                  "tableReceivers": "RECEIVERS",
                  "maxError" : 0.0,
-                 "confMaxSrcDist" : 500,
+                 "confMaxSrcDist" : 1000,
                  "confReflOrder" : 0,
                  "paramWallAlpha" : 1,
                  "confDiffHorizontal" : true,
@@ -526,10 +528,11 @@ class TestDynamic extends JdbcTestCase {
                  //"confRaysName":'file:///C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/Test/map.kml',
 
                 ])
+        /*
         new Create_Isosurface().exec(connection,
                 [resultTable: "RECEIVERS_LEVEL",
                  smoothCoefficient : 0])
-
+*/
 
         new Export_Table().exec(connection,
                 ["tableToExport"   : "RECEIVERS_LEVEL",
@@ -537,10 +540,11 @@ class TestDynamic extends JdbcTestCase {
                  //"exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/Test/SimpletestReceiversDynamic.shp"
                 ])
 
-
+/*
         new Export_Table().exec(connection, [exportPath:"C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/CONTOURING_NOISE_MAP.shp",
                                              tableToExport: "CONTOURING_NOISE_MAP"])
 
+*/
 
         new Export_Table().exec(connection, [exportPath:"C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/SOURCES_EMISSION.dbf",
         //new Export_Table().exec(connection, [exportPath:"C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/Test/SimpleSOURCES_EMISSION.dbf",

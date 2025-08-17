@@ -114,6 +114,13 @@ inputs = [
                         '<li> <b> LWD50 ,LWD63 ,LWD80 , LWD100 ,LWD125 ,LWD160 , LWD200 ,LWD250 ,LWD315 , LWD400 ,LWD500 ,LWD630 , LWD800 ,LWD1000 ,LWD1250 , LWD1600 ,LWD2000 ,LWD2500 , LWD3150 ,LWD4000 ,LWD5000 , LWD6300 ,LWD8000 ,LWD10000</b> : Emission noise level in dB can be third-octave 50Hz to 10000Hz (FLOAT) </li> ',
                 min        : 0, max: 1, type: String.class
         ],
+        "selectSource"            : [
+                name       : 'use specific Source',
+                title      : 'use specific Source',
+                description: 'Name of the Sources table (ex. "ALL", "ROLLING" ...) </br> </br>' +
+                        '&#128736; Default value: <b>"ALL" </b>',
+                min        : 0, max: 1, type: String.class
+        ],
         tableReceivers          : [
                 name       : 'Receivers table name',
                 title      : 'Receivers table name',
@@ -428,6 +435,10 @@ def exec(Connection connection, Map input) {
     }
 
 
+    String selectSource ="ALL"
+    if(input['selectSource']){
+        selectSource = input['selectSource']
+    }
 
     boolean recordProfile = false
     if (input['confRecordProfile']) {
@@ -515,6 +526,25 @@ def exec(Connection connection, Map input) {
         // Use the right default database caps according to db type
         String tableSourceEmission = TableLocation.capsIdentifier(input['tableSourceEmission'] as String, dbType)
         pointNoiseMap.setSourcesEmissionTableName(tableSourceEmission)
+    }
+
+
+    if(selectSource=="ALL"){
+        if (input['tableSourceEmission']) {
+            // Use the right default database caps according to db type
+            String tableSourceEmission = TableLocation.capsIdentifier(input['tableSourceEmission'] as String, dbType)
+            pointNoiseMap.setSourcesEmissionTableName(tableSourceEmission)
+        }
+    }else{
+        def sourceToId = ["ROLLING": 1,"TRACTIONA": 2,"TRACTIONB": 3,"AERODYNAMICA": 4,"AERODYNAMICB": 5,"BRIDGE": 6]
+        if (sourceToId.containsKey(selectSource)) {
+            int idSource = sourceToId[selectSource]
+            sql.execute("DROP TABLE IF EXISTS SOURCES_EMISSION_SPECIFIC_SOURCE")
+            sql.execute("CREATE TABLE SOURCES_EMISSION_SPECIFIC_SOURCE AS SELECT * FROM SOURCES_GEOM WHERE IDSOURCE = 1; ")
+            pointNoiseMap.setSourcesEmissionTableName("SOURCES_EMISSION_SPECIFIC_SOURCE")
+        } else {
+            println "Source non reconnue : $selectSource"
+        }
     }
 
     sql.execute("drop table if exists " + TableLocation.parse(pointNoiseMap.noiseMapDatabaseParameters.receiversLevelTable))
