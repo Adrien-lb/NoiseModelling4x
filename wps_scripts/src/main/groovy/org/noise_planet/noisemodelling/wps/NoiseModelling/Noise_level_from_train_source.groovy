@@ -359,12 +359,39 @@ def exec(Connection connection, Map input) {
     if (sridSources == 3785 || sridSources == 4326) throw new IllegalArgumentException("Error : Please use a metric projection for "+sources_table_name+".")
     if (sridSources == 0) throw new IllegalArgumentException("Error : The table "+sources_table_name+" does not have an associated SRID.")
 
-    //Get the geometry field of the source table
-    TableLocation sourceTableIdentifier = TableLocation.parse(sources_table_name)
-    List<String> geomFields = GeometryTableUtilities.getGeometryColumnNames(connection, sourceTableIdentifier)
-    if (geomFields.isEmpty()) {
-        throw new SQLException(String.format("The table %s does not exists or does not contain a geometry field", sourceTableIdentifier))
+    // Check type source use
+    String selectSource ="ALL"
+    if(input['selectSource']){
+        selectSource = input['selectSource']
     }
+
+
+    //Get the geometry field of the source table
+    if(selectSource=="ALL"){
+        TableLocation sourceTableIdentifier = TableLocation.parse(sources_table_name)
+        List<String> geomFields = GeometryTableUtilities.getGeometryColumnNames(connection, sourceTableIdentifier)
+        if (geomFields.isEmpty()) {
+            throw new SQLException(String.format("The table %s does not exists or does not contain a geometry field", sourceTableIdentifier))
+        }
+    }else {
+        def sourceToId = ["ROLLING": 1,"TRACTIONA": 2,"TRACTIONB": 3,"AERODYNAMICA": 4,"AERODYNAMICB": 5,"BRIDGE": 6]
+        if (sourceToId.containsKey(selectSource)) {
+            int idSource = sourceToId[selectSource]
+            println "SourceGeom used : $selectSource "
+            sql.execute("DROP TABLE IF EXISTS SOURCES_GEOM_SPECIFIC_SOURCE")
+            sql.execute("CREATE TABLE SOURCES_GEOM_SPECIFIC_SOURCE AS SELECT * FROM SOURCES_GEOM WHERE DIR_ID = ?", [idSource])
+            sql.execute("ALTER TABLE SOURCES_GEOM_SPECIFIC_SOURCE ADD COLUMN IDSOURCEUSED INT NOT NULL AUTO_INCREMENT PRIMARY KEY;")
+            TableLocation sourceTableIdentifier = TableLocation.parse("SOURCES_GEOM_SPECIFIC_SOURCE")
+            List<String> geomFields = GeometryTableUtilities.getGeometryColumnNames(connection, sourceTableIdentifier)
+            if (geomFields.isEmpty()) {
+                throw new SQLException(String.format("The table %s does not exists or does not contain a geometry field", sourceTableIdentifier))
+            }
+            sources_table_name="SOURCES_GEOM_SPECIFIC_SOURCE"
+        } else {
+            println "SourceGeom non reconnue : $selectSource"
+        }
+    }
+
 
     //Get the primary key field of the source table
     int pkIndex = JDBCUtilities.getIntegerPrimaryKey(connection, TableLocation.parse(sources_table_name))
@@ -434,11 +461,6 @@ def exec(Connection connection, Map input) {
         tableSourceDirectivity = tableSourceDirectivity.toUpperCase()
     }
 
-
-    String selectSource ="ALL"
-    if(input['selectSource']){
-        selectSource = input['selectSource']
-    }
 
     boolean recordProfile = false
     if (input['confRecordProfile']) {
@@ -531,6 +553,7 @@ def exec(Connection connection, Map input) {
 
     if(selectSource=="ALL"){
         if (input['tableSourceEmission']) {
+            println "Source used : ALL"
             // Use the right default database caps according to db type
             String tableSourceEmission = TableLocation.capsIdentifier(input['tableSourceEmission'] as String, dbType)
             pointNoiseMap.setSourcesEmissionTableName(tableSourceEmission)
@@ -539,11 +562,14 @@ def exec(Connection connection, Map input) {
         def sourceToId = ["ROLLING": 1,"TRACTIONA": 2,"TRACTIONB": 3,"AERODYNAMICA": 4,"AERODYNAMICB": 5,"BRIDGE": 6]
         if (sourceToId.containsKey(selectSource)) {
             int idSource = sourceToId[selectSource]
+            println "Source used : $selectSource "
             sql.execute("DROP TABLE IF EXISTS SOURCES_EMISSION_SPECIFIC_SOURCE")
-            sql.execute("CREATE TABLE SOURCES_EMISSION_SPECIFIC_SOURCE AS SELECT * FROM SOURCES_GEOM WHERE IDSOURCE = 1; ")
+            sql.execute("CREATE TABLE SOURCES_EMISSION_SPECIFIC_SOURCE AS SELECT * FROM SOURCES_EMISSION WHERE DIR_ID = ?", [idSource])
+            sql.execute("ALTER TABLE SOURCES_EMISSION_SPECIFIC_SOURCE RENAME COLUMN IDSOURCE TO IDSOURCEUSED;")
+            sql.execute("ALTER TABLE SOURCES_EMISSION_SPECIFIC_SOURCE ADD COLUMN IDSOURCE INT NOT NULL AUTO_INCREMENT PRIMARY KEY;")
             pointNoiseMap.setSourcesEmissionTableName("SOURCES_EMISSION_SPECIFIC_SOURCE")
         } else {
-            println "Source non reconnue : $selectSource"
+            println "Unrecognized source : $selectSource"
         }
     }
 
@@ -564,7 +590,7 @@ def exec(Connection connection, Map input) {
 
     if (input.containsKey('confFavorableOccurrencesDefault')) {
         StringTokenizer tk = new StringTokenizer(input['confFavorableOccurrencesDefault'] as String, ',')
-        double[] favOccurrences = new double[AttenuationCnossosParameters.DEFAULT_WIND_ROSE.length]
+        double[] favOccurrences = new double[AttenuationParameters.DEFAULT_WIND_ROSE.length]
         for (int i = 0; i < favOccurrences.length; i++) {
             favOccurrences[i] = Math.max(0, Math.min(1, Double.valueOf(tk.nextToken().trim())))
         }
