@@ -56,7 +56,7 @@ import java.sql.SQLException
 
 title = 'Map Difference'
 description = '&#10145;&#65039; Computes the difference between two noise maps'
-
+// TODO edit for specfic source position
 inputs = [
         trainsPosition : [
                 name: 'Trains position table',
