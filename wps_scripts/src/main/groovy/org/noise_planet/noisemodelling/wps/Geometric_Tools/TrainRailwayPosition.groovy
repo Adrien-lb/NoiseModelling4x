@@ -169,9 +169,8 @@ def exec(Connection connection, Map input) {
 
     def field_1=1
 
-
     // conversion km/h to m/s
-    def dX = speedSet/ 3.6 * integrationTimeSet
+    def deltaD = speedSet/ 3.6 * integrationTimeSet as Double
 
     // List features storage
     def features = []
@@ -180,78 +179,63 @@ def exec(Connection connection, Map input) {
     def pk = 1
 
     // check LineString segments
+    def lastPoint = railwayGeom[0]
+    features.add(createFeature(lastPoint, field_1++, pk++, idSection, train_id, speedSet, fieldTrainset, timeStartSet++))
+    def bufferFirstPoint = 0
     for (int i = 0; i < railwayGeom.size() - 1; i++) {
         def start = railwayGeom[i]
         def end = railwayGeom[i + 1]
 
-        // Evaluate segment distance
+        // Calcul de la distance totale du segment
         def dx = end[0] - start[0]
         def dy = end[1] - start[1]
+        def dz = end[2] - start[2]
+        def segmentLength = getTotalDistance(dx, dy, dz)
 
-        def totalDistance = getTotalDistance(dx,dy)
+        def numPoints = (int)(segmentLength / deltaD)
+        if (i > 0) {
+            def dxBuffer = start[0] - lastPoint[0]
+            def dyBuffer = start[1] - lastPoint[1]
+            def dzBuffer = start[2] - lastPoint[2]
+            def bufferDistance = getTotalDistance(dxBuffer, dyBuffer, dzBuffer)
+            bufferFirstPoint = deltaD-bufferDistance
 
-        // Evaluate number of intermediate points positions in this segment
-        def numPoints = (int) ( totalDistance/ (dX as Number))
+            def ratio = bufferFirstPoint / segmentLength
+            def x1 = start[0] + dx * ratio
+            def y1 = start[1] + dy * ratio
+            def z1 = start[2] + dz * ratio
+            def newPoint = [x1, y1, z1]
+            features.add(createFeature(newPoint, field_1++, pk++, idSection, train_id, speedSet, fieldTrainset, timeStartSet++))
 
-        // Add starting point position
-        def x = start[0]
-        def y = start[1]
-        def z = start[2]
-
-        def feature = [
-                type: "Feature",
-                properties: [
-                        field_1: field_1++,
-                        pk: pk++,
-                        idSection: idSection,
-                        x: x,
-                        y: y,
-                        z: z,
-                        angle: 0,
-                        train_id: train_id,
-                        speed: speedSet,
-                        train_set: fieldTrainset,
-                        timestep: timeStartSet++
-                ],
-                geometry: [
-                        type: "Point",
-                        coordinates: [x, y, z]
-                ]
-        ]
-        features.add(feature)
-
-        // generate intermediate points positions
-        for (int j = 1; j <= numPoints; j++) {
-            double currentDistance = j * (dX as Number)
-            def ratio = currentDistance / totalDistance
-
-            x = start[0] + dx * ratio
-            y = start[1] + dy * ratio
-            z = start[2] + (end[2] - start[2]) * ratio
-
-            feature = [
-                    type: "Feature",
-                    properties: [
-                            field_1: field_1++,
-                            pk: pk++,
-                            idSection: idSection,
-                            x: 0.0,
-                            y: 0.0,
-                            z: 0.0,
-                            angle: 0,
-                            train_id: train_id,
-                            speed: speedSet,
-                            train_set: fieldTrainset,
-                            timestep: timeStartSet++
-                    ],
-                    geometry: [
-                            type: "Point",
-                            coordinates: [x, y, z]
-                    ]
-            ]
-            features.add(feature)
+            numPoints = (int)((segmentLength-bufferFirstPoint)/ deltaD)
+            for (int j = 1; j <= numPoints; j++) {
+                def distance = j * deltaD
+                if (distance > segmentLength) break
+                ratio = distance / segmentLength
+                def x = x1 + dx * ratio
+                def y = y1 + dy * ratio
+                def z = z1 + dz * ratio
+                newPoint = [x, y, z]
+                features.add(createFeature(newPoint, field_1++, pk++, idSection, train_id, speedSet, fieldTrainset, timeStartSet++))
+                lastPoint = newPoint
+            }
+        }else{
+            // Génération des points intermédiaires dans le segment actuel
+            for (int j = 1; j <= numPoints; j++) {
+                def distance = j * deltaD
+                if (distance > segmentLength) break
+                def ratio = distance / segmentLength
+                def x = start[0] + dx * ratio
+                def y = start[1] + dy * ratio
+                def z = start[2] + dz * ratio
+                def newPoint = [x, y, z]
+                features.add(createFeature(newPoint, field_1++, pk++, idSection, train_id, speedSet, fieldTrainset, timeStartSet++))
+                lastPoint = newPoint
+            }
         }
     }
+
+
 // Creeate final GeoJSON file
     def geojson = [
             type: "FeatureCollection",
@@ -276,8 +260,31 @@ def exec(Connection connection, Map input) {
 
 }
 
-static double getTotalDistance(dx,dy) {
-    def totalDistance = Math.sqrt(Math.pow(dx,2) + Math.pow(dy,2))
+def createFeature(def coordinates, def field_1, def pk, def idSection, def train_id, def speed, def train_set, def timestep) {
+    return [
+            type: "Feature",
+            properties: [
+                    field_1: field_1,
+                    pk: pk,
+                    idSection: idSection,
+                    x: coordinates[0],
+                    y: coordinates[1],
+                    z: coordinates[2],
+                    angle: 0,
+                    train_id: train_id,
+                    speed: speed,
+                    train_set: train_set,
+                    timestep: timestep
+            ],
+            geometry: [
+                    type: "Point",
+                    coordinates: coordinates
+            ]
+    ]
+}
+
+static double getTotalDistance(dx,dy,dz) {
+    def totalDistance = Math.sqrt(Math.pow(dx,2) + Math.pow(dy,2) +Math.pow(dz,2)  )
     return totalDistance
 }
 
