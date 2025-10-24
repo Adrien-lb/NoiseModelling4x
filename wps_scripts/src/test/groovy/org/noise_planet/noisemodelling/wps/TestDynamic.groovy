@@ -13,7 +13,10 @@ import org.noise_planet.noisemodelling.wps.Dynamic.Flow_2_Noisy_Vehicles;
 import org.noise_planet.noisemodelling.wps.Dynamic.Ind_Vehicles_2_Noisy_Vehicles;
 import org.noise_planet.noisemodelling.wps.Dynamic.Noise_From_Attenuation_Matrix;
 import org.noise_planet.noisemodelling.wps.Dynamic.Point_Source_From_Network
+import org.noise_planet.noisemodelling.wps.Dynamic.RailWayNetworkFusion
 import org.noise_planet.noisemodelling.wps.Dynamic.Split_Sources_Period
+import org.noise_planet.noisemodelling.wps.Dynamic.TrainNetworkParameters
+import org.noise_planet.noisemodelling.wps.Dynamic.TrainRailwayPosition
 import org.noise_planet.noisemodelling.wps.Dynamic.TrainSourcesFromPosition
 import org.noise_planet.noisemodelling.wps.Experimental.DynamicTrainFromAADTTraffic;
 import org.noise_planet.noisemodelling.wps.Geometric_Tools.Set_Height
@@ -421,15 +424,54 @@ class TestDynamic extends JdbcTestCase {
                   railsTraffic: "RAILS_TRAFFIC"])
     }
 
+    void testDynamicTrainSourcesInterpolation() {
+        new TrainRailwayPosition().exec(connection, [
+//                railwayGeom: [ [ 546521.693513195612468, 6777500.572052604518831, 0.0], [ 546477.599999999976717, 6777514.200000000186265, 0.0], [ 546391.099999999976717, 6777539.799999999813735, 0.0], [ 546282.0, 6777573.400000000372529, 0.0], [ 546253.599999999976717, 6777582.099999999627471, 0.0], [ 546103.099999999976717, 6777630.900000000372529, 0.0], [ 545999.0, 6777666.599999999627471, 0.0], [ 545876.800000000046566, 6777708.299999999813735, 0.0], [ 545740.5, 6777756.700000000186265, 0.0], [ 545597.900000000023283, 6777806.900000000372529, 0.0], [ 545481.900000000023283, 6777847.599999999627471, 0.0], [ 545446.900000000023283, 6777859.299999999813735, 0.0], [ 545380.199999999953434, 6777881.700000000186265, 0.0], [ 545340.0, 6777895.400000000372529, 0.0], [ 545219.0, 6777935.0, 0.0], [ 545116.0, 6777965.400000000372529, 0.0], [ 545034.400000000023283, 6777989.099999999627471, 0.0], [ 544938.699999999953434, 6778013.900000000372529, 0.0], [ 544836.199999999953434, 6778040.099999999627471, 0.0], [ 544835.56068417429924, 6778040.249127665534616, 0.0] ] ,
+                railwayGeom: [[0.0, 0.0, 0.0],[1000.0, 0.0, 0.0]],
+                fieldTrainset: "TGVSE-10U2",
+                speedSet: 350,
+                idSection: 1,
+                integrationTimeSet: 0.125,
+                timeStartSet: 1734297900,
+                nameFile: "vehicle/vehicleCasR4E",
+        ])
+    }
+// TODO railway tracktransfer TGV =2 à prendre ! ~=4
+    void testTrainRailWayNetwork() {
+        new TrainNetworkParameters().exec(connection, [
+//                railwayGeom: [ [ 546521.693513195612468, 6777500.572052604518831, 0.0], [ 546477.599999999976717, 6777514.200000000186265, 0.0], [ 546391.099999999976717, 6777539.799999999813735, 0.0], [ 546282.0, 6777573.400000000372529, 0.0], [ 546253.599999999976717, 6777582.099999999627471, 0.0], [ 546103.099999999976717, 6777630.900000000372529, 0.0], [ 545999.0, 6777666.599999999627471, 0.0], [ 545876.800000000046566, 6777708.299999999813735, 0.0], [ 545740.5, 6777756.700000000186265, 0.0], [ 545597.900000000023283, 6777806.900000000372529, 0.0], [ 545481.900000000023283, 6777847.599999999627471, 0.0], [ 545446.900000000023283, 6777859.299999999813735, 0.0], [ 545380.199999999953434, 6777881.700000000186265, 0.0], [ 545340.0, 6777895.400000000372529, 0.0], [ 545219.0, 6777935.0, 0.0], [ 545116.0, 6777965.400000000372529, 0.0], [ 545034.400000000023283, 6777989.099999999627471, 0.0], [ 544938.699999999953434, 6778013.900000000372529, 0.0], [ 544836.199999999953434, 6778040.099999999627471, 0.0], [ 544835.56068417429924, 6778040.249127665534616, 0.0] ] ,
+                railwayGeom: [[0.0, 0.0, 0.0],[1000.0, 0.0, 0.0]],
+                idSection: 1,
+                nTrack: 1,
+                speedTrack: 350,
+                trackTrans: 2,
+                railRoughn: 1,
+                impactNois: 0,
+                curvature: 0,
+                bridgeTran: 0,
+                speedComme: 350,
+                isTunnel: false,
+                nameFile: "rail_track/railTrackCasTestR4E",
+        ])
+    }
+
+    void testFusionGeojson() {
+        new RailWayNetworkFusion().exec(connection, [
+                file1Path: "Dynamic/TrainExport/test_Fret_200.geojson",
+                file2Path: "Dynamic/TrainExport/test_TGVSE10U2_300.geojson",
+                nameFile: "Dynamic/TrainExport/test_TrainTraffic_Fusion"
+        ])
+    }
+
     /**
      * Test the generation of multiple wagons sources from engine train position
      */
     void testDynamicTrainSourcesPlacement() {
         new Import_File().exec(connection, [
-                pathFile: TestDynamic.getResource("Dynamic/TrainSourceDistribution/pointTrainDynamic.geojson").getPath()])
+                pathFile: TestDynamic.getResource("Dynamic/R4E/vehicleR4E.geojson").getPath()])
 
         new Import_File().exec(connection, [
-                pathFile: TestDynamic.getResource("Dynamic/TrainSourceDistribution/train_network_32635.geojson").getPath()])
+                pathFile: TestDynamic.getResource("Dynamic/R4E/railTrackR4E.geojson").getPath()])
 
 
         new TrainSourcesFromPosition().exec(connection, [
@@ -460,6 +502,207 @@ class TestDynamic extends JdbcTestCase {
 
     }
 
+    // TODO edit exportPath folder
+    // TODO comparasion avec mesures ? cf Valentin pour ses mesures
+    void testDynamicIndividualTrainCas1() {
+        // Import Buildings for your study area
+        new Import_File().exec(connection,
+                ["pathFile" :  TestDatabaseManager.getResource("Dynamic/TrainDynamicTest/testBati.geojson").getPath() ,
+                     "inputSRID": "32635",
+                 "tableName": "buildings"])
+
+        new Import_File().exec(connection, [
+                pathFile: TestDynamic.getResource("Dynamic/TrainDynamicTest/receiverTest.geojson").getPath(),
+                "inputSRID": "32635",
+                "tableName": "RECEIVERS"])
+
+        new Import_File().exec(connection, [
+                pathFile: TestDynamic.getResource("Dynamic/TrainExport/vehicle/vehicleCasTest1.geojson").getPath(),
+                "inputSRID": "32635",
+                "tableName": "vehicle"])
+
+        new Import_File().exec(connection, [
+                pathFile: TestDynamic.getResource("Dynamic/TrainExport/rail_track/railTrackCasTest1.geojson").getPath(),
+                "inputSRID": "32635",
+                "tableName": "rail_track"])
+
+        // Create a table with the noise level from the vehicles and snap the vehicles to the discretized network
+        new TrainSourcesFromPosition().exec(connection, [
+                trainsPosition: "vehicle",
+                railwayGeometries: "rail_track",
+                fieldTrainset: "train_set",
+                fieldTrainId: "train_id",
+                fieldTimeStep: "timestep",
+                trainTrainsetData: Railway.class.getResource("RailwayTrainsets.json").toString(),
+                trainVehicleData: Railway.class.getResource("RailwayVehiclesCnossos.json").toString(),
+                trainCoefficientsData: Railway.class.getResource("RailwayCnossosSNCF_2021.json").toString()
+        ])
+
+        // Compute the attenuation noise level from the network sources (SOURCES_0DB) to the receivers
+        new Noise_level_from_train_source().exec(connection,
+                ["tableBuilding"   : "BUILDINGS",
+                 "tableSources"   : "SOURCES_GEOM",
+                 "tableSourcesEmission" : "SOURCES_EMISSION",
+                 "selectSource":"ALL",
+                 "tableReceivers": "RECEIVERS",
+                 "maxError" : 0.0,
+                 "confFavorableOccurrencesDefault"  :"0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0",
+                 "confTemperature":20,
+                 "confMaxSrcDist" : 1000,
+                 "confReflOrder" : 0,
+                 "paramWallAlpha" : 1,
+                 "confDiffHorizontal" : false,
+                 "confDiffVertical" : false,
+                 "confExportSourceId": false
+                ])
+
+        new Export_Table().exec(connection,
+                ["tableToExport"   : "SOURCES_EMISSION",
+                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/CasTest/testEmissionDynamic_cas_test_1.csv"
+                ])
+
+        new Export_Table().exec(connection,
+                ["tableToExport"   : "RECEIVERS_LEVEL",
+                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/CasTest/testInterpolationReceiversDynamic_cas_test1.csv"
+                ])
+
+        new Export_Table().exec(connection,
+                ["tableToExport"   : "SOURCES_GEOM",
+                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/CasTest/SOURCES_GEOM_cas_test1.shp"
+                ])
+    }
+    void testDynamicIndividualTrainCas2() {
+        // Import Buildings for your study area
+        new Import_File().exec(connection,
+                ["pathFile" :  TestDatabaseManager.getResource("Dynamic/TrainDynamicTest/testBati.geojson").getPath() ,
+                 "inputSRID": "32635",
+                 "tableName": "buildings"])
+
+        new Import_File().exec(connection, [
+                pathFile: TestDynamic.getResource("Dynamic/TrainDynamicTest/receiverTest.geojson").getPath(),
+                "inputSRID": "32635",
+                "tableName": "RECEIVERS"])
+
+        new Import_File().exec(connection, [
+                pathFile: TestDynamic.getResource("Dynamic/TrainExport/vehicle/vehicleCasTest2.geojson").getPath(),
+                "inputSRID": "32635",
+                "tableName": "vehicle"])
+
+        new Import_File().exec(connection, [
+                pathFile: TestDynamic.getResource("Dynamic/TrainExport/rail_track/railTrackCasTest2.geojson").getPath(),
+                "inputSRID": "32635",
+                "tableName": "rail_track"])
+
+
+        // TODO prevoir le ENRICH_DEM_with_rail
+
+        // Create a table with the noise level from the vehicles and snap the vehicles to the discretized network
+        new TrainSourcesFromPosition().exec(connection, [
+                trainsPosition: "vehicle",
+                railwayGeometries: "rail_track",
+                fieldTrainset: "train_set",
+                fieldTrainId: "train_id",
+                fieldTimeStep: "timestep",
+                trainTrainsetData: Railway.class.getResource("RailwayTrainsets.json").toString(),
+                trainVehicleData: Railway.class.getResource("RailwayVehiclesCnossos.json").toString(),
+                trainCoefficientsData: Railway.class.getResource("RailwayCnossosSNCF_2021.json").toString()
+        ])
+
+        // Compute the attenuation noise level from the network sources (SOURCES_0DB) to the receivers
+        new Noise_level_from_train_source().exec(connection,
+                ["tableBuilding"   : "BUILDINGS",
+                 "tableSources"   : "SOURCES_GEOM",
+                 "tableSourcesEmission" : "SOURCES_EMISSION",
+                 "selectSource":"ALL",
+                 "tableReceivers": "RECEIVERS",
+                 "maxError" : 0.0,
+                 "confFavorableOccurrencesDefault"  :"0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0",
+                 "confTemperature":20,
+                 "confMaxSrcDist" : 1000,
+                 "confReflOrder" : 0,
+                 "paramWallAlpha" : 1,
+                 "confDiffHorizontal" : false,
+                 "confDiffVertical" : false,
+                 "confExportSourceId": false
+                ])
+
+        new Export_Table().exec(connection,
+                ["tableToExport"   : "SOURCES_EMISSION",
+                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/CasTest/testEmissionDynamic_cas_test_2.csv"
+                ])
+
+        new Export_Table().exec(connection,
+                ["tableToExport"   : "RECEIVERS_LEVEL",
+                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/CasTest/testInterpolationReceiversDynamic_cas_test2.csv"
+                ])
+
+        new Export_Table().exec(connection,
+                ["tableToExport"   : "SOURCES_GEOM",
+                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/CasTest/SOURCES_GEOM_cas_test2.shp"
+                ])
+    }
+
+    void testDynamicR4E(){
+        new Import_File().exec(connection, [
+                pathFile: TestDynamic.getResource("Dynamic/R4E/vehicleR4E.geojson").getPath(),
+                "inputSRID": "32635",
+                "tableName": "vehicle"])
+
+        new Import_File().exec(connection, [
+                pathFile: TestDynamic.getResource("Dynamic/R4E/railTrackR4E.geojson").getPath(),
+                "inputSRID": "32635",
+                "tableName": "rail_track"])
+
+        new Import_File().exec(connection, [
+                pathFile: TestDynamic.getResource("Dynamic/R4E/receiversR4E.geojson").getPath(),
+                "inputSRID": "32635",
+                "tableName": "RECEIVERS"])
+
+        new Import_File().exec(connection,
+                ["pathFile" :  TestDatabaseManager.getResource("Dynamic/R4E/buildingsR4E.geojson").getPath() ,
+                 "inputSRID": "32635",
+                 "tableName": "buildings"])
+
+        new TrainSourcesFromPosition().exec(connection, [
+                trainsPosition: "vehicle",
+                railwayGeometries: "rail_track",
+                fieldTrainset: "train_set",
+                fieldTrainId: "train_id",
+                fieldTimeStep: "timestep",
+                trainTrainsetData: Railway.class.getResource("RailwayTrainsets.json").toString(),
+                trainVehicleData: Railway.class.getResource("RailwayVehiclesCnossos.json").toString(),
+                trainCoefficientsData: Railway.class.getResource("RailwayCnossosSNCF_2021.json").toString()
+        ])
+
+        // Compute the attenuation noise level from the network sources (SOURCES_0DB) to the receivers
+        new Noise_level_from_train_source().exec(connection,
+                ["tableBuilding"   : "BUILDINGS",
+                 "tableSources"   : "SOURCES_GEOM",
+                 "tableSourcesEmission" : "SOURCES_EMISSION",
+                 "selectSource":"ALL",
+                 "tableReceivers": "RECEIVERS",
+                 "maxError" : 0.0,
+                 "confFavorableOccurrencesDefault"  :"0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0",
+                 "confTemperature":20,
+                 "confMaxSrcDist" : 1000,
+                 "confReflOrder" : 0,
+                 "paramWallAlpha" : 1,
+                 "confDiffHorizontal" : false,
+                 "confDiffVertical" : false,
+                 "confExportSourceId": false
+                ])
+
+        new Export_Table().exec(connection, [exportPath:"src/test/resources/org/noise_planet/noisemodelling/wps/Dynamic/R4E/SOURCES_GEOM_R4E.shp",
+                                             tableToExport:"SOURCES_GEOM"])
+
+        new Export_Table().exec(connection, [exportPath:"src/test/resources/org/noise_planet/noisemodelling/wps/Dynamic/R4E/SOURCES_EMISSION_R4E.dbf",
+                                             tableToExport:"SOURCES_EMISSION"])
+        new Export_Table().exec(connection,
+                ["tableToExport"   : "RECEIVERS_LEVEL",
+                 "exportPath"   : "src/test/resources/org/noise_planet/noisemodelling/wps/Dynamic/R4E/receiversResultsR4E.shp"
+                ])
+    }
+
     void testDynamicIndividualTrainSimple() {
 
         // Import Buildings for your study area
@@ -474,13 +717,14 @@ class TestDynamic extends JdbcTestCase {
                 "tableName": "RECEIVERS"])
 
         new Import_File().exec(connection, [
-                pathFile: TestDynamic.getResource("Dynamic/TrainDynamicTest/PointFastTrain.geojson").getPath(),
-                //pathFile: TestDynamic.getResource("Dynamic/TrainDynamicTest/SimplePointFastTrain.geojson").getPath(),
+//                pathFile: TestDynamic.getResource("Dynamic/TrainDynamicTest/PointFastTrain.geojson").getPath(),
+//                pathFile: TestDynamic.getResource("Dynamic/TrainDynamicTest/SimplePointFastTrain.geojson").getPath(),
+                pathFile: TestDynamic.getResource("Dynamic/TrainExport/test_TrainTraffic_Fusion.geojson").getPath(),
                 "inputSRID": "32635",
                 "tableName": "vehicle"])
 
         new Import_File().exec(connection, [
-                pathFile: TestDynamic.getResource("Dynamic/TrainDynamicTest/testTrainNetwork.geojson").getPath(),
+                pathFile: TestDynamic.getResource("Dynamic/TrainExport/test_RailwayNetwork_Fusion.geojson").getPath(),
                 "inputSRID": "32635",
                 "tableName": "rail_track"])
         // TODO prevoir le ENRICH_DEM_with_rail
@@ -516,45 +760,168 @@ class TestDynamic extends JdbcTestCase {
                 ["tableBuilding"   : "BUILDINGS",
                  "tableSources"   : "SOURCES_GEOM",
                  "tableSourcesEmission" : "SOURCES_EMISSION",
-                 "selectSource":"ROLLING",
+                 "selectSource":"ALL",
                  "tableReceivers": "RECEIVERS",
                  "maxError" : 0.0,
+                 "confFavorableOccurrencesDefault"  :"0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0",
+                 "confTemperature":20,
+                 //                 "confRaysName":"RaysExport",
                  "confMaxSrcDist" : 1000,
                  "confReflOrder" : 0,
                  "paramWallAlpha" : 1,
-                 "confDiffHorizontal" : true,
-                 "confDiffVertical" : true,
+                 "confDiffHorizontal" : false,
+                 "confDiffVertical" : false,
                  "confExportSourceId": false
-                 //"confRaysName":'file:///C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/Test/map.kml',
-
                 ])
-        /*
-        new Create_Isosurface().exec(connection,
-                [resultTable: "RECEIVERS_LEVEL",
-                 smoothCoefficient : 0])
-*/
 
+/*              new Export_Table().exec(connection,
+                  ["tableToExport"   : "RAYSEXPORT",
+                   "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/RAYSEXPORT.shp"
+
+                  ])*/
+
+  /*
+          new Create_Isosurface().exec(connection,
+                  [resultTable: "RECEIVERS_LEVEL",
+                   smoothCoefficient : 0])
+  */
+/*
+        new Export_Table().exec(connection,
+                ["tableToExport"   : "SOURCES_EMISSION_SPECIFIC_SOURCE",
+//                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/testEmissionDynamic.csv"
+//                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/testEmissionDynamic_SPECIFIC_SOURCE_ROLLING.csv"
+//                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/testEmissionDynamic_SPECIFIC_SOURCE_TRACTIONA.csv"
+//                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/testEmissionDynamic_SPECIFIC_SOURCE_TRACTIONB.csv"
+//                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/testEmissionDynamic_SPECIFIC_SOURCE_AERODYNAMICA.csv"
+                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/testEmissionDynamic_SPECIFIC_SOURCE_AERODYNAMICB.csv"
+//                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/testEmissionDynamic_SPECIFIC_SOURCE_BRIDGE.csv"
+                ])
+*/
         new Export_Table().exec(connection,
                 ["tableToExport"   : "RECEIVERS_LEVEL",
-                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/testReceiversDynamic.shp"
-                 //"exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/Test/SimpletestReceiversDynamic.shp"
+                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/testInterpolationReceiversDynamic.csv"
+//                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/testReceiversDynamic_SPECIFIC_SOURCE_ROLLING.csv"
+//                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/testReceiversDynamic_SPECIFIC_SOURCE_TRACTIONA.csv"
+//                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/testReceiversDynamic_SPECIFIC_SOURCE_TRACTIONB.csv"
+//                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/testReceiversDynamic_SPECIFIC_SOURCE_AERODYNAMICA.csv"
+//                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/testReceiversDynamic_SPECIFIC_SOURCE_AERODYNAMICB.csv"
+//                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/testReceiversDynamic_SPECIFIC_SOURCE_BRIDGE.csv"
                 ])
+
+
 
 /*
         new Export_Table().exec(connection, [exportPath:"C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/CONTOURING_NOISE_MAP.shp",
                                              tableToExport: "CONTOURING_NOISE_MAP"])
 
+/*
+
+
+        new Export_Table().exec(connection, [exportPath:"C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/SOURCES_EMISSION_SPECIFIC_Source.dbf",
+                                             //new Export_Table().exec(connection, [exportPath:"C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/Test/SimpleSOURCES_EMISSION.dbf",
+                                             tableToExport:"SOURCES_EMISSION"])
+        new Export_Table().exec(connection,
+                ["tableToExport"   : "SOURCES_GEOM",
+                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/SOURCES_GEOM_SPECIFIC_SOURCE.shp"
+                 //"exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/Test/SimpleSOURCES_GEOM.shp"
+                ])*/
+    }
+
+    void testDynamicDoubleTrain() {
+
+        // Import Buildings for your study area
+        new Import_File().exec(connection,
+                ["pathFile" :  TestDatabaseManager.getResource("Dynamic/TrainDynamicTest/testBati.geojson").getPath() ,
+                 "inputSRID": "32635",
+                 "tableName": "buildings"])
+
+        new Import_File().exec(connection, [
+                pathFile: TestDynamic.getResource("Dynamic/TrainDynamicTest/receiverTest.geojson").getPath(),
+                "inputSRID": "32635",
+                "tableName": "RECEIVERS"])
+
+        new Import_File().exec(connection, [
+                pathFile: TestDynamic.getResource("Dynamic/TrainExport/test_TrainTraffic_Fusion.geojson").getPath(),
+//                pathFile: TestDynamic.getResource("Dynamic/TrainExport/test_FRET_200.geojson").getPath(),
+                "inputSRID": "32635",
+                "tableName": "vehicle"])
+
+        new Import_File().exec(connection, [
+                pathFile: TestDynamic.getResource("Dynamic/TrainExport/test_RailwayNetwork_Fusion.geojson").getPath(),
+                "inputSRID": "32635",
+                "tableName": "rail_track"])
+
+        // Create a table with the noise level from the vehicles and snap the vehicles to the discretized network
+        new TrainSourcesFromPosition().exec(connection, [
+                trainsPosition: "vehicle",
+                railwayGeometries: "rail_track",
+                fieldTrainset: "train_set",
+                fieldTrainId: "train_id",
+                fieldTimeStep: "timestep",
+                trainTrainsetData: Railway.class.getResource("RailwayTrainsets.json").toString(),
+                trainVehicleData: Railway.class.getResource("RailwayVehiclesCnossos.json").toString(),
+                trainCoefficientsData: Railway.class.getResource("RailwayCnossosSNCF_2021.json").toString()
+        ])
+/*
+        new Delaunay_Grid().exec(connection, ["buildingTableName"  : "buildings",
+                                              "sourcesTableName"   : "rail_track",
+                                              "maxArea" : 1000
+        ]);*/
+
+/*
+
+        new Set_Height().exec(connection,
+                [ "tableName":"RECEIVERS",
+                  "height": 1.5
+                ])
 */
 
-        new Export_Table().exec(connection, [exportPath:"C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/SOURCES_EMISSION.dbf",
-        //new Export_Table().exec(connection, [exportPath:"C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/Test/SimpleSOURCES_EMISSION.dbf",
-                                             tableToExport:"SOURCES_EMISSION"])
+        // Compute the attenuation noise level from the network sources (SOURCES_0DB) to the receivers
+        new Noise_level_from_train_source().exec(connection,
+                ["tableBuilding"   : "BUILDINGS",
+                 "tableSources"   : "SOURCES_GEOM",
+                 "tableSourcesEmission" : "SOURCES_EMISSION",
+                 "selectSource":"ALL",
+                 "tableReceivers": "RECEIVERS",
+                 "maxError" : 0.0,
+                 "confFavorableOccurrencesDefault"  :"0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0",
+                 "confTemperature":20,
+                 "confMaxSrcDist" : 1000,
+                 "confReflOrder" : 0,
+                 "paramWallAlpha" : 1,
+                 "confDiffHorizontal" : false,
+                 "confDiffVertical" : false,
+                 "confExportSourceId": false
+                ])
+
+/*              new Export_Table().exec(connection,
+                  ["tableToExport"   : "RAYSEXPORT",
+                   "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/RAYSEXPORT.shp"
+
+                  ])*/
+
+/*
+
+                new Create_Isosurface().exec(connection,
+                        [resultTable: "RECEIVERS_LEVEL",
+                         smoothCoefficient : 0])
+
+*/
 
         new Export_Table().exec(connection,
                 ["tableToExport"   : "SOURCES_GEOM",
-                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/SOURCES_GEOM.shp"
-                 //"exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/Test/SimpleSOURCES_GEOM.shp"
+                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/testDoubleSOURCES_GEOMDynamic.shp"
                 ])
+
+
+
+/*
+
+        new Export_Table().exec(connection, [exportPath:"C:/Users/lebellec/Documents/1_Projets/NoiseModelling/mars2025/TESTSimple/Double_CONTOURING_NOISE_MAP.shp",
+                                             tableToExport: "CONTOURING_NOISE_MAP"])
+*/
+
+
     }
 
     void testDynamicIndividualTrainTutorial() {
@@ -639,4 +1006,5 @@ class TestDynamic extends JdbcTestCase {
                 ])
 
     }
+
 }
