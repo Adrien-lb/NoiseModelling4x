@@ -546,20 +546,6 @@ class TestDynamic extends JdbcTestCase {
                  "confExportSourceId": false
                 ])
 
-//        new Export_Table().exec(connection,
-//                ["tableToExport"   : "SOURCES_EMISSION",
-//                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/CasTest/testEmissionDynamic_cas_test_1.csv"
-//                ])
-//
-//        new Export_Table().exec(connection,
-//                ["tableToExport"   : "RECEIVERS_LEVEL",
-//                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/CasTest/testInterpolationReceiversDynamic_cas_test1.csv"
-//                ])
-//
-//        new Export_Table().exec(connection,
-//                ["tableToExport"   : "SOURCES_GEOM",
-//                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/CasTest/SOURCES_GEOM_cas_test1.shp"
-//                ])
     }
     void testDynamicIndividualTrainCas2() {
         // Import Buildings for your study area
@@ -615,21 +601,6 @@ class TestDynamic extends JdbcTestCase {
                  "confDiffVertical" : false,
                  "confExportSourceId": false
                 ])
-
-//        new Export_Table().exec(connection,
-//                ["tableToExport"   : "SOURCES_EMISSION",
-//                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/CasTest/testEmissionDynamic_cas_test_2.csv"
-//                ])
-//
-//        new Export_Table().exec(connection,
-//                ["tableToExport"   : "RECEIVERS_LEVEL",
-//                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/CasTest/testInterpolationReceiversDynamic_cas_test2.csv"
-//                ])
-//
-//        new Export_Table().exec(connection,
-//                ["tableToExport"   : "SOURCES_GEOM",
-//                 "exportPath"   : "C:/Users/lebellec/Documents/1_Projets/NoiseModelling/CasTest/SOURCES_GEOM_cas_test2.shp"
-//                ])
     }
 
     void testDopplerEffect(){
@@ -674,8 +645,6 @@ class TestDynamic extends JdbcTestCase {
                  "selectSource":"ALL",
                  "tableReceivers": "RECEIVERS",
                 ])*/
-
-
 
         // Compute the attenuation noise level from the network sources (SOURCES_0DB) to the receivers
         new Noise_level_from_train_source().exec(connection,
