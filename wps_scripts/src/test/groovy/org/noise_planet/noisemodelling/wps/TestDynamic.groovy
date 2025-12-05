@@ -23,7 +23,7 @@ import org.noise_planet.noisemodelling.wps.Geometric_Tools.Set_Height
 import org.noise_planet.noisemodelling.wps.Import_and_Export.Export_Table;
 import org.noise_planet.noisemodelling.wps.Import_and_Export.Import_File;
 import org.noise_planet.noisemodelling.wps.Import_and_Export.Import_OSM
-import org.noise_planet.noisemodelling.wps.NoiseModelling.Noise_emission_from_DopplerEffect;
+//import org.noise_planet.noisemodelling.wps.NoiseModelling.Noise_emission_from_DopplerEffect;
 import org.noise_planet.noisemodelling.wps.NoiseModelling.Noise_level_from_source
 import org.noise_planet.noisemodelling.wps.NoiseModelling.Noise_level_from_train_source
 import org.noise_planet.noisemodelling.wps.Receivers.Delaunay_Grid
