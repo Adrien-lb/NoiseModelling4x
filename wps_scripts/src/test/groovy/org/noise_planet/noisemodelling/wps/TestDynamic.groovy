@@ -665,13 +665,15 @@ class TestDynamic extends JdbcTestCase {
                 trainVehicleData: Railway.class.getResource("RailwayVehiclesCnossos.json").toString(),
                 trainCoefficientsData: Railway.class.getResource("RailwayCnossosSNCF_2021.json").toString()
         ])
+
+        /*
         new Noise_emission_from_DopplerEffect().exec(connection,
                 ["tableBuilding"   : "BUILDINGS",
                  "tableSources"   : "SOURCES_GEOM",
                  "tableSourcesEmission" : "SOURCES_EMISSION",
                  "selectSource":"ALL",
                  "tableReceivers": "RECEIVERS",
-                ])
+                ])*/
 
 
 
@@ -951,17 +953,6 @@ class TestDynamic extends JdbcTestCase {
                 trainCoefficientsData: Railway.class.getResource("RailwayCnossosSNCF_2021.json").toString()
         ])
 
-        /*new Delaunay_Grid().exec(connection, ["buildingTableName"  : "buildings",
-                                              "sourcesTableName"   : "rail_track",
-                                              "maxArea" : 1000
-        ]);
-
-
-        new Set_Height().exec(connection,
-                [ "tableName":"RECEIVERS",
-                  "height": 1.5
-                ])*/
-
         // Compute the attenuation noise level from the network sources (SOURCES_0DB) to the receivers
         new Noise_level_from_train_source().exec(connection,
                 ["tableBuilding"   : "BUILDINGS",
@@ -1046,14 +1037,6 @@ class TestDynamic extends JdbcTestCase {
                  "inputSRID": "32635",
                  "tableName": "buildings"])
 
-        // Import the receivers (or generate your set of receivers using Regular_Grid script for example)
-        // create grid Delaunay
-        /*new Import_File().exec(connection,
-                ["pathFile" : TestDatabaseManager.getResource("Dynamic/receivers_python_method0_50m_pop.shp").getPath() ,
-                 "inputSRID": "32635",
-                 "tableName": "receivers"])*/
-        // Set the height of the receivers
-
         new Import_File().exec(connection, [
                 pathFile: TestDynamic.getResource("Dynamic/TrainSourceDistribution/pointTrainDynamic.geojson").getPath(),
                 "tableName": "vehicle"])
@@ -1075,7 +1058,6 @@ class TestDynamic extends JdbcTestCase {
                 trainVehicleData: Railway.class.getResource("RailwayVehiclesCnossos.json").toString(),
                 trainCoefficientsData: Railway.class.getResource("RailwayCnossosSNCF_2021.json").toString()
         ])
-
 
         new Delaunay_Grid().exec(connection, ["buildingTableName"  : "buildings",
                                               "sourcesTableName"   : "rail_track",
@@ -1100,7 +1082,6 @@ class TestDynamic extends JdbcTestCase {
                  "confDiffVertical" : true,
                  "confExportSourceId": false
                 ])
-
 
         new Create_Isosurface().exec(connection,
                 [resultTable: "RECEIVERS_LEVEL",
