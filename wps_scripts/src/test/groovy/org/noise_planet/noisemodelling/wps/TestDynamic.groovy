@@ -2,8 +2,6 @@ package org.noise_planet.noisemodelling.wps
 
 import groovy.sql.Sql
 import org.h2gis.utilities.JDBCUtilities
-import org.h2gis.utilities.TableUtilities
-import org.h2gis.utilities.dbtypes.DBUtils
 import org.noise_planet.noisemodelling.emission.railway.Railway
 import org.noise_planet.noisemodelling.jdbc.NoiseMapDatabaseParameters
 import org.noise_planet.noisemodelling.wps.Acoustic_Tools.Create_Isosurface;
@@ -23,7 +21,7 @@ import org.noise_planet.noisemodelling.wps.Geometric_Tools.Set_Height
 import org.noise_planet.noisemodelling.wps.Import_and_Export.Export_Table;
 import org.noise_planet.noisemodelling.wps.Import_and_Export.Import_File;
 import org.noise_planet.noisemodelling.wps.Import_and_Export.Import_OSM
-//import org.noise_planet.noisemodelling.wps.NoiseModelling.Noise_emission_from_DopplerEffect;
+import org.noise_planet.noisemodelling.wps.Dynamic.Noise_DopplerEffect;
 import org.noise_planet.noisemodelling.wps.NoiseModelling.Noise_level_from_source
 import org.noise_planet.noisemodelling.wps.NoiseModelling.Noise_level_from_train_source
 import org.noise_planet.noisemodelling.wps.Receivers.Delaunay_Grid
@@ -606,12 +604,12 @@ class TestDynamic extends JdbcTestCase {
     void testDopplerEffect(){
         // Import Buildings for your study area
         new Import_File().exec(connection,
-                ["pathFile" :  TestDatabaseManager.getResource("Dynamic/TrainDynamicTest/testBati.geojson").getPath() ,
+                ["pathFile" :  TestDatabaseManager.getResource("Dynamic/Train/TrainDynamicTest/testBati.geojson").getPath() ,
                  "inputSRID": "32635",
                  "tableName": "buildings"])
 
         new Import_File().exec(connection, [
-                pathFile: TestDynamic.getResource("Dynamic/TrainDynamicTest/receiverTest.geojson").getPath(),
+                pathFile: TestDynamic.getResource("Dynamic/Train/TrainDynamicTest/receiverTest.geojson").getPath(),
                 "inputSRID": "32635",
                 "tableName": "RECEIVERS"])
 
@@ -637,14 +635,11 @@ class TestDynamic extends JdbcTestCase {
                 trainCoefficientsData: Railway.class.getResource("RailwayCnossosSNCF_2021.json").toString()
         ])
 
-        /*
-        new Noise_emission_from_DopplerEffect().exec(connection,
-                ["tableBuilding"   : "BUILDINGS",
-                 "tableSources"   : "SOURCES_GEOM",
-                 "tableSourcesEmission" : "SOURCES_EMISSION",
-                 "selectSource":"ALL",
-                 "tableReceivers": "RECEIVERS",
-                ])*/
+
+        new Noise_DopplerEffect().exec(connection,
+                ["tableSources": "SOURCES_GEOM",
+                 speedSet: 350,
+                 "tableReceivers": "RECEIVERS"])
 
         // Compute the attenuation noise level from the network sources (SOURCES_0DB) to the receivers
         new Noise_level_from_train_source().exec(connection,
