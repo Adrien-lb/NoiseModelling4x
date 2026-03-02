@@ -49,7 +49,7 @@ description = '&#10145;&#65039; Insert altimetric points coming from railways in
               'And four parameters:</br>' +
               ' <ul>' +
                 '<li>Railroads right-of-way (railWidth): Name of column where the railroad right-of-way is stored (Mandatory)</li>' +
-                '<li>Rail platform height (hRail): Railways platform height (Optionnal). Default value = 0.5m</li>' +
+                '<li>Rail platform height (hRail): Railways platform height (Optionnal). Default value = 0.15m</li>' +
                 '<li>Input SRID (inputSRID): SRID of the input tables (Optionnal)</li>' +
                 '<li>Output suffixe (outputSuffixe): Suffixe applied at the end of the resuling table name (Optionnal). If not specified, "ENRICHED" is applied</li>' +
               '</ul>' +
@@ -93,7 +93,7 @@ inputs = [
                 name       : 'Rail platform height',
                 title      : 'Railways platform height',
                 description: 'Railways platform height (in meters) (Optionnal)</br> </br>'+
-                             '&#128736; Default value = <b>0.5</b>',
+                             '&#128736; Default value = <b>0.15</b>',
                 min        : 0, max: 1,
                 type       : double.class
         ],
@@ -236,7 +236,7 @@ def exec(Connection connection, input) {
     String inputRail = input["inputRail"]
     String railWidth = input["railWidth"]
 
-    // Initialize rail platform height. Default value is 0.5m
+    // Initialize rail platform height. Default value is 0.15m
     double hRail = 0.15
     if ('hRail' in input) {
         hRail = input["hRail"] as double
