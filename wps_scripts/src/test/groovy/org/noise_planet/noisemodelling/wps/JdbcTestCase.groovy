@@ -25,7 +25,8 @@ import java.sql.SQLException
 @Ignore
 class JdbcTestCase  extends GroovyTestCase {
     Connection connection
-    File dbFile = new File(new File("build/tmp"), UUID.randomUUID().toString().replace("-", "")+".mv.db")
+//    File dbFile = new File(new File("build/tmp"), UUID.randomUUID().toString().replace("-", "")+".mv.db")
+    File dbFile = new File(new File("build/tmp"), "testDynamic.mv.db")
 
     @Before
     void setUp() {
@@ -36,6 +37,6 @@ class JdbcTestCase  extends GroovyTestCase {
     @After
     void tearDown() throws SQLException {
         connection.close()
-        dbFile.delete()
+//        dbFile.delete()
     }
 }

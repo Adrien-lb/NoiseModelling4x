@@ -279,7 +279,7 @@ def exec(Connection connection, input) {
     String roadWidth = input["roadWidth"]
 
     // Initialize rail platform height. Default value is 0.5m
-    double hRail = 0.5
+    double hRail = 0.15
     if ('hRail' in input) {
         hRail = input["hRail"] as double
     }

@@ -20,7 +20,7 @@ import org.noise_planet.noisemodelling.emission.directivity.cnossos.RailwayCnoss
  */
 
 public class DiscreteDirectivitySphereTest {
-    final static double[] freqTest = new double[]{125, 250, 500, 1000, 2000, 4000, 8000, 16000};
+    final static double[] freqTest = new double[]{50, 63, 80, 100, 125, 160, 200, 250, 315, 400, 500, 630, 800, 1000, 1250, 1600, 2000, 2500, 3150, 4000, 5000, 6300, 8000, 10000};
 
     @Test
     public void testInsert() {
@@ -61,14 +61,15 @@ public class DiscreteDirectivitySphereTest {
                 (float) Math.toRadians(31), 1);
         assertEquals(new DirectivityRecord((float) Math.toRadians(26),
                 (float) Math.toRadians(31), null), r);
-        assertArrayEquals(new double[]{-5.63, -5.63, -5.63, -5.63, -5.63, -5.63, -5.63, -5.63}, r.getAttenuation(),
+        assertArrayEquals(new double[]{-5.63, -5.63, -5.63, -5.63, -5.63, -5.63, -5.63, -5.63,-5.63, -5.63, -5.63, -5.63,
+                        -5.63, -5.63, -5.63, -5.63,-5.63, -5.63, -5.63, -5.63, -5.63, -5.63, -5.63, -5.63}, r.getAttenuation(),
                 0.1);
 
         // check for non-existing frequency
         assertArrayEquals(new double[]{-5.63, -5.63, -5.63, -5.63, -5.63, -5.63, -5.63, -5.63, -5.63, -5.63, -5.63,
-                        -5.63, -5.63, -5.63, -5.63, -5.63, -5.63, -5.63, -5.63},
-                d.getAttenuationArray(new double[]{125.0, 160.0, 200.0, 250.0, 315.0, 400.0, 500.0, 630.0, 800.0,
-                                1000.0, 1250.0, 1600.0, 2000.0, 2500.0, 3150.0, 4000.0, 5000.0, 6300.0, 8000.0},
+                        -5.63, -5.63, -5.63, -5.63, -5.63, -5.63, -5.63, -5.63, -5.63, -5.63, -5.63, -5.63, -5.63},
+                d.getAttenuationArray(new double[]{50, 63, 80, 100, 125, 160, 200, 250, 315, 400, 500, 630, 800, 1000,
+                                1250, 1600, 2000, 2500, 3150, 4000, 5000, 6300, 8000, 10000},
                         (float) Math.toRadians(31), (float) Math.toRadians(26)), 0.1);
 
 
